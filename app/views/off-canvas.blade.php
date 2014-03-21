@@ -1,0 +1,1 @@
+@extends('layouts.off-canvas')

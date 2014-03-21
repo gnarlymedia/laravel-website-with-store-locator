@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = false
+[remote "live"]
+	url = ssh://gnarlym@hotelcolombomusic.com:2222/~/public_html/testcapitalradio
+	fetch = +refs/heads/*:refs/remotes/live/*
+[receive]
+	denyCurrentBranch = ignore
