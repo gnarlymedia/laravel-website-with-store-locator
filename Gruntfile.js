@@ -101,9 +101,10 @@ module.exports = function(grunt) {
             //watched files
             './app/routes.php',
             './app/views/*',
-            './app/views/layouts/*'
+            './app/views/layouts/*',
+            './app/models/*'
           ],   
-          tasks: ['concat:css_frontend'],    		//tasks to run
+/*           tasks: [''],    							//tasks to run */
           options: {
             livereload: true                        //reloads the browser
           }
@@ -116,7 +117,7 @@ module.exports = function(grunt) {
           }
         },
         tests: {
-          files: ['app/controllers/*.php','app/models/*.php'],  //the task will run only when you save files in this location
+          files: ['app/controllers/*.php','app/models/*.php','app/tests/*.php'],  //the task will run only when you save files in this location
           tasks: ['phpunit']
         }
       }

@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
-		"phpunit/phpunit": "3.7.*"
+		"phpunit/phpunit": "3.7.*",
+		"doctrine/dbal": "2.3.4",
+		"laravelbook/ardent": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
