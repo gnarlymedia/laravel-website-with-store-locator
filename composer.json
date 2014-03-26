@@ -9,7 +9,8 @@
 		"doctrine/dbal": "2.3.4",
 		"laravelbook/ardent": "dev-master",
 		"way/generators": "dev-master",
-		"zizaco/factory-muff": "dev-master"
+		"zizaco/factory-muff": "dev-master",
+		"mockery/mockery": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

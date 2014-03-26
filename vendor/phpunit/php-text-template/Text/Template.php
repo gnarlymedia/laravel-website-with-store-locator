@@ -2,7 +2,7 @@
 /**
  * Text_Template
  *
- * Copyright (c) 2009-2014, Sebastian Bergmann <sebastian@phpunit.de>.
+ * Copyright (c) 2009-2012, Sebastian Bergmann <sb@sebastian-bergmann.de>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -36,8 +36,8 @@
  *
  * @category   Text
  * @package    Template
- * @author     Sebastian Bergmann <sebastian@phpunit.de>
- * @copyright  2009-2014 Sebastian Bergmann <sebastian@phpunit.de>
+ * @author     Sebastian Bergmann <sb@sebastian-bergmann.de>
+ * @copyright  2009-2012 Sebastian Bergmann <sb@sebastian-bergmann.de>
  * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @link       http://github.com/sebastianbergmann/php-text-template
  * @since      File available since Release 1.0.0
@@ -48,8 +48,8 @@
  *
  * @category   Text
  * @package    Template
- * @author     Sebastian Bergmann <sebastian@phpunit.de>
- * @copyright  2009-2014 Sebastian Bergmann <sebastian@phpunit.de>
+ * @author     Sebastian Bergmann <sb@sebastian-bergmann.de>
+ * @copyright  2009-2012 Sebastian Bergmann <sb@sebastian-bergmann.de>
  * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @version    Release: @package_version@
  * @link       http://github.com/sebastianbergmann/php-text-template
@@ -63,16 +63,6 @@ class Text_Template
     protected $template = '';
 
     /**
-     * @var string
-     */
-    protected $openDelimiter = '{';
-
-    /**
-     * @var string
-     */
-    protected $closeDelimiter = '}';
-
-    /**
      * @var array
      */
     protected $values = array();
@@ -83,11 +73,9 @@ class Text_Template
      * @param  string $file
      * @throws InvalidArgumentException
      */
-    public function __construct($file = '', $openDelimiter = '{', $closeDelimiter = '}')
+    public function __construct($file = '')
     {
         $this->setFile($file);
-        $this->openDelimiter  = $openDelimiter;
-        $this->closeDelimiter = $closeDelimiter;
     }
 
     /**
@@ -140,7 +128,7 @@ class Text_Template
         $keys = array();
 
         foreach ($this->values as $key => $value) {
-            $keys[] = $this->openDelimiter . $key . $this->closeDelimiter;
+            $keys[] = '{' . $key . '}';
         }
 
         return str_replace($keys, $this->values, $this->template);
@@ -174,4 +162,3 @@ class Text_Template
         }
     }
 }
-
