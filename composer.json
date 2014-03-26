@@ -7,7 +7,9 @@
 		"laravel/framework": "4.1.*",
 		"phpunit/phpunit": "3.7.*",
 		"doctrine/dbal": "2.3.4",
-		"laravelbook/ardent": "dev-master"
+		"laravelbook/ardent": "dev-master",
+		"way/generators": "dev-master",
+		"zizaco/factory-muff": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -16,7 +18,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+			"app/lib"
 		]
 	},
 	"scripts": {

@@ -13,7 +13,7 @@ class SiteNameIsRequiredTest extends TestCase {
 		$site = new Site;
 		$site->addressLine1 = "Address line 1";
 		$site->addressSuburb = "Address suburb";
-		$site->addressState = "Address state";
+		$site->addressState = "ABC";
 		$site->addressPostcode = "1234";
 		$site->phone = "Phone";
 		

@@ -20,7 +20,7 @@ class CreateSitesTable extends Migration {
 	        $table->string('addressLine2')->nullable();
 	        $table->string('addressSuburb');
 	        $table->string('addressState');
-	        $table->string('addressPostcode');
+	        $table->integer('addressPostcode');
 	        $table->string('openingHours')->nullable();
 	        $table->string('phone');
 	        $table->string('fax')->nullable();

@@ -46,11 +46,26 @@ class Site extends Ardent implements RemindableInterface {
 		'name' => 'required|between:1,30',
 		'addressLine1' => 'required|between:1,40',
 		'addressSuburb' => 'required|between:1,30',
-		'addressState' => 'required|between:1,30',
+		'addressState' => 'required|between:2,3',
 		'addressPostcode' => 'required|integer',
 		'openingHours' => 'between:1,30',
 		'phone' => 'required|between:1,12',
-		'modalities' => 'between:1,50');
+		'modalities' => 'between:1,50'
+	); 
+	  
+	/**
+	 * Factory
+	 */
+	public static $factory = array(
+		'name' => 'string',
+		'addressLine1' => 'string',
+		'addressSuburb' => 'string',
+		'addressState' => 'ABC',
+		'addressPostcode' => '1234',
+		'openingHours' => 'string',
+		'phone' => 'string',
+		'modalities' => 'string',
+	);
 	  
 	/**
 	 * Post relationship

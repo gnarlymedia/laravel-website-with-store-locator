@@ -40,7 +40,7 @@ class SiteTableSeeder extends Seeder {
         	'addressLine2' => '',
         	'addressSuburb' => 'Albert Park',
         	'addressState' => 'Vic',
-        	'addressPostcode' => '3206',
+        	'addressPostcode' => 3206,
         	'openingHours' => 'Mon to Fri 9am-5pm, Sat 9-12pm',
         	'phone' => '03 9690 2377',
         	'fax' => '03 9686 8358',
@@ -59,6 +59,6 @@ class AddressTableSeeder extends Seeder {
         	'addressLine2' => '',
         	'addressSuburb' => 'Albert Park',
         	'addressState' => 'Vic',
-        	'addressPostcode' => '3206'));
+        	'addressPostcode' => 3206));
     }
 }

@@ -66,7 +66,13 @@ Route::get('test-validation', function()
 Route::get('test-address', function()
 {
 	// Create a new Address
-	$address = new Address(array('addressLine1' => 'Address line 1', 'addressLine2' => '', 'addressSuburb' => 'Address suburb', 'addressState' => 'Address state', 'addressPostcode' => 'Address postcode'));
+	$address = new Address(array(
+		'addressLine1' => 'Address line 1',
+		'addressLine2' => '',
+		'addressSuburb' => 'Address suburb',
+		'addressState' => 'ABC',
+		'addressPostcode' => '1234'
+	));
 	// Grab Site 1
 	$site = Site::find(1);
 	// Save the Address
@@ -79,7 +85,7 @@ Route::get('test-site-validation', function()
 		$site = new Site;
 		$site->addressLine1 = "Address line 1";
 		$site->addressSuburb = "Address suburb";
-		$site->addressState = "Address state";
+		$site->addressState = "ABC";
 		$site->addressPostcode = "1234";
 		$site->phone = "Phone";
 		
@@ -91,3 +97,9 @@ Route::get('test-site-validation', function()
 		
 		var_dump($errors);
 });
+
+Route::get('/test', function(){
+  echo WebsiteModel::greeting();
+});
+
+Route::resource('site', 'SiteController');
