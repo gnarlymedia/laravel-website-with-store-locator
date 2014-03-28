@@ -117,11 +117,13 @@ module.exports = function(grunt) {
           }
         },
         tests: {
-          files: [
+          files: [						  			//the task will run only when you save files in this location
           	'app/controllers/*.php',
           	'app/models/*.php',
-          	'app/tests/*.php',
-          	'app/tests/models/*.php'],  //the task will run only when you save files in this location
+          	'app/tests/**',
+          	'app/tests/models/*.php',
+          	'app/tests/controllers/functional/*.php',
+          	'app/tests/views/*'],
           tasks: ['phpunit']
         }
       }

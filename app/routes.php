@@ -11,25 +11,51 @@
 |
 */
 
-Route::get('/', function()
+
+// Theme
+Route::get('theme/', function()
 {
-	return View::make('theme');
+	return View::make('theme1');
 });
 
-Route::get('home', function()
+Route::get('theme/home', function()
 {
-	return View::make('theme');
+	return View::make('theme1');
 });
 
-Route::get('about', function()
+Route::get('theme/about', function()
 {
 	return View::make('theme2');
 });
 
-Route::get('contact', function()
+Route::get('theme/contact', function()
 {
 	return View::make('theme3');
 });
+
+
+// Navbar
+Route::get('navbar/', function()
+{
+	return View::make('navbar1');
+});
+
+Route::get('navbar/home', function()
+{
+	return View::make('navbar1');
+});
+
+Route::get('navbar/about', function()
+{
+	return View::make('navbar2');
+});
+
+Route::get('navbar/contact', function()
+{
+	return View::make('navbar3');
+});
+
+
 
 Route::get('cover', function()
 {
@@ -42,6 +68,11 @@ Route::get('users', function()
 
     return View::make('users')->with('users', $users);
 });
+
+Route::get('hello', array('as' => 'hello', function()
+{
+    return "Hello";
+}));
 
 Route::get('sites', function()
 {
@@ -103,3 +134,12 @@ Route::get('/test', function(){
 });
 
 Route::resource('site', 'SiteController');
+
+Route::get('env', function(){
+  return  App::environment();
+});
+
+Route::get('splash', function()
+{
+	return View::make('splash');
+});

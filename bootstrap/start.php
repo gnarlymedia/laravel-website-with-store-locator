@@ -27,6 +27,7 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	'local' => array('Simons-iMac.local'),
+	'gatorTesting' => array('gator3043.hostgator.com'),
 
 ));
 

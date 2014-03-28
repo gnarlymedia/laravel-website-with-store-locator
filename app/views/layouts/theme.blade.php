@@ -10,10 +10,10 @@
 
 	@yield('head')
 
-   	{{ HTML::script('assets/javascript/frontend.js'); }}
+   	{{ HTML::script('/assets/javascript/frontend.js'); }}
    	
-	{{ HTML::style('assets/stylesheets/combined.css'); }}
-   	{{ HTML::style('assets/stylesheets/theme.css'); }}
+	{{ HTML::style('/assets/stylesheets/combined.css'); }}
+   	{{ HTML::style('/assets/stylesheets/theme.css'); }}
 
     <!-- Bootstrap core CSS -->
 <!--     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -31,6 +31,16 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!--Start of Zopim Live Chat Script-->
+	<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+		$.src='//v2.zopim.com/?20HOsJPdhfQe7tzvzqvfhFEySwiP7Kzk';z.t=+new Date;$.
+		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+	</script>
+	<!--End of Zopim Live Chat Script-->
   </head>
 
   <body role="document" style="position:relative">
@@ -45,7 +55,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
+          <a class="navbar-brand" href="#">Capital Radiology</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">

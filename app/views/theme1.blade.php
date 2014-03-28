@@ -2,13 +2,13 @@
 
 @section('head')
 	<title>Home</title>
-	{{ HTML::style('assets/stylesheets/carousel.css'); }}
+	{{ HTML::style('/assets/stylesheets/carousel.css'); }}
 @stop
 
 @section('nav')
-	<li class="active"><a href="/home">Home</a></li>
-	<li><a href="/about">About</a></li>
-	<li><a href="/contact">Contact</a></li>
+	<li class="active"><a href="/theme/home">Home</a></li>
+	<li><a href="/theme/about">About</a></li>
+	<li><a href="/theme/contact">Contact</a></li>
 @stop
 
 @section('content')
@@ -24,32 +24,32 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="assets/images/iStock_1.jpg" alt="First slide">
+          <img src="/assets/images/iStock_1.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Capital radiology</h1>
+              <h1>Capital Radiology</h1>
               <p>The most amazing radiology company you've ever heard of.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              <p><a class="btn btn-lg btn-primary" href="/theme/home" role="button">Sign up today</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="assets/images/iStock_2.jpg" alt="Second slide">
+          <img src="/assets/images/iStock_2.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>The best of the best.</h1>
               <p>We really are the best. Of the best.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <p><a class="btn btn-lg btn-primary" href="/theme/home" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="assets/images/iStock_3.jpg" alt="Third slide">
+          <img src="/assets/images/iStock_3.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>For the whole family.</h1>
               <p>We don't leave anyone out.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <p><a class="btn btn-lg btn-primary" href="/theme/home" role="button">Browse gallery</a></p>
             </div>
           </div>
         </div>

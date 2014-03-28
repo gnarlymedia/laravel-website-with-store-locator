@@ -1,3 +1,4 @@
+/*
 window.onload = function() {
 	$.stellar({
 	  // Set scrolling to be in either one or both directions
@@ -12,3 +13,4 @@ window.onload = function() {
 	  responsive: true
 	});
 };
+*/ 

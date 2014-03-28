@@ -2,7 +2,7 @@
 
 use Zizaco\FactoryMuff\Facade\FactoryMuff;
 
-class AddressTest extends TestCase {
+class ModelsUnitAddressTest extends TestCase {
 	/**
 	 * Test relationship with Site
 	 */
@@ -22,8 +22,8 @@ class AddressTest extends TestCase {
 		// Create new Address
 		$address = new Address;
 		
-		// Set the boy
-		$address->addressLine1 = "Address line 1";
+		// Set the fields
+		$address->addressLine1 = "Address line 1"; 
 		$address->addressSuburb = "Address suburb";
 		$address->addressState = "ABC";
 		$address->addressPostcode = "1234";

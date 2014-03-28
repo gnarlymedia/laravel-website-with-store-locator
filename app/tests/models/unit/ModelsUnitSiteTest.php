@@ -1,14 +1,27 @@
 <?php
 
-class SiteNameIsRequiredTest extends TestCase {
+use Zizaco\FactoryMuff\Facade\FactoryMuff;
 
+class ModelsUnitSiteTest extends TestCase {
+	/**
+	 * Test createPrettyMailingLabel method in Site
+	 */
+	public function testCreateOneLineAddressSummary()
+	{
+		// Instantiate new Site
+		$site = FactoryMuff::create('Site');
+		
+		$this->assertEquals("Pretty mailing label", $site->createOneLineAddressSummary());
+	}
+	
 	/**
 	 * A validation test.
 	 *
 	 * @return void
 	 */
-	public function tests()
-	{
+	public function testSiteNameIsRequired()
+	{ 
+/*
 		// Create a new Site
 		$site = new Site;
 		$site->addressLine1 = "Address line 1";
@@ -28,5 +41,6 @@ class SiteNameIsRequiredTest extends TestCase {
 		
 		// The site name error should be set
 		$this->assertEquals($errors[0], "The name field is required.");
+*/
 	} 
 }

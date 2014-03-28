@@ -4,7 +4,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use LaravelBook\Ardent\Ardent;
 
-class Site extends Ardent implements RemindableInterface {
+class Site extends Eloquent implements RemindableInterface {
 
 	/**
 	 * The database table used by the model.
@@ -42,6 +42,7 @@ class Site extends Ardent implements RemindableInterface {
 	/**
 	 * Ardent validation rules
 	 */
+/*
 	public static $rules = array(
 		'name' => 'required|between:1,30',
 		'addressLine1' => 'required|between:1,40',
@@ -51,7 +52,28 @@ class Site extends Ardent implements RemindableInterface {
 		'openingHours' => 'between:1,30',
 		'phone' => 'required|between:1,12',
 		'modalities' => 'between:1,50'
-	); 
+	);
+*/
+	
+	
+	/**
+	 * Validation rules
+	 */
+	public static $rules = array(
+		"save" => array(),
+		"create" => array(
+			'name' => 'required|between:1,30',
+			'addressLine1' => 'required|between:1,40',
+			'addressSuburb' => 'required|between:1,30',
+			'addressState' => 'required|between:2,3',
+			'addressPostcode' => 'required|integer',
+			'openingHours' => 'between:1,30',
+			'phone' => 'required|between:1,12',
+			'modalities' => 'between:1,50'
+		),
+		"update" => array()
+	);
+
 	  
 	/**
 	 * Factory
@@ -66,6 +88,16 @@ class Site extends Ardent implements RemindableInterface {
 		'phone' => 'string',
 		'modalities' => 'string',
 	);
+	
+	/**
+	 * Get a one-line summary of the address.
+	 *
+	 * @return string
+	 */
+	public function createOneLineAddressSummary()
+	{
+		return "Pretty mailing label";
+	}
 	  
 	/**
 	 * Post relationship

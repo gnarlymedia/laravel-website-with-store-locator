@@ -4,6 +4,15 @@ use WebsiteModel\Storage\Site\SiteRepository as Site;
 
 class SiteController extends \BaseController {
 
+	/**
+	 * Site Repository
+	 */
+	protected $site;
+
+
+	/**
+	 * Inject the Site Repository
+	 */
 	public function __construct(Site $site)
 	{
 		$this->site = $site;
@@ -26,7 +35,7 @@ class SiteController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('site.create');
 	}
 
 	/**
@@ -36,7 +45,33 @@ class SiteController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$s = $this->site->create(Input::all());
+		
+		if ($s->isSaved()) {
+			return Redirect::route('site.index')
+			->with('flash', 'The new site has been created');
+		}
+		
+		return Redirect::route('site.create')
+			->withInput()
+			->withErrors($s->errors()); 
+
+// Using validators
+/*
+		$v = new WebsiteModel\Services\Validators\Site;
+		
+		if ($v->passes())
+		{
+			$this->site->create($input);
+			
+			return Redirect::route('site.index')
+			->with('flash', 'The new site has been created');
+		}
+		
+		return Redirect::route('site.create')
+			->withInput()
+			->withErrors($v->getErrors());
+*/
 	}
 
 	/**
@@ -47,7 +82,7 @@ class SiteController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return $this->site->find($id);
 	}
 
 	/**
@@ -58,7 +93,9 @@ class SiteController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$site = $this->site->find($id);
+		
+		return View::make('site.edit')->with('site', $site);
 	}
 
 	/**
@@ -69,7 +106,16 @@ class SiteController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$s = $this->site->update($id);
+		
+		if ($s->isSaved()) {
+			return Redirect::route('site.show', $id)
+			->with('flash', 'The site was updated');
+		}
+		
+		return Redirect::route('site.edit', $id)
+			->withInput()
+			->withErrors($s->errors());
 	}
 
 	/**
@@ -80,7 +126,11 @@ class SiteController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return $this->site->delete($id);
 	}
 
+	public function createOneLineAddressSummary()
+	{
+		return $this->site->createOneLineAddressSummary();
+	}
 }

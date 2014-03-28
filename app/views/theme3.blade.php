@@ -5,9 +5,9 @@
 @stop
 
 @section('nav')
-	<li><a href="/home">Home</a></li>
-	<li><a href="/about">About</a></li>
-	<li class="active"><a href="/contact">Contact</a></li>
+	<li><a href="/theme/home">Home</a></li>
+	<li><a href="/theme/about">About</a></li>
+	<li class="active"><a href="/theme/contact">Contact</a></li>
 @stop
 
 @section('content')
