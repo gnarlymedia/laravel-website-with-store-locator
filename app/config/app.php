@@ -108,7 +108,6 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'WebsiteModel\Storage\StorageServiceProvider',
-		'CapitalRadiology\WebsiteModel\WebsiteModelServiceProvider',
 
 	),
 
