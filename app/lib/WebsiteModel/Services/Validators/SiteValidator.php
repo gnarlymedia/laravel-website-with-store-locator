@@ -1,6 +1,6 @@
 <?php namespace WebsiteModel\Services\Validators;
  
-class Site extends Validator {
+class User extends Validator {
  
   /**
    * Validation rules

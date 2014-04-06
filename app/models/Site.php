@@ -14,7 +14,17 @@ class Site extends Eloquent implements RemindableInterface {
 	protected $table = 'sites';
 	
 	// Specify which of the columns can be mass assigned.
-	protected $fillable = array('name', 'addressLine1', 'addressLine2', 'addressSuburb', 'addressState', 'addressPostcode', 'openingHours', 'phone', 'fax', 'modalities');
+	protected $fillable = array(
+		'name',
+		'addressLine1',
+		'addressLine2',
+		'addressSuburb',
+		'addressState',
+		'addressPostcode',
+		'openingHours',
+		'phone',
+		'fax',
+		'modalities');
 		
 	// Prevents the listed columns from mass assignment
 	protected $guarded = array('id');

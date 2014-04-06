@@ -2,7 +2,7 @@
 
 use WebsiteModel\Storage\Site\SiteRepository as Site;
 
-class SiteController extends \BaseController {
+class SiteController extends BaseController {
 
 	/**
 	 * Site Repository

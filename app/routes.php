@@ -129,17 +129,44 @@ Route::get('test-site-validation', function()
 		var_dump($errors);
 });
 
-Route::get('/test', function(){
+Route::get('test', function(){
   echo WebsiteModel::greeting();
 });
 
 Route::resource('site', 'SiteController');
 
+Route::resource('user', 'UserController');
+
 Route::get('env', function(){
-  return  App::environment();
+  return App::environment();
 });
 
 Route::get('splash', function()
 {
 	return View::make('splash');
 });
+
+Route::get('register', array(
+  'uses' => 'RegisterController@index',
+  'as' => 'register.index'
+));
+
+Route::post('register', array(
+  'uses' => 'RegisterController@store',
+  'as' => 'register.store'
+));
+
+Route::get('login', array(
+  'uses' => 'SessionController@create',
+  'as' => 'session.create'
+));
+
+Route::post('login', array(
+  'uses' => 'SessionController@store',
+  'as' => 'session.store'
+));
+
+Route::get('logout', array(
+  'uses' => 'SessionController@destroy',
+  'as' => 'session.destroy'
+));

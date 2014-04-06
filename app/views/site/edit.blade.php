@@ -1,25 +1,19 @@
 <body>
 {{ Form::model($site, array('route' => array('site.update', $site->id))) }}
-<h1>Username</h1>
-{{ Form::text('username') }}
+
+<h1>Site</h1>
+<p>{{ Form::text('name') }}</p>
+<p>{{ Form::text('addressLine1') }}</p>
+<p>{{ Form::text('addressLine2') }}</p>
+<p>{{ Form::text('addressSuburb') }}</p>
+<p>{{ Form::text('addressState') }}</p>
+<p>{{ Form::text('addressPostcode') }}</p>
+<p>{{ Form::text('openingHours') }}</p>
+<p>{{ Form::text('phone') }}</p>
+<p>{{ Form::text('fax') }}</p>
+<p>{{ Form::text('modalities') }}</p>
  
-<h1>Email</h1>
-{{ Form::label('email', 'E-Mail Address') }}
-{{ Form::text('email', 'Your email') }}
-
-
-<h1>File</h1>
-{{ Form::file('image') }}
-
-<h1>Select</h1>
-{{ Form::select('Network', array(
-  'facebook' => 'Facebook',
-  'twitter' => 'Twitter'
-)) }}
-
-<h1>Submit</h1>
-{{ Form::submit('Register') }}
-
+<p>{{ Form::submit('Register') }}</p>
 
 {{ Form::close() }}
 </body>

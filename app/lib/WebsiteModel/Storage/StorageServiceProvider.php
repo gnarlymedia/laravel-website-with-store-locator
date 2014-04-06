@@ -10,6 +10,11 @@ class StorageServiceProvider extends ServiceProvider {
       'WebsiteModel\Storage\Site\SiteRepository',
       'WebsiteModel\Storage\Site\EloquentSiteRepository'
     );
+    
+    $this->app->bind(
+      'WebsiteModel\Storage\User\UserRepository',
+      'WebsiteModel\Storage\User\EloquentUserRepository'
+    );
   }
  
 }

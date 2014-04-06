@@ -24,7 +24,11 @@ class UserTableSeeder extends Seeder {
     {
         DB::table('users')->delete();
 
-        User::create(array('email' => 's.hudson@capitalradiology.com.au','name' => 'Simon Hudson'));
+        User::create(array(
+        	'email' => 's.hudson@capitalradiology.com.au',
+        	'username' => 'Simon Hudson',
+        	'password' => 'capital381'
+        ));
     }
 }
 
@@ -44,7 +48,8 @@ class SiteTableSeeder extends Seeder {
         	'openingHours' => 'Mon to Fri 9am-5pm, Sat 9-12pm',
         	'phone' => '03 9690 2377',
         	'fax' => '03 9686 8358',
-        	'modalities' => 'Dental X-Ray, General X-Ray'));
+        	'modalities' => 'Dental X-Ray, General X-Ray'
+        ));
     }
 }
 
@@ -59,6 +64,7 @@ class AddressTableSeeder extends Seeder {
         	'addressLine2' => '',
         	'addressSuburb' => 'Albert Park',
         	'addressState' => 'Vic',
-        	'addressPostcode' => 3206));
+        	'addressPostcode' => 3206
+        ));
     }
 }
