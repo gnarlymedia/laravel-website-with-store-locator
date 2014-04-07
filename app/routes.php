@@ -64,6 +64,8 @@ Route::get('cover', function()
 
 Route::get('users', function()
 {
+	Artisan::call('migrate');
+
     $users = User::all();
 
     return View::make('users')->with('users', $users);
