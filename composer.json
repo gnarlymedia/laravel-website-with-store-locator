@@ -10,7 +10,8 @@
 		"laravelbook/ardent": "dev-master",
 		"way/generators": "dev-master",
 		"zizaco/factory-muff": "dev-master",
-		"mockery/mockery": "dev-master"
+		"mockery/mockery": "dev-master",
+		"fzaninotto/faker": "1.3.*@dev"
 	},
 	"autoload": {
 		"classmap": [
