@@ -29,6 +29,12 @@ class UserTableSeeder extends Seeder {
         	'username' => 'Simon Hudson',
         	'password' => 'capital381'
         ));
+        
+        User::create(array(
+        	'email' => 'j.bloggs@somewhere.com.au',
+        	'username' => 'Joe Bloggs',
+        	'password' => 'capital123'
+        ));
     }
 }
 
