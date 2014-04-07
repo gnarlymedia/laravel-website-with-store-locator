@@ -64,12 +64,10 @@ Route::get('cover', function()
 
 Route::get('users', function()
 {
-/*
 	Artisan::call('migrate');
 	Artisan::call('db:seed');
-*/
 
-	Artisan::call('migrate:refresh');
+/* 	Artisan::call('migrate:refresh'); */
 
     $users = User::all();
 
