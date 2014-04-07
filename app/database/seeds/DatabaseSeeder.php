@@ -23,12 +23,6 @@ class UserTableSeeder extends Seeder {
     public function run()
     {
         DB::table('users')->delete();
-        
-		$user = User::create(array(
-		  'username' => 'Simon Hudson',
-		  'email' => 's.hudson@capitalradiology.com.au',
-		  'password' => 'capital381'
-		));
 
 		$faker = Faker\Factory::create();
 		 
