@@ -91,10 +91,8 @@ Route::get('cover', function()
 Route::get('migrate-seed', function()
 {
 	Artisan::call('migrate');
-    return "Migrated!";
-	
 	Artisan::call('db:seed');
-    return "Seeded!";
+    return "Migrated and seeded!";
 });
 
 // Users
