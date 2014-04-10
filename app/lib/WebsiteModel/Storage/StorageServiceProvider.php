@@ -15,6 +15,11 @@ class StorageServiceProvider extends ServiceProvider {
       'WebsiteModel\Storage\User\UserRepository',
       'WebsiteModel\Storage\User\EloquentUserRepository'
     );
+    
+    $this->app->bind(
+      'WebsiteModel\Storage\Patient\PatientRepository',
+      'WebsiteModel\Storage\Patient\EloquentPatientRepository'
+    );
   }
  
 }

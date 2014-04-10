@@ -12,6 +12,12 @@
 */
 
 
+// General
+Route::get('/', function()
+{
+	return View::make('navbar1');
+});
+
 // Theme
 Route::get('theme/', function()
 {
@@ -55,6 +61,25 @@ Route::get('navbar/contact', function()
 	return View::make('navbar3');
 });
 
+// Patients
+Route::get('navbar/contact', function()
+{
+	return View::make('navbar3');
+});
+
+// Authenticated routes
+
+Route::group(array('before' => 'auth'), function()
+{
+	Route::get('user/account', function()
+	{
+		return View::make('testAuth');
+	});
+	
+	// Patients
+	Route::resource('patient', 'PatientController');
+  // ...
+});
 
 
 Route::get('cover', function()
@@ -62,16 +87,46 @@ Route::get('cover', function()
 	return View::make('cover');
 });
 
+// Database
+Route::get('migrate-seed', function()
+{
+	Artisan::call('migrate');
+    return "Migrated!";
+	
+	Artisan::call('db:seed');
+    return "Seeded!";
+});
+
+// Users
 Route::get('users', function()
 {
 	Artisan::call('migrate');
 	Artisan::call('db:seed');
 
-/* 	Artisan::call('migrate:refresh'); */
-
     $users = User::all();
 
     return View::make('users')->with('users', $users);
+});
+
+Route::get('logged-in', function()
+{
+    return "Logged in!";
+});
+
+Route::get('user-created', function()
+{
+    return "User created!";
+});
+
+Route::resource('user', 'UserController');
+
+// Passwords
+Route: Route::controller('password', 'RemindersController');
+
+
+Route::get('password-changed', function()
+{
+    return "Password changed!";
 });
 
 Route::get('hello', array('as' => 'hello', function()
@@ -119,6 +174,7 @@ Route::get('test-site-validation', function()
 {
 		// Create a new Site
 		$site = new Site;
+		$site->name = "Name";
 		$site->addressLine1 = "Address line 1";
 		$site->addressSuburb = "Address suburb";
 		$site->addressState = "ABC";
@@ -139,8 +195,6 @@ Route::get('test', function(){
 });
 
 Route::resource('site', 'SiteController');
-
-Route::resource('user', 'UserController');
 
 Route::get('env', function(){
   return App::environment();

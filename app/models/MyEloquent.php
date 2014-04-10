@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\MessageBag;
+
 class MyEloquent extends Eloquent {
 	
 	public function __construct($attributes = array())
@@ -8,7 +10,7 @@ class MyEloquent extends Eloquent {
 		$this->validationErrors = new MessageBag;
 	}
 
-	public function save() {
+	public function save(array $options = array()) {
 		// Merge the rules arrays into one array
 		// (in the save() method)
 		static::$rules = $this->mergeRules();

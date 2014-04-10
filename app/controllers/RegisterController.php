@@ -28,9 +28,11 @@ class RegisterController extends BaseController {
  
     if($s->isSaved())
     {
-      return Redirect::route('user.index')
+      return Redirect::route('user-created')
         ->with('flash', 'The new user has been created');
     }
+ 
+/* 	var_dump($s); */
  
     return Redirect::route('register.index')
       ->withInput()

@@ -2683,22 +2683,74 @@
         ]
     },
     {
+        "name": "magniloquent/magniloquent",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/philipbrown/magniloquent.git",
+            "reference": "dc21acfef965051b198cff2515d70b5986d9f1f6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/philipbrown/magniloquent/zipball/dc21acfef965051b198cff2515d70b5986d9f1f6",
+            "reference": "dc21acfef965051b198cff2515d70b5986d9f1f6",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/database": "4.x",
+            "illuminate/support": "4.x",
+            "illuminate/validation": "4.x",
+            "php": ">=5.3.0"
+        },
+        "time": "2014-03-26 03:51:48",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Magniloquent\\Magniloquent": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Philip Brown",
+                "email": "phil@ipbrown.com",
+                "role": "Creator/Developer"
+            },
+            {
+                "name": "Alex Sears",
+                "email": "alexwsears@gmail.com",
+                "homepage": "http://alexsears.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Self-validating models for Laravel 4's Eloquent",
+        "keywords": [
+            "eloquent",
+            "laravel"
+        ]
+    },
+    {
         "name": "way/generators",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/JeffreyWay/Laravel-4-Generators.git",
-            "reference": "80213d3e17cac74ced222121d887b35839f4b698"
+            "reference": "b2803d4ac8e80f3af0e27ebfdfa12452d28d5fbc"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/80213d3e17cac74ced222121d887b35839f4b698",
-            "reference": "80213d3e17cac74ced222121d887b35839f4b698",
+            "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/b2803d4ac8e80f3af0e27ebfdfa12452d28d5fbc",
+            "reference": "b2803d4ac8e80f3af0e27ebfdfa12452d28d5fbc",
             "shasum": ""
         },
         "require": {
-            "illuminate/support": "~4.1",
+            "illuminate/support": "~4.0",
             "php": ">=5.4.0"
         },
         "require-dev": {
@@ -2710,7 +2762,7 @@
             "phpspec/phpspec": "~2.0",
             "phpunit/phpunit": "~3.7"
         },
-        "time": "2014-04-03 13:43:14",
+        "time": "2014-04-07 17:41:23",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2739,12 +2791,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/padraic/mockery.git",
-            "reference": "2739e3062557253b1eddb7c32b49936d5882333f"
+            "reference": "86801301b1596df8f27e87b8c0156ca92ec95f30"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/padraic/mockery/zipball/2739e3062557253b1eddb7c32b49936d5882333f",
-            "reference": "2739e3062557253b1eddb7c32b49936d5882333f",
+            "url": "https://api.github.com/repos/padraic/mockery/zipball/86801301b1596df8f27e87b8c0156ca92ec95f30",
+            "reference": "86801301b1596df8f27e87b8c0156ca92ec95f30",
             "shasum": ""
         },
         "require": {
@@ -2756,7 +2808,7 @@
             "phpunit/phpunit": "4.0.*",
             "satooshi/php-coveralls": "dev-master"
         },
-        "time": "2014-03-30 21:04:41",
+        "time": "2014-04-08 21:15:51",
         "type": "library",
         "extra": {
             "branch-alias": {
