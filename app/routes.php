@@ -106,10 +106,10 @@ Route::get('users', function()
     return View::make('users')->with('users', $users);
 });
 
-Route::get('logged-in', function()
+Route::get('logged-in', array('as' => 'logged-in', function()
 {
     return "Logged in!";
-});
+}));
 
 Route::get('user-created', function()
 {
@@ -149,7 +149,7 @@ Route::get('test-validation', function()
 	$site->addressPostcode = '3206';
 	$site->phone = '03 9690 2377';
 	$site->openingHours = '03 9690 2377';
-	var_dump($site->save());
+/* 	var_dump($site->save()); */
 });
 
 Route::get('test-address', function()
@@ -192,7 +192,7 @@ Route::get('test', function(){
   echo WebsiteModel::greeting();
 });
 
-Route::resource('site', 'SiteController');
+Route::resource('user', 'UserController');
 
 Route::get('env', function(){
   return App::environment();

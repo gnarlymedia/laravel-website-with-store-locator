@@ -1,6 +1,6 @@
 <?php
 
-class BasicCrawlerRootTest extends TestCase {
+class RootCrawlerTest extends TestCase {
 
 	/**
 	 * A basic functional test example.

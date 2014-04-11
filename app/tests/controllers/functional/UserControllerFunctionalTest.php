@@ -1,12 +1,12 @@
 <?php
  
-class SiteControllerFunctionalTest extends TestCase {
+class UserControllerFunctionalTest extends TestCase {
  
 	public function setUp()
 	{
 		parent::setUp();
 		
-		$this->mock = $this->mock('WebsiteModel\Storage\Site\SiteRepository');
+		$this->mock = $this->mock('WebsiteModel\Storage\User\UserRepository');
 	}
 	
 	public function mock($class)
@@ -28,7 +28,7 @@ class SiteControllerFunctionalTest extends TestCase {
 	{
 		$this->mock->shouldReceive('all')->once();
 		
-		$this->call('GET', 'site');
+		$this->call('GET', 'user');
 		
 		$this->assertResponseOk();
 	}
@@ -42,9 +42,9 @@ class SiteControllerFunctionalTest extends TestCase {
 				'errors' => array()
 			)));
 		
-		$this->call('POST', 'site');
+		$this->call('POST', 'user');
 		
-		$this->assertRedirectedToRoute('site.create');
+		$this->assertRedirectedToRoute('user.create');
 		$this->assertSessionHasErrors();
 	}
 	
@@ -56,8 +56,8 @@ class SiteControllerFunctionalTest extends TestCase {
 				'isSaved' => true
 			)));
 		
-		$this->call('POST', 'site');
-		$this->assertRedirectedToRoute('site.index');
+		$this->call('POST', 'user');
+		$this->assertRedirectedToRoute('user.index');
 		$this->assertSessionHas('flash');
 	}
 	
@@ -67,14 +67,18 @@ class SiteControllerFunctionalTest extends TestCase {
 			->once()
 			->with(1);
 		
-		$this->call('GET', 'site/1');
+		$this->call('GET', 'user/1');
 		
 		$this->assertResponseOk();
 	}
 	
 	public function testEdit()
 	{
-		$this->call('GET', 'site/1/edit');
+		$this->mock->shouldReceive('find')
+			->once()
+			->with(1);
+	
+		$this->call('GET', 'user/1/edit');
 		
 		$this->assertResponseOk();
 	}
@@ -88,18 +92,10 @@ class SiteControllerFunctionalTest extends TestCase {
 				'isSaved' => false,
 				'errors' => array()
 			)));
-
-		$this->mock->shouldReceive('find')
-			->once()
-			->with(1)
-			->andReturn(Mockery::mock(array(
-				'isSaved' => false,
-				'errors' => array()
-			)));
 		
-		$this->call('PUT', 'site/1');
+		$this->call('PUT', 'user/1');
 		
-		$this->assertRedirectedToRoute('site.edit', 1);
+		$this->assertRedirectedToRoute('user.edit', 1);
 		$this->assertSessionHasErrors();
 	}
 	
@@ -112,9 +108,9 @@ class SiteControllerFunctionalTest extends TestCase {
 				'isSaved' => true
 			)));
 		
-		$this->call('PUT', 'site/1');
+		$this->call('PUT', 'user/1');
 		
-		$this->assertRedirectedToRoute('site.show', 1);
+		$this->assertRedirectedToRoute('user.show', 1);
 		$this->assertSessionHas('flash');
 	}
 	
@@ -123,7 +119,7 @@ class SiteControllerFunctionalTest extends TestCase {
 	{
 		$this->mock->shouldReceive('createOneLineAddressSummary')->once();
 		
-		$this->call('GET', 'site/1/createOneLineAddressSummary');
+		$this->call('GET', 'user/1/createOneLineAddressSummary');
 		
 		$this->assertResponseOk();
 	}

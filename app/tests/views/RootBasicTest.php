@@ -1,6 +1,6 @@
 <?php
 
-class HomeBasicTest extends TestCase {
+class RootBasicTest extends TestCase {
 
 	/**
 	 * A basic functional test example.
@@ -9,7 +9,7 @@ class HomeBasicTest extends TestCase {
 	 */
 	public function tests()
 	{
-		$response = $this->call('GET', 'home');
+		$response = $this->call('GET', '/');
 
 		$this->assertTrue($this->client->getResponse()->isOk());
 	}

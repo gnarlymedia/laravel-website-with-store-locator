@@ -65,8 +65,6 @@ class ModelsUnitAddressTest extends TestCase {
 		// Save the errors
 		$errors = $address->errors()->all();
 		
-		var_dump($errors);
-		
 		// There should be 1 error
 		$this->assertCount(4, $errors);
 		

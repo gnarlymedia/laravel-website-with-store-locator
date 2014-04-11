@@ -29,7 +29,7 @@ class PasswordController extends BaseController {
 			
 			$user->save();
 			
-			return Redirect::to('login')->with('flash', 'Your password has been reset');
+			return Redirect::to('session.create')->with('flash', 'Your password has been reset');
 		});
 	}
 }

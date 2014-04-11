@@ -55,7 +55,7 @@ class SessionControllerFunctionalTest extends TestCase {
 	 
 	  $this->call('POST', 'login');
 	 
-	  $this->assertRedirectedToRoute('home.index');
+	  $this->assertRedirectedToRoute('logged-in');
 	}
 
 }

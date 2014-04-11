@@ -11,6 +11,4 @@ interface SiteRepository {
 	public function update($input);
 	
 	public function delete($id);
-	
-	public function createOneLineAddressSummary();
 }

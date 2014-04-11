@@ -9,7 +9,7 @@ class ViewsUnitSiteTest extends TestCase {
 	 */
 	public function testCreate()
 	{
-		$this->call('GET', 'site/create');
+		$this->call('GET', 'user/create');
 		
 		$this->assertResponseOk();
 	} 

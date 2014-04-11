@@ -59,7 +59,7 @@ class RegisterControllerFuncTest extends TestCase {
  
     $this->call('POST', 'register');
  
-    $this->assertRedirectedToRoute('user.index');
+    $this->assertRedirectedToRoute('session.create');
     $this->assertSessionHas('flash');
   }
 }
