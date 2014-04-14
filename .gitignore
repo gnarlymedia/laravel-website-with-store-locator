@@ -1,1 +1,4 @@
 /nbproject/private/
+.env.local.php
+apache_error_log
+public/.htaccess

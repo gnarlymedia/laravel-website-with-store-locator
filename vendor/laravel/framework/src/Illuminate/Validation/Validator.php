@@ -648,7 +648,7 @@ class Validator implements MessageProviderInterface {
 	 */
 	protected function validateAccepted($attribute, $value)
 	{
-		$acceptable = array('yes', 'on', '1', 1);
+		$acceptable = array('yes', 'on', '1', 1, true, 'true');
 
 		return ($this->validateRequired($attribute, $value) && in_array($value, $acceptable, true));
 	}
@@ -842,7 +842,7 @@ class Validator implements MessageProviderInterface {
 	 */
 	protected function validateIn($attribute, $value, $parameters)
 	{
-		return in_array($value, $parameters);
+		return in_array((string) $value, $parameters);
 	}
 
 	/**
@@ -855,7 +855,7 @@ class Validator implements MessageProviderInterface {
 	 */
 	protected function validateNotIn($attribute, $value, $parameters)
 	{
-		return ! in_array($value, $parameters);
+		return ! in_array((string) $value, $parameters);
 	}
 
 	/**

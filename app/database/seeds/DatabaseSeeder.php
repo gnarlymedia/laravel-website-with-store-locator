@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder {
         $this->call('SiteTableSeeder');
         $this->call('UserTableSeeder');
         $this->call('PatientTableSeeder');
+        $this->call('MarkersTableSeeder');
 
         $this->command->info('Site table seeded!');
 	}
@@ -45,6 +46,42 @@ class UserTableSeeder extends Seeder {
     }
 }
 
+class MarkersTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('markers')->delete();
+        
+        // Our test marker(s)
+        // Head office
+		$marker = Marker::create(array(
+			'name' => 'Capital Radiology Head Office',
+			'address' => 'Level 3, 81 Lorimer Street, Docklands, VIC 3008',
+			'lat' => '-37.824346',
+			'lng' => '144.942316'
+		));
+
+		$marker = Marker::create(array(
+			'name' => 'Kilmore Imaging',
+			'address' => 'Rutledge Street Kilmore VIC 3764',
+			'lat' => '-37.301622',
+			'lng' => '144.958031'
+		));
+
+		$faker = Faker\Factory::create();
+		 
+		for ($i = 0; $i < 50; $i++)
+		{
+		  $marker = Marker::create(array(
+			'name' => $faker->lastName,
+			'address' => $faker->address,
+			'lat' => $faker->latitude,
+			'lng' => $faker->longitude
+		  ));
+		}        
+    }
+}
+
 class PatientTableSeeder extends Seeder {
 
     public function run()
@@ -52,7 +89,6 @@ class PatientTableSeeder extends Seeder {
         DB::table('patients')->delete();
 
 		$faker = Faker\Factory::create();
-/* 		$faker->addProvider(new Faker\Provider\ro_RO\PhoneNumber($faker)); */
 		 
 		for ($i = 0; $i < 20; $i++)
 		{

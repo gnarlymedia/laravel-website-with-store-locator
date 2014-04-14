@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'capradtestgrunt',
-			'username'  => 'capradtestgrunt',
-			'password'  => 'BUhnZN6UB8Phjh2K',
+			'database'  => $_ENV['DATABASE_NAME'],
+			'username'  => $_ENV['DATABASE_USER'],
+			'password'  => $_ENV['DATABASE_PASSWORD'],
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

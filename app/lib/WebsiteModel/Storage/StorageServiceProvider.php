@@ -20,6 +20,11 @@ class StorageServiceProvider extends ServiceProvider {
       'WebsiteModel\Storage\Patient\PatientRepository',
       'WebsiteModel\Storage\Patient\EloquentPatientRepository'
     );
+    
+    $this->app->bind(
+      'WebsiteModel\Storage\Marker\MarkerRepository',
+      'WebsiteModel\Storage\Marker\MarkerPatientRepository'
+    );
   }
  
 }

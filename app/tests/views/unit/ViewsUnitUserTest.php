@@ -1,6 +1,6 @@
 <?php
 
-class ViewsUnitSiteTest extends TestCase {
+class ViewsUnitUserTest extends TestCase {
 
 	/**
 	 * A basic functional test example.

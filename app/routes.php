@@ -18,6 +18,16 @@ Route::get('/', function()
 	return View::make('navbar1');
 });
 
+Route::get('locations', array('as' => 'locations', function()
+{
+	return View::make('locations');
+}));
+
+Route::get('google-locations', array('as' => 'locations', function()
+{
+	return View::make('google-locations');
+}));
+
 // Theme
 Route::get('theme/', function()
 {
