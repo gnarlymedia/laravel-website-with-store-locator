@@ -9,6 +9,7 @@
 <script type="text/javascript" src="/assets/javascript/geometa.js"></script>
 <style type="text/css">
   *, html { margin:0; padding:0 }
+  body { margin: 10px; }
   div#map_canvas { width:100%; height:100%; }
   div#info { width:100%; position:absolute; overflow:hidden; text-align:center; top:0;
     left:0; }
