@@ -62,11 +62,14 @@
 	    <div id="about-us-panel">
 		  <h1>About Us</h1>
 		  
-		  <p>From a genesis of a single clinic created in 1999, Capital Radiology has brought together private service providers and through organic growth to become Victoria’s second largest provider network of Diagnostic Imaging facilities.</p>
-		  <p>With facilities across the Melbourne metropolitan area and rural Victoria, led by Specialist Diagnostic Imaging Consultants, Capital Radiology provide comprehensive diagnostic support to referring clinicians and patients across all imaging modalities.</p>
-		  <p>With a philosophy of putting the patient first, we provide fast, reliable quality diagnostic imaging. With many scans Bulk Billed, Capital Radiology is the affordable choice for patients and referring clinicians.</p>
+		  <div>
+  		  	<img src="/assets/images/iStock_6.jpg" alt="iStock_6" width="200" height="200" class="sidebar-right sub-image" />
+			  <p>From a genesis of a single clinic created in 1999, Capital Radiology has brought together private service providers and through organic growth to become Victoria’s second largest provider network of Diagnostic Imaging facilities.</p>
+			  <p>With facilities across the Melbourne metropolitan area and rural Victoria, led by Specialist Diagnostic Imaging Consultants, Capital Radiology provide comprehensive diagnostic support to referring clinicians and patients across all imaging modalities.</p>
+			  <p>With a philosophy of putting the patient first, we provide fast, reliable quality diagnostic imaging. With many scans Bulk Billed, Capital Radiology is the affordable choice for patients and referring clinicians.</p>
+		  </div>
 		  
-		  <div class="container">
+		  <div class="clear">
 			  <div class="page-header">
 		        <h1>Alerts</h1>
 			  </div>
