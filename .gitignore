@@ -2,3 +2,4 @@
 .env.local.php
 apache_error_log
 public/.htaccess
+public/assets/php/phpsqlsearch_dbinfo.php

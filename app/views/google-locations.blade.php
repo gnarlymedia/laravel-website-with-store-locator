@@ -12,7 +12,7 @@
   body { margin: 10px; }
   div#map_canvas { width:100%; height:100%; }
   div#info { width:100%; position:absolute; overflow:hidden; text-align:center; top:0;
-    left:0; }
+    left:0; font-size: small; }
   .lightBox {
     filter:alpha(opacity=60);
     -moz-opacity:0.6;
@@ -249,10 +249,11 @@ function searchLocations() {
     <div id="addressFinder">
      <input type="text" id="addressInput" size="50"/>
     <select id="radiusSelect" onchange="">
-      <option value="20000" selected>20000km</option>
       <option value="25">25km</option>
+      <option value="50">50km</option>
       <option value="100">100km</option>
       <option value="200">200km</option>
+      <option value="20000" selected>20000km</option>
     </select>
 
     <input type="button" onclick="searchLocations()" value="Search"/>

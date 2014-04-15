@@ -29,7 +29,7 @@ Route::get('google-locations', array('as' => 'locations', function()
 }));
 
 // Theme
-Route::get('theme/', function()
+Route::get('theme', function()
 {
 	return View::make('theme1');
 });
@@ -49,6 +49,10 @@ Route::get('theme/contact', function()
 	return View::make('theme3');
 });
 
+Route::get('theme/stellar', function()
+{
+	return View::make('theme2-stellar');
+});
 
 // Navbar
 Route::get('navbar/', function()
@@ -208,9 +212,22 @@ Route::get('env', function(){
   return App::environment();
 });
 
+// Splash
+// Normal
 Route::get('splash', function()
 {
 	return View::make('splash');
+});
+
+// Stellar
+Route::get('splash-stellar', function()
+{
+	return View::make('splash-stellar');
+});
+
+Route::get('off-canvas', function()
+{
+	return View::make('off-canvas');
 });
 
 Route::get('register', array(

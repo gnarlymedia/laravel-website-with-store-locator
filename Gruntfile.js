@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         src: [
           './bower_components/jquery/dist/jquery.js',
           './bower_components/bootstrap/dist/js/bootstrap.js',
-          './bower_components/jquery.stellar/jquery.stellar.min.js',
+          './bower_components/jquery.stellar/jquery.stellar.js',
           './bower_components/bootstrap/docs/assets/js/vendor/holder.js',
           './app/assets/javascript/frontend.js'
         ],
@@ -79,19 +79,24 @@ module.exports = function(grunt) {
             './bower_components/bootstrap/dist/js/bootstrap.js',
             './app/assets/javascript/frontend.js'
             ],
-          tasks: ['concat:js_frontend','uglify:frontend'],     //tasks to run
+          tasks: [     								//tasks to run
+          	'concat:js_frontend',
+          	'uglify:frontend'
+          ],
           options: {
             livereload: true                        //reloads the browser
           }
         },
         js_backend: {
-          files: [
-            //watched files
+          files: [									//watched files
             './bower_components/jquery/jquery.js',
             './bower_components/bootstrap/dist/js/bootstrap.js',
             './app/assets/javascript/backend.js'
           ],   
-          tasks: ['concat:js_backend','uglify:backend'],     //tasks to run
+          tasks: [		     						//tasks to run
+          	'concat:js_backend',
+          	'uglify:backend'
+          ],
           options: {
             livereload: true                        //reloads the browser
           }
