@@ -1,9 +1,9 @@
 <?php  
-/* require("phpsqlsearch_dbinfo.php"); */
+/* require("/assets/php/phpsqlsearch_dbinfo.php"); */
 
-$username="capradtestgrunt";
-$password="BUhnZN6UB8Phjh2K";
-$database="capradtestgrunt";
+$username='capradtestgrunt';
+$password='BUhnZN6UB8Phjh2K';
+$database='capradtestgrunt';
 
 /*
 $database  => $_ENV['DATABASE_NAME'];
@@ -34,7 +34,7 @@ if (!$db_selected) {
 }
 
 // Search the rows in the markers table
-$query = sprintf("SELECT address, name, lat, lng, ( 3959 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance FROM markers HAVING distance < '%s' ORDER BY distance LIMIT 0 , 20",
+$query = sprintf("SELECT address, name, lat, lng, ( 6371 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance FROM markers HAVING distance < '%s' ORDER BY distance LIMIT 0 , 20",
   mysql_real_escape_string($center_lat),
   mysql_real_escape_string($center_lng),
   mysql_real_escape_string($center_lat),

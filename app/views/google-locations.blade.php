@@ -8,7 +8,7 @@
   src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="/assets/javascript/geometa.js"></script>
 <style type="text/css">
-  *, html { margin:0; padding:0 }
+  html { margin:0; padding:0 }
   body { margin: 10px; }
   div#map_canvas { width:100%; height:100%; }
   div#info { width:100%; position:absolute; overflow:hidden; text-align:center; top:0;
@@ -99,7 +99,7 @@
     var coords = position.coords || position.coordinate || position;
     var latLng = new google.maps.LatLng(coords.latitude, coords.longitude);
     map.setCenter(latLng);
-    map.setZoom(12);
+    map.setZoom(10);
     var marker = new google.maps.Marker({
 	    map: map,
 	    position: latLng,
@@ -249,10 +249,10 @@ function searchLocations() {
     <div id="addressFinder">
      <input type="text" id="addressInput" size="50"/>
     <select id="radiusSelect" onchange="">
-      <option value="20000" selected>20000mi</option>
-      <option value="25">25mi</option>
-      <option value="100">100mi</option>
-      <option value="200">200mi</option>
+      <option value="20000" selected>20000km</option>
+      <option value="25">25km</option>
+      <option value="100">100km</option>
+      <option value="200">200km</option>
     </select>
 
     <input type="button" onclick="searchLocations()" value="Search"/>
