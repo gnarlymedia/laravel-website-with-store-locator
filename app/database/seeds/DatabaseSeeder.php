@@ -26,23 +26,27 @@ class UserTableSeeder extends Seeder {
     {
         DB::table('users')->delete();
 
+		$faker = Faker\Factory::create();
+		
+		for ($i = 0; $i < 40; $i++)
+		{
+			$password = $faker->word;
+		
+			$user = User::create(array(
+			    'username' => $faker->userName,
+			    'email' => $faker->email,
+			    'password' => $password,
+				'password_confirmation' => $password
+			));
+		}
+		
 		// Our test user
 		$user = User::create(array(
 			'username' => 'capitalradio',
 			'email' => 'capitalradio12345@gmail.com',
-			'password' => 'capital381'
+			'password' => 'capital123',
+			'password_confirmation' => 'capital123'
 		));
-
-		$faker = Faker\Factory::create();
-		 
-		for ($i = 0; $i < 20; $i++)
-		{
-		  $user = User::create(array(
-		    'username' => $faker->userName,
-		    'email' => $faker->email,
-		    'password' => $faker->word
-		  ));
-		}        
     }
 }
 
