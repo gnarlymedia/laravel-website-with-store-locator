@@ -58,12 +58,14 @@ class MarkersTableSeeder extends Seeder {
         
         // Our test marker(s)
         // Head office
+/*
 		$marker = Marker::create(array(
 			'name' => 'Capital Radiology Head Office',
 			'address' => 'Level 3, 81 Lorimer Street, Docklands, VIC 3008',
 			'lat' => '-37.824346',
 			'lng' => '144.942316'
 		));
+*/
 
 		$marker = Marker::create(array(
 			'name' => 'Kilmore Imaging',
@@ -71,6 +73,27 @@ class MarkersTableSeeder extends Seeder {
 			'lat' => '-37.301622',
 			'lng' => '144.958031'
 		));
+		
+		$marker = Marker::create(array(
+			'name' => 'Brunswick',
+			'address' => '9 Blyth Street Brunswick VIC 3056',
+			'lat' => '-37.765394',
+			'lng' => '144.963656'
+		));
+		
+		$marker = Marker::create(array(
+			'name' => 'Epping',
+			'address' => '2 Supply Drive Epping VIC 3076',
+			'lat' => '-37.660000',
+			'lng' => '145.026277'
+		));
+		
+		$marker = Marker::create(array(
+			'name' => 'Broadford',
+			'address' => '81 High Street Broadford VIC 3658',
+			'lat' => '-37.204205',
+			'lng' => '145.046741'
+		));		
 
 		$faker = Faker\Factory::create();
 		 

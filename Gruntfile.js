@@ -107,7 +107,8 @@ module.exports = function(grunt) {
             './app/routes.php',
             './app/views/*',
             './app/views/layouts/*',
-            './app/models/*'
+            './app/models/*',
+            './app/views/google-locations.blade.php'
           ],   
 /*           tasks: [''],    							//tasks to run */
           options: {

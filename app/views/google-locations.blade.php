@@ -13,6 +13,7 @@
   div#map_canvas { width:100%; height:100%; }
   div#info { width:100%; position:absolute; overflow:hidden; text-align:center; top:0;
     left:0; font-size: small; }
+  div#info_msg { position:relative; margin:0 auto; top:50% }
   .lightBox {
     filter:alpha(opacity=60);
     -moz-opacity:0.6;
@@ -33,8 +34,10 @@
 	var locationSelect;
 	var radiusSelect;
 	var currentCentre;
+	var latLng;
   
   function initialise() {
+/*
     var latlng = new google.maps.LatLng(-37.824329,144.942257);
     var myOptions = {
       zoom: 12,
@@ -44,6 +47,7 @@
       mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}
     }
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+*/
     prepareGeolocation();
     doGeolocation();
     
@@ -97,14 +101,32 @@
   function positionSuccess(position) {
     // Centre the map on the new location
     var coords = position.coords || position.coordinate || position;
-    var latLng = new google.maps.LatLng(coords.latitude, coords.longitude);
-    map.setCenter(latLng);
-    map.setZoom(10);
+    latLng = new google.maps.LatLng(coords.latitude, coords.longitude);
+    
+    var myOptions = {
+/*       zoom: 12, */
+      center: latLng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: false,
+      mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}
+    }
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        
     var marker = new google.maps.Marker({
 	    map: map,
 	    position: latLng,
-	    title: 'Why, there you are!'
+	    title: 'You are here',
+	    icon: {
+        	url: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+		},
     });
+    
+   	var html = "You are here";
+    
+    var youInfoWindow = new google.maps.InfoWindow();
+	youInfoWindow.setContent(html);
+	youInfoWindow.open(map, marker);
+    
     document.getElementById('info').innerHTML = 'Looking for <b>' +
         coords.latitude + ', ' + coords.longitude + '</b>...';
 
@@ -124,7 +146,9 @@
 				}
 				marker.setTitle(resp[0].formatted_address);
 			}
-			document.getElementById('info').innerHTML = place;
+			var infoObject = document.getElementById('info');
+			infoObject.innerHTML = place;
+/* 			infoObject.height = inherit; */
 			
 			currentCentre = resp[0].geometry.location;
 			
@@ -186,6 +210,7 @@ function searchLocations() {
          createMarker(latlng, name, address);
          bounds.extend(latlng);
        }
+       bounds.extend(latLng);
        map.fitBounds(bounds);
        locationSelect.style.visibility = "visible";
        locationSelect.onchange = function() {
@@ -199,8 +224,12 @@ function searchLocations() {
       var html = "<b>" + name + "</b> <br/>" + address;
       var marker = new google.maps.Marker({
         map: map,
-        position: latlng
+        position: latlng,
+        icon: {
+        	url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+		},
       });
+      
       google.maps.event.addListener(marker, 'click', function() {
         infoWindow.setContent(html);
         infoWindow.open(map, marker);
@@ -211,7 +240,7 @@ function searchLocations() {
     function createOption(name, distance, num) {
       var option = document.createElement("option");
       option.value = num;
-      option.innerHTML = name + " (" + distance.toFixed(1) + " mi)";
+      option.innerHTML = name + " (" + distance.toFixed(1) + " km)";
       locationSelect.appendChild(option);
     }
 
@@ -249,11 +278,13 @@ function searchLocations() {
     <div id="addressFinder">
      <input type="text" id="addressInput" size="50"/>
     <select id="radiusSelect" onchange="">
+      <option value="5">5km</option>
+      <option value="10" selected>10km</option>
       <option value="25">25km</option>
       <option value="50">50km</option>
       <option value="100">100km</option>
       <option value="200">200km</option>
-      <option value="20000" selected>20000km</option>
+      <option value="20000">20000km</option>
     </select>
 
     <input type="button" onclick="searchLocations()" value="Search"/>
