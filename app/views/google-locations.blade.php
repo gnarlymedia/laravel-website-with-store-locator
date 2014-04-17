@@ -124,8 +124,11 @@
    	var html = "You are here";
     
     var youInfoWindow = new google.maps.InfoWindow();
+    youInfoWindow.visibility = false;
 	youInfoWindow.setContent(html);
 	youInfoWindow.open(map, marker);
+
+    youInfoWindow.visibility = true;
     
     document.getElementById('info').innerHTML = 'Looking for <b>' +
         coords.latitude + ', ' + coords.longitude + '</b>...';

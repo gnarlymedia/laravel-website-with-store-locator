@@ -1,9 +1,11 @@
 <?php  
-/* require("/assets/php/phpsqlsearch_dbinfo.php"); */
+require("phpsqlsearch_dbinfo.php");
 
+/*
 $username='capradtestgrunt';
 $password='BUhnZN6UB8Phjh2K';
 $database='capradtestgrunt';
+*/
 
 /*
 $database  => $_ENV['DATABASE_NAME'];

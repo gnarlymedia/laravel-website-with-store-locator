@@ -1,5 +1,5 @@
 <?
-$username='capradtestgrunt';
-$password='BUhnZN6UB8Phjh2K';
-$database='capradtestgrunt';
+$database='gnarlym_testgrunt';
+$username='gnarlym_testgrnt';
+$password='#8&zS8]l}$eV';
 ?>
