@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'Australia/Melbourne',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -108,6 +108,9 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'WebsiteModel\Storage\StorageServiceProvider',
+		'Clockwork\Support\Laravel\ClockworkServiceProvider',
+		'Way\Form\FormServiceProvider',
+		'Former\FormerServiceProvider'
 
 	),
 
@@ -143,6 +146,7 @@ return array(
 		'Blade'           => 'Illuminate\Support\Facades\Blade',
 		'Cache'           => 'Illuminate\Support\Facades\Cache',
 		'ClassLoader'     => 'Illuminate\Support\ClassLoader',
+		'Clockwork' 	  => 'Clockwork\Support\Laravel\Facade',
 		'Config'          => 'Illuminate\Support\Facades\Config',
 		'Controller'      => 'Illuminate\Routing\Controller',
 		'Cookie'          => 'Illuminate\Support\Facades\Cookie',
@@ -152,6 +156,7 @@ return array(
 		'Event'           => 'Illuminate\Support\Facades\Event',
 		'File'            => 'Illuminate\Support\Facades\File',
 		'Form'            => 'Illuminate\Support\Facades\Form',
+		'Former' 		  => 'Former\Facades\Former',
 		'Hash'            => 'Illuminate\Support\Facades\Hash',
 		'HTML'            => 'Illuminate\Support\Facades\HTML',
 		'Input'           => 'Illuminate\Support\Facades\Input',
@@ -173,7 +178,7 @@ return array(
 		'Str'             => 'Illuminate\Support\Str',
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
-		'View'            => 'Illuminate\Support\Facades\View',
+		'View'            => 'Illuminate\Support\Facades\View'
 
 	),
 

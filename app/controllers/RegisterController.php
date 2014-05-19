@@ -28,13 +28,26 @@ class RegisterController extends BaseController {
  
     if($s->isSaved())
     {
-      return Redirect::route('session.create')
-        ->with('flash', 'The new user has been created');
+/*       return Redirect::route('session.create')
+		->with('flash', 'The new user has been created'); */
+		
+		// Try to log the user in
+		Auth::login($s);
+		
+		if (Auth::check())
+		{
+			return Redirect::intended('logged-in')
+				->with('message', 'The new user has been created');
+		}
+		else
+		{
+			return Redirect::route('session.create')
+				->with('flash', 'The new user has been created');
+		}
     }
  
-    return Redirect::route('register.index')
-      ->withInput()
-      ->withErrors($s->errors());
-  }
- 
+	return Redirect::route('register.index')
+		->withInput()
+		->withErrors($s->errors());
+  } 
 }

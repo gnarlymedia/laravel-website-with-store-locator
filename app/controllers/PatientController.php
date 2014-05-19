@@ -89,6 +89,7 @@ class PatientController extends BaseController {
 	 */
 	public function update($id)
 	{
+		ChromePhp::log('update');
 		$s = $this->patient->update($id);
 		
 		if ($s->isSaved()) {

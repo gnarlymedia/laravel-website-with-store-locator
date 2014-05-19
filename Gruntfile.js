@@ -25,6 +25,7 @@ module.exports = function(grunt) {
         src: [
           './bower_components/jquery/dist/jquery.js',
           './bower_components/bootstrap/dist/js/bootstrap.js',
+/*           './bower_components/bootstrap/js/modal.js', */
           './bower_components/jquery.stellar/jquery.stellar.js',
           './bower_components/bootstrap/docs/assets/js/vendor/holder.js',
           './app/assets/javascript/frontend.js'
@@ -105,10 +106,12 @@ module.exports = function(grunt) {
           files: [
             //watched files
             './app/routes.php',
-            './app/views/*',
-            './app/views/layouts/*',
-            './app/models/*',
-            './app/views/google-locations.blade.php'
+            './app/views/**',
+            './app/views/*/**',
+            './app/views/layouts/**',
+            './app/models/**',
+            './app/views/google-locations.blade.php',
+            './app/controllers/**'        
           ],   
 /*           tasks: [''],    							//tasks to run */
           options: {
@@ -132,7 +135,16 @@ module.exports = function(grunt) {
           	'app/tests/views/*'],
           tasks: ['phpunit']
         }
-      }
+      },
+      'angular-builder': {
+	    options: {
+	        main: 'mainModuleName'
+	    },
+	    app: {
+	        src:  'src/**/*.js',
+	        dest: 'build/project.js'
+	    },
+	  },
     });
 
   // Plugin loading
@@ -141,8 +153,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-phpunit');
+  grunt.loadNpmTasks('grunt-angular-builder');
 
   // Task definition
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask ('release', ['angular-builder']);
+  grunt.registerTask ('debug', ['angular-builder::debug']);
 
 };

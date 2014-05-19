@@ -16,7 +16,8 @@ class Marker extends Magniloquent {
 		'name',
 		'address',
 		'lat',
-		'lng'
+		'lng',
+		'services'
 	);
 
 	// Prevents the listed columns from mass assignment
@@ -27,20 +28,14 @@ class Marker extends Magniloquent {
 	 */
 	public static $rules = array(
 		"save" => array(
-			'name' => 'required',
-			'address' => 'required',
-			'lat' => 'required',
-			'lng' => 'required'
+			'name' => 'required'
 		),
 		"create" => array(),
 		"update" => array()
 	);
 
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = array(
-	);
+	public function modalities()
+    {
+        return $this->belongsToMany('Modality');
+    }
 }

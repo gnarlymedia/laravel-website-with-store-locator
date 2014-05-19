@@ -12,5 +12,12 @@ class ViewsUnitUserTest extends TestCase {
 		$this->call('GET', 'user/create');
 		
 		$this->assertResponseOk();
-	} 
+	}
+	
+	public function testStellarSplash()
+	{
+		$this->call('GET', 'splash-stellar');
+		
+		$this->assertResponseOk();
+	}
 }

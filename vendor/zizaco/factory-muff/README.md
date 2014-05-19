@@ -4,6 +4,10 @@ FactoryMuff
 ![factory muff poster](https://dl.dropbox.com/u/12506137/libs_bundles/factorymuff.png)
 
 [![Build Status](https://api.travis-ci.org/Zizaco/factory-muff.png)](https://travis-ci.org/Zizaco/factory-muff)
+[![Latest Stable Version](https://poser.pugx.org/zizaco/factory-muff/v/stable.png)](https://packagist.org/packages/zizaco/factory-muff)
+[![Latest Unstable Version](https://poser.pugx.org/zizaco/factory-muff/v/unstable.png)](https://packagist.org/packages/zizaco/factory-muff)
+[![Total Downloads](https://poser.pugx.org/zizaco/factory-muff/downloads.png)](https://packagist.org/packages/zizaco/factory-muff)
+[![License](https://poser.pugx.org/zizaco/factory-muff/license.png)](https://packagist.org/packages/zizaco/factory-muff)
 [![ProjectStatus](http://stillmaintained.com/Zizaco/factory-muff.png)](http://stillmaintained.com/Zizaco/factory-muff)
 
 The goal of this Package is to enable the rapid creation of objects for the purpose of testing. Basically a "[factory\_girl\_rails](https://github.com/thoughtbot/factory_girl_rails)" simplified for use with PHP.
@@ -46,6 +50,8 @@ class Message extends Eloquent
         'subject' => 'string',
         'address' => 'email',
         'message' => 'text',
+        'phone_number' => 'integer|8',
+        'created' => 'date|Ymd h:s',
         'slug' => 'call|makeSlug|string',
     );
 
@@ -111,6 +117,10 @@ class TestUserModel extends PHPUnit_Framework_TestCase {
  * An word from the wordlist + domain. Ex: "smart@example.com", "Brasil@nonexist.org"
 * text
  * A text of about 7 words from the list. Ex: "something table underrated blackboard"
+* integer|length
+ * Return an integer of the specified length
+* date|format
+ * Return the current date, using the supplied format. (See php.net/date for formats)
 * factory|ModelName
  * Will trigger the __create__ for the given model and return it's id.
 * call|staticMethodName

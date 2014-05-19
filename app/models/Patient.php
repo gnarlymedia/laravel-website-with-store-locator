@@ -32,14 +32,36 @@ class Patient extends Eloquent {
 		'email',
 		'dateDeceased',
 		'address',
-		'condition'
+		'condition',
+		'user_id'
 	);
-
+	
 	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
+	 * Validation rules
 	 */
-/* 	protected $hidden = array('password'); */
-
+	public static $rules = array(
+		"save" => array(
+			'patientID' => 'required',
+			'user_id' => 'required',
+		),
+		"create" => array(),
+		"update" => array()
+	);
+	
+	protected $niceNames = array(
+    	'email'     => 'Email address',
+    	'DOB'     => 'Date of birth',
+    	'firstName'     => 'First name',
+    	'surname'     => 'Surname',
+    	'homePhone'     => 'Phone number',
+    	'medicareNumber' => 'Medicare number'
+	);
+	
+	/**
+	 * User relationship
+	 */
+	public function user()
+	{
+		return $this->belongsTo('User');
+	}
 }

@@ -58,6 +58,15 @@
 	/* custom configuration goes here (www.olark.com/documentation) */
 	olark.identify('8438-726-10-3224');/*]]>*/</script><noscript><a href="https://www.olark.com/site/8438-726-10-3224/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
 	<!-- end olark code -->
-    
+        
+    <!--Start of Zopim Live Chat Script-->
+	<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+		$.src='//v2.zopim.com/?20HOsJPdhfQe7tzvzqvfhFEySwiP7Kzk';z.t=+new Date;$.
+		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+	</script>
+	<!--End of Zopim Live Chat Script-->
   </body>
 </html>

@@ -21,17 +21,17 @@ class EloquentPatientRepository implements PatientRepository {
 	
 	public function update($id)
 	{
-		$user = $this->find($id);
+		$patient = $this->find($id);
 		
-		$user->save(\Input::all());
+		$patient->save(\Input::all());
 		
-		return $user;
+		return $patient;
 	}
 	
 	public function delete($id)
 	{
-		$user = $this->find($id);
+		$patient = $this->find($id);
 		
-		return $user->delete();
+		return $patient->delete();
 	}
 }

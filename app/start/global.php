@@ -17,6 +17,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
+	app_path().'/composers',
 
 ));
 
@@ -31,7 +32,12 @@ ClassLoader::addDirectories(array(
 |
 */
 
-Log::useFiles(storage_path().'/logs/laravel.log');
+// Default setting
+//Log::useFiles(storage_path().'/logs/laravel.log');
+
+// My setting to use daily log files
+$logFile = 'laravel.log';
+Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +55,10 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+	
+/* 	console.log("test"); */
+	
+/* 	Console::log('test'); */
 });
 
 /*
@@ -79,3 +89,15 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+
+/**
+ * Register a new blade tag to decalre php variables
+ *
+ * <code>
+ * {? $old_section = "whatever" ?}
+ * </code>
+ */
+Blade::extend(function($value) {
+    return preg_replace('/\{\?(.+)\?\}/', '<?php ${1} ?>', $value);
+});

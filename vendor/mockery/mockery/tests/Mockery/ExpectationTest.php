@@ -183,6 +183,39 @@ class ExpectationTest extends PHPUnit_Framework_TestCase
         $this->mock->foo();
     }
 
+    public function testAndThrowExceptions()
+    {   
+        $this->mock->shouldReceive('foo')->andThrowExceptions(array(
+            new OutOfBoundsException,
+            new InvalidArgumentException,
+        ));
+
+        try {
+            $this->mock->foo();
+            throw new Exception("Expected OutOfBoundsException, non thrown");
+        } catch (\Exception $e) {
+            $this->assertInstanceOf("OutOfBoundsException", $e, "Wrong or no exception thrown: {$e->getMessage()}");
+        }
+
+        try {
+            $this->mock->foo();
+            throw new Exception("Expected InvalidArgumentException, non thrown");
+        } catch (\Exception $e) {
+            $this->assertInstanceOf("InvalidArgumentException", $e, "Wrong or no exception thrown: {$e->getMessage()}");
+        }
+    }
+
+    /**
+     * @expectedException Mockery\Exception
+     * @expectedExceptionMessage You must pass an array of exception objects to andThrowExceptions
+     */
+    public function testAndThrowExceptionsCatchNonExceptionArgument()
+    {   
+        $this->mock
+            ->shouldReceive('foo')
+            ->andThrowExceptions(array('NotAnException'));
+    }
+
     public function testMultipleExpectationsWithReturns()
     {
         $this->mock->shouldReceive('foo')->with(1)->andReturn(10);
@@ -1725,24 +1758,6 @@ class ExpectationTest extends PHPUnit_Framework_TestCase
         $mock->shouldReceive('foo->bar->baz')->andReturn('Spam!');
         $demeter = new Mockery_UseDemeter($mock);
         $this->assertSame('Spam!', $demeter->doitWithArgs());
-    }
-
-    /**
-     * @expectedException PHPUnit_Framework_Error_Warning
-     * @runInSeparateProcess
-     */
-    public function testPregMatchThrowsDelimiterWarningWithXdebugScreamTurnedOn()
-    {
-        if (!extension_loaded('xdebug')) {
-            $this->markTestSkipped('ext/xdebug not installed');
-        }
-
-        ini_set('xdebug.scream', 1);
-
-        $mock = $this->container->mock('foo');
-        $mock->shouldReceive('foo')->with('bar', 'baz');
-
-        $mock->foo('spam', 'ham');
     }
 
     public function testPassthruEnsuresRealMethodCalledForReturnValues()

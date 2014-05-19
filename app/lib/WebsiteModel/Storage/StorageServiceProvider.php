@@ -23,8 +23,12 @@ class StorageServiceProvider extends ServiceProvider {
     
     $this->app->bind(
       'WebsiteModel\Storage\Marker\MarkerRepository',
-      'WebsiteModel\Storage\Marker\MarkerPatientRepository'
+      'WebsiteModel\Storage\Marker\EloquentMarkerRepository'
+    );
+    
+    $this->app->bind(
+      'WebsiteModel\Storage\Modality\ModalityRepository',
+      'WebsiteModel\Storage\Modality\EloquentModalityRepository'
     );
   }
- 
 }

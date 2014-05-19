@@ -15,7 +15,8 @@
 // General
 Route::get('/', function()
 {
-	return View::make('navbar1');
+/* 	return View::make('navbar1'); */
+	return View::make('splash-stellar');
 });
 
 Route::get('locations', array('as' => 'locations', function()
@@ -54,31 +55,10 @@ Route::get('theme/stellar', function()
 	return View::make('theme2-stellar');
 });
 
-// Navbar
-Route::get('navbar/', function()
-{
-	return View::make('navbar1');
-});
-
-Route::get('navbar/home', function()
-{
-	return View::make('navbar1');
-});
-
-Route::get('navbar/about', function()
-{
-	return View::make('navbar2');
-});
-
-Route::get('navbar/contact', function()
-{
-	return View::make('navbar3');
-});
-
 // Patients
-Route::get('navbar/contact', function()
+Route::get('/patients-home', function()
 {
-	return View::make('navbar3');
+	return View::make('patients-home');
 });
 
 // Authenticated routes
@@ -92,9 +72,55 @@ Route::group(array('before' => 'auth'), function()
 	
 	// Patients
 	Route::resource('patient', 'PatientController');
-  // ...
-});
 
+	// Navbar
+	Route::get('navbar/', function()
+	{
+		return View::make('navbar1');
+	});
+	
+	Route::get('navbar/home', function()
+	{
+		return View::make('navbar1');
+	});
+	
+	Route::get('navbar/about', function()
+	{
+		return View::make('navbar2');
+	});
+	
+	Route::get('navbar/contact', function()
+	{
+		return View::make('navbar3');
+	});
+	
+	Route::get('/patient-portal', function()
+	{
+		return View::make('patient-portal');
+	});
+	
+	Route::get('/patient-details-single', function()
+	{
+		return View::make('patient-details-single')
+			->with('message', 'Your details were loaded successfully');
+	});
+
+	Route::get('/patient-details-multiple', function()
+	{
+		return View::make('patient-details-multiple')
+			->with('message', 'Your details were loaded successfully');
+	});
+
+	Route::get('/patient-details-single', function()
+	{
+		return View::make('patient-details-single')
+			->with('message', 'Your details were loaded successfully');
+	});
+
+	Route::get('/patient-details/{id}', 'PatientControllerExtTest@showDetails');
+
+/* 	Route::get('/patient-details-test', 'PatientControllerExtTest@showTest'); */
+});
 
 Route::get('cover', function()
 {
@@ -122,7 +148,7 @@ Route::get('users', function()
 
 Route::get('logged-in', array('as' => 'logged-in', function()
 {
-    return "Logged in!";
+	return View::make('patient-portal');
 }));
 
 Route::get('user-created', function()
@@ -133,7 +159,12 @@ Route::get('user-created', function()
 Route::resource('user', 'UserController');
 
 // Passwords
-Route: Route::controller('password', 'RemindersController');
+Route::controller('password', 'RemindersController');
+
+// Patients
+Route::resource('patient-ext', 'PatientController');
+
+Route::resource('patient-details-test', 'PatientControllerExtTest');
 
 
 Route::get('password-changed', function()
@@ -206,10 +237,9 @@ Route::get('test', function(){
   echo WebsiteModel::greeting();
 });
 
-Route::resource('user', 'UserController');
-
 Route::get('env', function(){
   return App::environment();
+  return $_ENV['DATABASE_NAME'];
 });
 
 // Splash
@@ -254,3 +284,26 @@ Route::get('logout', array(
   'uses' => 'SessionController@destroy',
   'as' => 'session.destroy'
 ));
+
+Route::get('patient', array(
+  'uses' => 'PatientController@show',
+  'as' => 'patient.show'
+));
+
+Route::post('patient', array(
+  'uses' => 'PatientController@update',
+  'as' => 'patient.update'
+));
+
+// Google locations
+/*
+Route::get('/google-gen-xml', function()
+{
+	return View::make('google-locations.phpsqlsearch_genxml');
+});
+
+Route::get('/google-search-db', function()
+{
+	return View::make('google-locations.phpsqlsearch_dbinfo');
+});
+*/

@@ -16,25 +16,30 @@ class User extends Magniloquent implements UserInterface, RemindableInterface {
 	// Specify which of the columns can be mass assigned.
 	protected $fillable = array(
 		'email',
-		'username',
 		'password',
-		'password_confirmation'
+		'password_confirmation',
+		'dob',
+		'first_name',
+		'surname',
+		'phone_number'
 	);
 
 	// Prevents the listed columns from mass assignment
-	protected $guarded = array('id', 'password');
+	protected $guarded = array('id');
 
 	/**
 	 * Validation rules
 	 */
 	public static $rules = array(
 		"save" => array(
-			'username' => 'required',
 			'email' => 'required|email',
-			'password' => 'required|min:8'
+			'password' => 'required|min:8',
+			'dob' => 'required|date_format:d/m/Y',
+			'first_name' => 'required|alpha_num',
+			'surname' => 'required|alpha_num',
+			'phone_number' => 'required|alpha_num'
 		),
 		"create" => array(
-			'username' => 'unique:users',
 			'email' => 'unique:users',
 			'password' => 'confirmed',
 			'password_confirmation' => 'same:password'
@@ -78,5 +83,33 @@ class User extends Magniloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->email;
 	}
-
+	
+	protected $niceNames = array(
+    	'email'			=> 'Email address',
+    	'dob'			=> 'Date of birth',
+    	'first_name'	=> 'First name',
+    	'surname'		=> 'Surname',
+    	'phone_number'	=> 'Phone number',
+    	'id'			=> 'id'
+	);
+	
+	public function getRememberToken()
+	{
+	    return $this->remember_token;
+	}
+	
+	public function setRememberToken($value)
+	{
+	    $this->remember_token = $value;
+	}
+	
+	public function getRememberTokenName()
+	{
+	    return 'remember_token';
+	}
+	
+	public function patient()
+    {
+        return $this->hasMany('Patient');
+    }
 }

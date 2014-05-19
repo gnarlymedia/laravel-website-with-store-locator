@@ -2,6 +2,7 @@
 
 @section('head')
 	<title>Splash Stellar</title>
+   	{{ HTML::script('/assets/javascript/activate_stellar.js'); }}
 @stop
 
 @section('nav')
@@ -20,8 +21,8 @@
 	  </div>
 	  <div class="navbar-collapse collapse">
 	    <ul class="nav navbar-nav">
-			<li><a href="/theme/home">Home</a></li>
-			<li class="active"><a href="/theme/about">About</a></li>
+			<li class="active"><a href="/theme/home">Home</a></li>
+			<li><a href="/theme/about">About</a></li>
 			<li><a href="/theme/contact">Contact</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -53,6 +54,21 @@
 		  <img src="/assets/images/iStock_5.jpg" alt="iStock_5" width="1600" height="1600" />
 	  </div>
     </div>
+
+	<div id="patients_referrers" class="stellar" data-stellar-ratio="0.75" data-stellar-vertical-offset="0">
+		<a href="/patients-home">
+			<div id="patients">
+				<img data-src="holder.js/200x200" class="img-thumbnail" alt="Patients">
+				<h1>Patients</h1>
+			</div>
+		</a>
+		<a href="http://cap-rad-grunt.local/theme/home">
+			<div id="referrers">
+				<img data-src="holder.js/200x200" class="img-thumbnail" alt="Patients">
+				<h1>Referrers</h1>
+			</div>
+		</a>
+	</div>
 
 	<div role="main" id="about-us-container">
 		<div id="glyphicon">
