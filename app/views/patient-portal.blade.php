@@ -26,33 +26,19 @@
 
 	@if(Auth::user())
 
-		<?php /* $url = URL::action('PatientControllerExtTest@method'); */ ?>
-
 		<a href="patient-details-test" type="button" class="btn btn-lg btn-default">Get my patient details</a>
-
-<!--
-		<?php $forwarding_url; ?>
-
-		@if(count(Auth::user()->patient) > 1)
-			<?php $forwarding_url = 'patient-details-multiple'; ?>
-		@else
-			<?php $forwarding_url = 'patient-details-single'; ?>
-		@endif
-		
-		<a href="<?php echo $forwarding_url ?>" type="button" class="btn btn-lg btn-default">Get my details</a>
--->
 	
 		<h2>Your information</h2>
-		
-		@foreach (Auth::user()['attributes'] as $key => $value)
-			@if (isset(Auth::user()['niceNames'][$key]))
-				<p><h3>{{ Auth::user()['niceNames'][$key] }}</h3><h4>{{ $value }}</h4></p>
-			@endif			
-		@endforeach
-		
-		<h2>Var dump: Auth::user()->patient[0]</h2>
-		{{ var_dump(Auth::user()->patient[0]) }}
-		
+
+		@if(Auth::user()['attributes'])		
+			@foreach (Auth::user()['attributes'] as $key => $value)
+				<?php if (($key) && ($value)) { ?>
+					@if (isset(Auth::user()['niceNames'][$key]))
+						<p><h3>{{ Auth::user()['niceNames'][$key] }}</h3><h4>{{ $value }}</h4></p>
+					@endif
+				<?php } ?>
+			@endforeach
+		@endif		
 	@else
 		<h2>Your information could not be retrieved</h2>
 	@endif

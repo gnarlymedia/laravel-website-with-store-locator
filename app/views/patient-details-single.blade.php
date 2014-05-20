@@ -23,7 +23,8 @@
 @section('content')
 	<h1>Patient details</h1>
 	<p>&nbsp;</p>
-	
+
+
 	@if ($patient)
 	
 		<h2>Your details</h2>

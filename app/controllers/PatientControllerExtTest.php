@@ -35,7 +35,7 @@ class PatientControllerExtTest extends \BaseController {
 		switch (count($patients)) {
 			case 1:
 				{{ ChromePhp::log('case 1'); }}
-				return Redirect::route('patient.edit', array($patients[0]->id));
+				return Redirect::route('patient.edit', array($patients->id));
 /* 				return View::make('patient-details-single', array('patient' => $patients[0])); */
 				break;
 			case 0:

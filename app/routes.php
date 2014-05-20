@@ -16,7 +16,7 @@
 Route::get('/', function()
 {
 /* 	return View::make('navbar1'); */
-	return View::make('splash-stellar');
+	return View::make('splash');
 });
 
 Route::get('locations', array('as' => 'locations', function()
@@ -296,7 +296,6 @@ Route::post('patient', array(
 ));
 
 // Google locations
-/*
 Route::get('/google-gen-xml', function()
 {
 	return View::make('google-locations.phpsqlsearch_genxml');
@@ -306,4 +305,3 @@ Route::get('/google-search-db', function()
 {
 	return View::make('google-locations.phpsqlsearch_dbinfo');
 });
-*/
