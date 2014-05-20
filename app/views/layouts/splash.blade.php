@@ -3,12 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-
-	@yield('head')
 
 	<!-- Compiled -->
    	{{ HTML::script('/assets/javascript/frontend.js'); }}
@@ -17,6 +15,8 @@
 	<!-- Extras -->	
    	{{ HTML::style('/assets/stylesheets/navbar.css'); }}
    	{{ HTML::script('/assets/javascript/iscroll.js'); }}
+   	
+	@yield('head')
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
