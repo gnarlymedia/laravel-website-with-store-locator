@@ -3,8 +3,15 @@
 
 html {
 	height:100%;
+	width:100%;
 }
-
+body {
+	width:100%;
+}
+#centering_container {
+	max-width:2000px;
+	margin:0 auto;
+}
 .pos-relative {
 	position:relative;
 }
@@ -22,6 +29,9 @@ html {
 }
 #background-image {
 	z-index: -1000;
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 #logo {
 	margin: 0 auto 20px auto;
@@ -46,10 +56,11 @@ html {
 #our-story-panel {
 	position: absolute;
 	margin: -20px 0 0 0;
-	padding: 0 80px;
 	background-color: white;
-	height: 410px;
-	z-index: -500;
+	height:410px;
+	z-index:-500;
+	width:100%;
+	padding:0 80px;
 }
 #our-story-container {
 	position:relative;
@@ -74,18 +85,20 @@ html {
 	clear:both;
 }
 a {
-	color: #fff;
+	color: none;
+	text-decoration: none;
 }
 a:hover {
-	color: #ccc;
+	color: none;
+	text-decoration: none;
 }
 #footer {
 	position: fixed;
    	padding: 30px 60px 45px 120px;
-	position: fixed;
 	width: 100%;
 	background-color: white;
-	bottom: 0;
+	bottom:0;
+	left:0;
 }
 #social {
 	float:left;
@@ -95,7 +108,6 @@ a:hover {
 	margin: 0;
 }
 #copyright {
-	position: absolute;
 	float: right;
 	font-size: 10px;
 	bottom: 70px;
