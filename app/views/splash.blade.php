@@ -2,7 +2,7 @@
 
 @section('head')
 	<title>Capital Radiology</title>
-   	{{ HTML::script('/assets/javascript/activate_stellar.js'); }}
+   	{{ HTML::script('/assets/javascript/activate_stellar_iscroll.js'); }}
 @stop
 
 @section('content')
