@@ -17,18 +17,18 @@
 		<img src="/assets/images/logo/capital_radiology.png" alt="Capital Radiology logo" width="180" height="57" id="logo"/>
 		
 		<div>
-			<a href="/patients-home">
-				<img src="/assets/images/buttons/patient_portal.png" alt="Patient portal" width="199" height="58" alt="Patients" />
+			<a href="/theme/home">
+				<img src="/assets/images/buttons/referrer_portal.png" width="199" height="58" alt="Referrer portal" />
 			</a>
 			<img src="/assets/images/elements/vertical_line.png" alt="Vertical line" width="1" height="162" id="vertical_line" />
-			<a href="http://cap-rad-grunt.local/theme/home">
-				<img src="/assets/images/buttons/referrer_portal.png" width="199" height="58" alt="Referrer portal" />
+			<a href="/patients-home">
+				<img src="/assets/images/buttons/patient_portal.png" alt="Patient portal" width="199" height="58" alt="Patients" />
 			</a>
 		</div>
 	</div>
 
 	<div id="our-story-container">
-    	<img src="/assets/images/elements/glyphicon.png" alt="Glyphicon" width="37" height="37" id="glyphicon" />
+    	<img src="/assets/images/elements/glyphicon.png" alt="Glyphicon" width="38" height="38" id="glyphicon" />
 		<div id="our-story-panel">
 			<h1>Our Story</h1>
 			<p>At Capital Radiology we offer premium level imaging and treatment services to the sporting and wider community meaning that you can have access to the same high quality imaging services, personnel, expertise and treatments as Australia’s elite athletes. We are open extended hours during the week and on weekends and free patient parking is available onsite. We invite you to contact us for more information, enquiries or bookings on 1300 X-RAY (9729).</p>
