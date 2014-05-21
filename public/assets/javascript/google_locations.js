@@ -228,8 +228,6 @@ function downloadComplete(data) {
     // Just currentClinics
     var nameOfModalitiesArray = "modalities";
 
-//    var singleClinicModality = {};
-//    var allClinicAndModalities = [];
     var currentClinics = [];
     var singleClinic;
 
@@ -239,25 +237,7 @@ function downloadComplete(data) {
     var markerNodes = xml.documentElement.getElementsByTagName("marker");
     var bounds = new google.maps.LatLngBounds();
 
-    for (var i = 0; i < markerNodes.length; i++) {
-        var name = markerNodes[i].getAttribute("name");
-        var address = markerNodes[i].getAttribute("address");
-        var distance = parseFloat(markerNodes[i].getAttribute("distance"));
-        var latlng = new google.maps.LatLng(
-            parseFloat(markerNodes[i].getAttribute("lat")),
-            parseFloat(markerNodes[i].getAttribute("lng"))
-        );
-        var modality = markerNodes[i].getAttribute("modality");
-
-//        singleClinicModality[nameOfName] = name;
-//        singleClinicModality[nameOfDistance] = distance;
-//        singleClinicModality[nameOfNum] = i;
-//        singleClinicModality[nameOfAddress] = address;
-//        singleClinicModality[nameOfLatLng] = latlng;
-//        singleClinicModality[nameOfModality] = modality;
-//
-//        allClinicAndModalities.push(singleClinicModality);
-
+    function addClinicModalityToCurrentClinics(name, address, distance, latlng, modality) {
         if (allCurrentClinicNames.indexOf(name) == -1) {
             // New clinic
             allCurrentClinicNames.push(name);
@@ -286,9 +266,32 @@ function downloadComplete(data) {
         }
     }
 
+    for (var i = 0; i < markerNodes.length; i++) {
+        var name = markerNodes[i].getAttribute("name");
+        var address = markerNodes[i].getAttribute("address");
+        var distance = parseFloat(markerNodes[i].getAttribute("distance"));
+        var latlng = new google.maps.LatLng(
+            parseFloat(markerNodes[i].getAttribute("lat")),
+            parseFloat(markerNodes[i].getAttribute("lng"))
+        );
+        var modality = markerNodes[i].getAttribute("modality");
+
+        // Check if we should examine this clinic
+        if ((currentModality) && (currentModality != modalitySelectDefaultText)) {
+            // A modality has been selected
+            if (modality == currentModality) {
+                // This modality we've found is the current selected modality  - add to current clinics
+                addClinicModalityToCurrentClinics(name, address, distance, latlng, modality);
+            }
+        } else {
+            // No modality set yet
+            addClinicModalityToCurrentClinics(name, address, distance, latlng, modality);
+        }
+    }
+
     // Set up location selector
     for (j = 0; j < currentClinics.length; j++) {
-        createOptionLocation(currentClinics[j][nameOfName], currentClinics[j][nameOfDistance], currentClinics[j][nameOfNum]);
+        createOptionLocation(currentClinics[j][nameOfName], currentClinics[j][nameOfDistance], j);
     }
 
     // Set up modality selector
@@ -306,27 +309,13 @@ function downloadComplete(data) {
         }
     }
 
-    var markerModalities;
-    var thisLatlng;
-    var clinicsForMarkers = [];
-
     // Set up markers
-    if ((currentModality) && (currentModality != modalitySelectDefaultText)) {
-        // A modality is set
-        for (var l = 0; l < currentClinics.length; l++) {
-            if (currentClinics[l][nameOfModalitiesArray].indexOf(currentModality) != -1) {
-                // Current clinic contains current modality - add to clinics for markers
-                clinicsForMarkers.push(currentClinics[l]);
-            }
-        }
-    } else {
-        // No modality set yet
-        clinicsForMarkers = currentClinics;
-    }
-
-    createMarkers(clinicsForMarkers);
+    createMarkers(currentClinics);
 
     function createMarkers(clinicsForMarkers) {
+        var markerModalities;
+        var thisLatlng;
+
         for (var q = 0; q < clinicsForMarkers.length; q++) {
             thisLatlng = clinicsForMarkers[q][nameOfLatLng];
             markerModalities = makeMarkerModalitiesOutput(clinicsForMarkers[q][nameOfModalitiesArray]);

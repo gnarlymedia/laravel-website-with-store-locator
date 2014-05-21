@@ -12,5 +12,5 @@ window.onload = function() {
 	  // Refreshes parallax content on window load and resize
 	  responsive: true
 	});
-}; 
+};
 */

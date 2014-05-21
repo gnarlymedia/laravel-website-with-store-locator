@@ -26,7 +26,7 @@ module.exports = function(grunt) {
           './bower_components/jquery/dist/jquery.js',
           './bower_components/bootstrap/dist/js/bootstrap.js',
 /*           './bower_components/bootstrap/js/modal.js', */
-          './bower_components/jquery.stellar/jquery.stellar.js',
+/*           './bower_components/jquery.stellar/jquery.stellar.js', */
           './bower_components/bootstrap/docs/assets/js/vendor/holder.js',
           './app/assets/javascript/frontend.js'
         ],
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
             livereload: true                        //reloads the browser
           }
         },
-        php_frontend: {
+        reload_frontend: {
           files: [
             //watched files
             './app/routes.php',
@@ -110,8 +110,8 @@ module.exports = function(grunt) {
             './app/views/*/**',
             './app/views/layouts/**',
             './app/models/**',
-            './app/views/google-locations.blade.php',
-            './app/controllers/**'        
+            './app/controllers/**',
+            './public/assets/stylesheets/**'
           ],   
 /*           tasks: [''],    							//tasks to run */
           options: {

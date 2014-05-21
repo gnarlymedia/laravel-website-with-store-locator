@@ -1,4 +1,4 @@
-@extends('layouts.splash-navbar')
+@extends('layouts.splash-stellar')
 
 @section('head')
 	<title>Splash Stellar</title>

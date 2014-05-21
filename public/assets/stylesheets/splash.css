@@ -1,0 +1,104 @@
+html {
+	height:100%;
+	width:100%;
+}
+body {
+	width:100%;
+	height: 100%;
+	padding-top: 0;
+}
+#centering_container {
+	max-width:1600px;
+	margin:0 auto;
+	position: relative;
+}
+#background-image {
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#logo {
+	margin: 0 auto 30px auto;
+	display: block;
+}
+#portal_buttons {
+	display:block;
+	margin: 0 auto;
+}
+#patients_referrers {
+/*
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+*/
+   width: 599px;
+   height: 321px;
+   position: absolute;
+   left: 50%;
+   top: 57%;
+   margin-left: -300px;
+   margin-top: -160px;
+}
+#patients_referrers * {
+}
+#vertical_line {
+	margin:0 30px;
+}
+#glyphicon {
+	display:block;
+	margin: -20px auto 0 auto;
+	z-index: 1001;
+}
+a {
+	color: none;
+	text-decoration: none;
+}
+a:hover {
+	color: none;
+	text-decoration: none;
+}
+#footer {
+   	padding: 30px 60px 45px 60px;
+	width: 100%;
+	background-color: white;
+}
+#social {
+	float:left;
+}
+#footer img, #footer a {
+	padding: 0;
+	margin: 0;
+}
+#copyright {
+	float:right;
+	font-size: 10px;
+	margin: 50px 0 0 0;
+}
+
+@media only screen and (max-width: 1199px) {
+	#patients_referrers {
+ -webkit-transform: scale(0.8); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.8); /* FF3.5+ */
+      -ms-transform: scale(0.8); /* IE9 */
+       -o-transform: scale(0.8); /* Opera 10.5+ */
+          transform: scale(0.8);
+             /* IE6–IE9 */
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#patients_referrers {
+ -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.5); /* FF3.5+ */
+      -ms-transform: scale(0.5); /* IE9 */
+       -o-transform: scale(0.5); /* Opera 10.5+ */
+          transform: scale(0.5);
+             /* IE6–IE9 */
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+	}
+}
+
+
+

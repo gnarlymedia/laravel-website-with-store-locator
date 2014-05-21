@@ -15,7 +15,6 @@
 // General
 Route::get('/', function()
 {
-/* 	return View::make('navbar1'); */
 	return View::make('splash');
 });
 
@@ -254,6 +253,12 @@ Route::get('splash-stellar', function()
 {
 	return View::make('splash-stellar');
 });
+
+Route::get('splash-stellar-new', function()
+{
+	return View::make('splash-stellar-new');
+});
+
 
 Route::get('off-canvas', function()
 {

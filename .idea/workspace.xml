@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2a764f3-60a1-4672-9496-fef140873b76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PatientControllerExtTest.php" afterPath="$PROJECT_DIR$/app/controllers/PatientControllerExtTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patient-details-single.blade.php" afterPath="$PROJECT_DIR$/app/views/patient-details-single.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patient-portal.blade.php" afterPath="$PROJECT_DIR$/app/views/patient-portal.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/javascript/google_locations.js" afterPath="$PROJECT_DIR$/public/assets/javascript/google_locations.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cap-rad-test-grunt.iws" />
@@ -31,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="google_locations.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="google_locations.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/javascript/google_locations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="0" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="6285">
+            <state line="285" column="16" selection-start="8688" selection-end="8688" vertical-scroll-proportion="0.42319748" vertical-offset="3900" max-vertical-offset="6165">
               <folding />
             </state>
           </provider>
@@ -43,64 +38,9 @@
       <file leaf-file-name="google_locations.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/stylesheets/google_locations.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="12" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="825">
+            <state line="11" column="12" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="825">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patient-portal.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/patient-portal.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="12" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="975">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PatientControllerExtTest.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/PatientControllerExtTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="70" selection-start="782" selection-end="782" vertical-scroll-proportion="0.020519836" vertical-offset="540" max-vertical-offset="2715">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frontend.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="http://cap-rad-grunt.local/assets/javascript/frontend.js">
-          <provider selected="true" editor-type-id="httpFileEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-          <provider selected="true" editor-type-id="httpFileEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patient-details-test" pinned="false" current="false" current-in-tab="false">
-        <entry file="http://cap-rad-grunt.local/patient-details-test">
-          <provider selected="true" editor-type-id="httpFileEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patient-details-single.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/patient-details-single.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1740">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js">
-          <provider selected="true" editor-type-id="httpFileEditor">
-            <state />
           </provider>
         </entry>
       </file>
@@ -132,7 +72,6 @@
         <option value="maps.gstatic.com/intl/en_gb/mapfiles/api-3/16/12/main.js" />
         <option value="maps.gstatic.com/cat_js/intl/en_gb/mapfiles/api-3/16/12/%7Bmain,places%7D.js" />
         <option value="/vm:159" />
-        <option value="$PROJECT_DIR$/public/assets/javascript/google_locations.js" />
         <option value="$PROJECT_DIR$/app/views/google-locations.blade.php" />
         <option value="cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js" />
         <option value="$PROJECT_DIR$/app/views/patient-portal.blade.php" />
@@ -140,6 +79,8 @@
         <option value="cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" />
         <option value="$PROJECT_DIR$/app/views/patient-details-single.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/PatientControllerExtTest.php" />
+        <option value="maps.gstatic.com/cat_js/intl/en_gb/mapfiles/api-3/17/0/%7Bmain,places%7D.js" />
+        <option value="$PROJECT_DIR$/public/assets/javascript/google_locations.js" />
       </list>
     </option>
   </component>
@@ -359,7 +300,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.patient-portal.blade.php">
+  <component name="RunManager" selected="JavaScript Debug.google-locations">
     <configuration default="false" name="google-locations" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://cap-rad-grunt.local/google-locations">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -400,8 +341,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.patient-portal.blade.php" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.google-locations" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.google-locations" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.patient-portal.blade.php" />
       </list>
     </recent_temporary>
   </component>
@@ -453,15 +394,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1282" height="1414" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294753" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294753" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896763" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24939467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31612903" sideWeight="0.4993498" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36132511" sideWeight="0.49959645" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32580644" sideWeight="0.4993498" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24114022" sideWeight="0.49959645" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28248587" sideWeight="0.50065017" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4066358" sideWeight="0.5004035" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -510,17 +451,10 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="83" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/javascript/google_locations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="13" selection-start="8564" selection-end="8564" vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="5415">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/stylesheets/google_locations.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="12" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="825">
@@ -740,13 +674,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3405" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascript/frontend.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776" />
@@ -757,23 +684,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2535" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/javascript/google_locations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="6345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/google-locations.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="960" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/stylesheets/google_locations.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="12" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js">
@@ -796,23 +709,45 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patient-portal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="12" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/patient-details-single.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1740">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1740" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/PatientControllerExtTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="70" selection-start="782" selection-end="782" vertical-scroll-proportion="0.020519836" vertical-offset="540" max-vertical-offset="2715">
+        <state line="43" column="22" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.1010952" vertical-offset="540" max-vertical-offset="2715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/patient-portal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="12" selection-start="776" selection-end="776" vertical-scroll-proportion="0.34341782" vertical-offset="0" max-vertical-offset="1223" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/stylesheets/google_locations.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="http://maps.gstatic.com/cat_js/intl/en_gb/mapfiles/api-3/17/0/%7Bmain,places%7D.js">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/javascript/google_locations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="285" column="16" selection-start="8688" selection-end="8688" vertical-scroll-proportion="0.42319748" vertical-offset="3900" max-vertical-offset="6165">
           <folding />
         </state>
       </provider>
