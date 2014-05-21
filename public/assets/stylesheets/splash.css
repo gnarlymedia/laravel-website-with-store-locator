@@ -32,7 +32,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 */
-   width: 599px;
+   max-width: 599px;
    height: 321px;
    position: absolute;
    left: 50%;
@@ -40,14 +40,15 @@ body {
    margin-left: -300px;
    margin-top: -160px;
 }
-#patients_referrers * {
+#patients_referrers img {
+
 }
 #vertical_line {
 	margin:0 30px;
 }
 #glyphicon {
 	display:block;
-	margin: -20px auto 0 auto;
+	margin: -25px auto 0 auto;
 	z-index: 1001;
 }
 a {
@@ -88,13 +89,37 @@ a:hover {
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 	#patients_referrers {
  -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
      -moz-transform: scale(0.5); /* FF3.5+ */
       -ms-transform: scale(0.5); /* IE9 */
        -o-transform: scale(0.5); /* Opera 10.5+ */
           transform: scale(0.5);
+             /* IE6–IE9 */
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#patients_referrers {
+ -webkit-transform: scale(0.4); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.4); /* FF3.5+ */
+      -ms-transform: scale(0.4); /* IE9 */
+       -o-transform: scale(0.4); /* Opera 10.5+ */
+          transform: scale(0.4);
+             /* IE6–IE9 */
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#patients_referrers {
+ -webkit-transform: scale(0.3); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.3); /* FF3.5+ */
+      -ms-transform: scale(0.3); /* IE9 */
+       -o-transform: scale(0.3); /* Opera 10.5+ */
+          transform: scale(0.3);
              /* IE6–IE9 */
              filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
 	}

@@ -8,7 +8,6 @@
 	<img src="/assets/images/background/background_1600.jpg" alt="background" width="1600" height="805" id="background-image" />
 	
 	<div id="patients_referrers">
-	
 		<img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" />		
 			<a href="/theme/home">
 				<img src="/assets/images/buttons/referrer_portal.png" alt="referrer_portal" width="265" height="77" />
@@ -19,7 +18,7 @@
 			</a>
 	</div>
 
-   	<img src="/assets/images/elements/glyphicon.png" alt="Glyphicon" width="38" height="38" id="glyphicon" />
+   	<img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="50" height="50" id="glyphicon" />
     
 	<div id="footer">
 	    <div id="social">
