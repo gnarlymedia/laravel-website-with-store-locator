@@ -54,11 +54,6 @@ class Magniloquent extends Model {
     protected $customMessages = array();
 
     /**
-     * @var array Nice attribute names
-     */
-    protected $niceNames = array();
-
-    /**
      * The constructor of the model. Takes optional array of attributes.
      * Also, it sets validationErrors to be an empty MessageBag instance.
      *
@@ -111,7 +106,14 @@ class Magniloquent extends Model {
 
         return parent::__get($key);
     }
-
+    
+    /**
+     * Perform actions before the Model effectively performs the save call.
+     *
+     * @return void
+     */
+    public function beforeSave() {}
+    
     /**
      * Prepare before the Model is actually saved
      *
@@ -131,6 +133,8 @@ class Magniloquent extends Model {
         }
 
         $this->fill($new_attributes);
+        
+        $this->beforeSave();
 
         if (! $forceSave)
         {
@@ -256,6 +260,17 @@ class Magniloquent extends Model {
     }
 
     /**
+     * Returns the niceNames attribute array and should be overridden by a child class.
+     * Legacy support for $this->niceNames is included.
+     *
+     * @return array
+     */
+    protected function niceNames()
+    {
+        return (property_exists($this, 'niceNames') && is_array($this->niceNames)) ? $this->niceNames : array();
+    }
+
+    /**
      * Performs validation on the model and return whether it
      * passed or failed
      *
@@ -278,7 +293,7 @@ class Magniloquent extends Model {
         $validation->getPresenceVerifier()->setConnection($this->connection);
 
         // Set custom messages on validator
-        $validation->setAttributeNames($this->niceNames);
+        $validation->setAttributeNames($this->niceNames());
 
         if ($validation->passes())
         {

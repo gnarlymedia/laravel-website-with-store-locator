@@ -220,6 +220,7 @@ return array(
     'Doctrine\\Common\\Proxy\\AbstractProxyFactory' => $vendorDir . '/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php',
     'Doctrine\\Common\\Proxy\\Autoloader' => $vendorDir . '/doctrine/common/lib/Doctrine/Common/Proxy/Autoloader.php',
     'Doctrine\\Common\\Proxy\\Exception\\InvalidArgumentException' => $vendorDir . '/doctrine/common/lib/Doctrine/Common/Proxy/Exception/InvalidArgumentException.php',
+    'Doctrine\\Common\\Proxy\\Exception\\OutOfBoundsException' => $vendorDir . '/doctrine/common/lib/Doctrine/Common/Proxy/Exception/OutOfBoundsException.php',
     'Doctrine\\Common\\Proxy\\Exception\\ProxyException' => $vendorDir . '/doctrine/common/lib/Doctrine/Common/Proxy/Exception/ProxyException.php',
     'Doctrine\\Common\\Proxy\\Exception\\UnexpectedValueException' => $vendorDir . '/doctrine/common/lib/Doctrine/Common/Proxy/Exception/UnexpectedValueException.php',
     'Doctrine\\Common\\Proxy\\Proxy' => $vendorDir . '/doctrine/common/lib/Doctrine/Common/Proxy/Proxy.php',

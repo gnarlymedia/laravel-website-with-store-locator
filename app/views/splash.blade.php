@@ -17,7 +17,7 @@
    	<img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="50" height="50" id="glyphicon" />
     
 	<div class="row">
-    	<div class="col-md-1 col-sm-1 col-xs-1"></div>
+    	<div class="col-md-1 col-sm-1"></div>
 	    <div id="social" class="col-md-7 col-sm-7 col-xs-10">
 			<a href="#"><img src="/assets/images/social/Sample-1.pdf-1_03.jpg" alt="Sample-1.pdf-1_03" width="97" height="83" class="img-responsive" /></a>
 			<a href="#"><img src="/assets/images/social/Sample-1.pdf-1_04.jpg" alt="Sample-1.pdf-1_04" width="104" height="83" class="img-responsive" /></a>
@@ -28,6 +28,6 @@
 		<div id="copyright" class="col-md-3 col-sm-3 col-xs-10">
 			Copyright (©) 2011-2014 Capital Radiology
 		</div>
-    	<div class="col-md-1 col-sm-1 col-xs-1"></div>
+    	<div class="col-md-1 col-sm-1"></div>
 	</div>
 @stop
