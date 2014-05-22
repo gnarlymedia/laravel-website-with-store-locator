@@ -17,32 +17,30 @@ body {
     height: auto;
     width: auto\9; /* ie8 */
 }
-#logo {
-	margin: 0 auto 30px auto;
-	display: block;
-}
-#portal_buttons {
-	display:block;
-	margin: 0 auto;
-}
 #patients_referrers {
-/*
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-*/
-   max-width: 599px;
-   height: 321px;
-   position: absolute;
-   left: 50%;
-   top: 57%;
-   margin-left: -300px;
-   margin-top: -160px;
+	background:	url(/assets/images/background/background_1600.jpg) no-repeat;
+	background-position: center -37px;
+    background-size: auto 100%;
+	text-align: center;
+	vertical-align: bottom;
+	padding: 20% 1% 1% 1%;
+	white-space: nowrap;
+    max-width:100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
+#logo {
+	margin-bottom: 25px;
+}
+#patients_referrers img {
+    max-width:20%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
 #glyphicon {
 	display:block;
-	margin: -25px auto 0 auto;
+	margin: 0 auto;
 	z-index: 1001;
 }
 a {
@@ -53,13 +51,6 @@ a:hover {
 	color: none;
 	text-decoration: none;
 }
-#footer {
-   	padding: 30px 60px 45px 4em;
-	width: 100%;
-	background-color: white;
-	overflow: hidden;
-	white-space: nowrap;
-}
 #social {
 	margin-top: 2%;
 }
@@ -68,19 +59,18 @@ a:hover {
     max-width:16%;
     height: auto;
     width: auto\9; /* ie8 */
-    overflow:hidden;
 }
-#footer img, #footer a {
+#social img {
 	padding: 0;
 	margin: 0;
 }
 #copyright {
-	padding: 5% 0 0 0;
-	text-align: right;
+	margin-top: 5%;
 	font-size: 10px;
 }
 
 #vertical_line {
+	display: inline;
 	margin:0 30px 55px 30px;
 }
 
@@ -125,6 +115,8 @@ a:hover {
 #patient_button_2:hover {
 	opacity: 0.4;
 }
-
+.row {
+	margin: 0;
+}
 
 
