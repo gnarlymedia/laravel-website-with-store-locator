@@ -54,21 +54,32 @@ a:hover {
 	text-decoration: none;
 }
 #footer {
-   	padding: 30px 60px 45px 60px;
+   	padding: 30px 60px 45px 4em;
 	width: 100%;
 	background-color: white;
+	overflow: hidden;
+	white-space: nowrap;
 }
 #social {
+	display: inline-block;
 	float:left;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#social img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 #footer img, #footer a {
 	padding: 0;
 	margin: 0;
 }
 #copyright {
-	float:right;
+	padding: 5% 5% 0 0;
+	text-align: right;
 	font-size: 10px;
-	margin: 50px 0 0 0;
 }
 
 #vertical_line {
@@ -102,6 +113,19 @@ a:hover {
 #patient_button:hover {
     background:url(../images/buttons/patient_portal_roll.png) no-repeat 0 0;
 /* 	opacity: 0.4; */
+}
+
+#patient_button_2 {
+	position:absolute;
+	margin-bottom: 30px;
+	opacity: 1;
+	transition: opacity .30s ease-in-out;
+	-moz-transition: opacity .30s ease-in-out;
+	-webkit-transition: opacity .30s ease-in-out;
+}
+
+#patient_button_2:hover {
+	opacity: 0.4;
 }
 
 @media only screen and (max-width: 1199px) {
