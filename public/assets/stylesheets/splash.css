@@ -61,14 +61,13 @@ a:hover {
 	white-space: nowrap;
 }
 #social {
-	margin-top: 1%;
+	margin-top: 2%;
 }
 #social img {
 	display: inline;
-    width: auto\9; /* ie8 */
-    
-    width:10%;
+    max-width:16%;
     height: auto;
+    width: auto\9; /* ie8 */
     overflow:hidden;
 }
 #footer img, #footer a {
