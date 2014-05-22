@@ -18,14 +18,14 @@
     
 	<div class="row">
     	<div class="col-md-1 col-sm-1 col-xs-1"></div>
-	    <div id="social" class="col-md-7 col-sm-7 col-xs-7">
+	    <div id="social" class="col-md-7 col-sm-7 col-xs-5">
 			<a href="#"><img src="/assets/images/social/Sample-1.pdf-1_03.jpg" alt="Sample-1.pdf-1_03" width="97" height="83" class="img-responsive" /></a>
 			<a href="#"><img src="/assets/images/social/Sample-1.pdf-1_04.jpg" alt="Sample-1.pdf-1_04" width="104" height="83" class="img-responsive" /></a>
 			<a href="#"><img src="/assets/images/social/Sample-1.pdf-1_05.jpg" alt="Sample-1.pdf-1_05" width="105" height="83" class="img-responsive"/></a>
 			<a href="#"><img src="/assets/images/social/Sample-1.pdf-1_06.jpg" alt="Sample-1.pdf-1_06" width="100" height="83" class="img-responsive"/></a>
 			<a href="#"><img src="/assets/images/social/Sample-1.pdf-1_07.jpg" alt="Sample-1.pdf-1_07" width="104" height="83" class="img-responsive"/></a>
 		</div>
-		<div id="copyright" class="col-md-3 col-sm-3 col-xs-3">
+		<div id="copyright" class="col-md-3 col-sm-3 col-xs-5">
 			Copyright (©) 2011-2014 Capital Radiology
 		</div>
     	<div class="col-md-1 col-sm-1 col-xs-1"></div>
