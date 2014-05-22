@@ -61,23 +61,22 @@ a:hover {
 	white-space: nowrap;
 }
 #social {
-	display: inline-block;
-	float:left;
-    max-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
+	margin-top: 1%;
 }
 #social img {
-    max-width: 100%;
-    height: auto;
+	display: inline;
     width: auto\9; /* ie8 */
+    
+    width:10%;
+    height: auto;
+    overflow:hidden;
 }
 #footer img, #footer a {
 	padding: 0;
 	margin: 0;
 }
 #copyright {
-	padding: 5% 5% 0 0;
+	padding: 5% 0 0 0;
 	text-align: right;
 	font-size: 10px;
 }
@@ -126,54 +125,6 @@ a:hover {
 
 #patient_button_2:hover {
 	opacity: 0.4;
-}
-
-@media only screen and (max-width: 1199px) {
-	#patients_referrers {
- -webkit-transform: scale(0.8); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.8); /* FF3.5+ */
-      -ms-transform: scale(0.8); /* IE9 */
-       -o-transform: scale(0.8); /* Opera 10.5+ */
-          transform: scale(0.8);
-             /* IE6–IE9 */
-             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
-	}
-}
-
-@media only screen and (max-width: 1000px) {
-	#patients_referrers {
- -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.5); /* FF3.5+ */
-      -ms-transform: scale(0.5); /* IE9 */
-       -o-transform: scale(0.5); /* Opera 10.5+ */
-          transform: scale(0.5);
-             /* IE6–IE9 */
-             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	#patients_referrers {
- -webkit-transform: scale(0.4); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.4); /* FF3.5+ */
-      -ms-transform: scale(0.4); /* IE9 */
-       -o-transform: scale(0.4); /* Opera 10.5+ */
-          transform: scale(0.4);
-             /* IE6–IE9 */
-             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
-	}
-}
-
-@media only screen and (max-width: 700px) {
-	#patients_referrers {
- -webkit-transform: scale(0.3); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.3); /* FF3.5+ */
-      -ms-transform: scale(0.3); /* IE9 */
-       -o-transform: scale(0.3); /* Opera 10.5+ */
-          transform: scale(0.3);
-             /* IE6–IE9 */
-             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
-	}
 }
 
 
