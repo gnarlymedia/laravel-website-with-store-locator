@@ -40,12 +40,6 @@ body {
    margin-left: -300px;
    margin-top: -160px;
 }
-#patients_referrers img {
-
-}
-#vertical_line {
-	margin:0 30px;
-}
 #glyphicon {
 	display:block;
 	margin: -25px auto 0 auto;
@@ -75,6 +69,39 @@ a:hover {
 	float:right;
 	font-size: 10px;
 	margin: 50px 0 0 0;
+}
+
+#vertical_line {
+	margin:0 30px 55px 30px;
+}
+
+#referrer_button {
+	background:url(../images/buttons/referrer_portal.png) no-repeat 0 0;
+    display: inline-block;
+    width:265px;
+    height:77px;
+}
+
+#referrer_button:hover {
+    background:url(../images/buttons/referrer_portal_roll.png) no-repeat 0 0;
+}
+
+#patient_button {
+	background:url(../images/buttons/patient_portal.png) no-repeat 0 0;
+    display: inline-block;
+    width:265px;
+    height:77px;
+/*
+	opacity: 1;
+	transition: opacity .30s ease-in-out;
+	-moz-transition: opacity .30s ease-in-out;
+	-webkit-transition: opacity .30s ease-in-out;
+*/
+}
+
+#patient_button:hover {
+    background:url(../images/buttons/patient_portal_roll.png) no-repeat 0 0;
+/* 	opacity: 0.4; */
 }
 
 @media only screen and (max-width: 1199px) {

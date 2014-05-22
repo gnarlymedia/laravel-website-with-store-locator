@@ -8,14 +8,10 @@
 	<img src="/assets/images/background/background_1600.jpg" alt="background" width="1600" height="805" id="background-image" />
 	
 	<div id="patients_referrers">
-		<img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" />		
-			<a href="/theme/home">
-				<img src="/assets/images/buttons/referrer_portal.png" alt="referrer_portal" width="265" height="77" />
-			</a>
-			<img src="/assets/images/elements/vertical_line.png" alt="vertical_line" width="1" height="215" id="vertical_line" />
-			<a href="/patients-home">
-				<img src="/assets/images/buttons/patient_portal.png" alt="patient_portal" width="265" height="77" />
-			</a>
+		<img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" />
+		<a href="/theme/home" id="referrer_button" width="265" height="77"></a>
+		<img src="/assets/images/elements/vertical_line.png" alt="vertical_line" width="1" height="215" id="vertical_line" />
+		<a href="/patients-home" id="patient_button"></a>
 	</div>
 
    	<img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="50" height="50" id="glyphicon" />
