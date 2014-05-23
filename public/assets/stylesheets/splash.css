@@ -8,13 +8,13 @@ body {
 	padding-top: 0;
 }
 #patients_referrers {
-	background:	url(/assets/images/background/background_2000.jpg) no-repeat;
+	background:	url(/assets/images/background/background_1800_short.jpg) no-repeat;
 	background-position: center center;
     background-size: 100% auto;
 	text-align: center;
 	margin: 0;
 	vertical-align: bottom;
-	padding: 25% 0 1% 0;
+	padding: 19% 0 1% 0;
 	white-space: nowrap;
 	position:relative;
 }
@@ -25,12 +25,6 @@ body {
 #patients_referrers img {
     height: auto;
     width: auto\9; /* ie8 */
-}
-#vertical_line {
-	display: inline;
-	margin:0 3%;
-    min-width:1px;
-    max-height: 15%;
 }
 #glyphicon {
 	display:block;
@@ -72,8 +66,8 @@ a:hover {
 #right {
 	position:absolute;
     left:50%;
-    top:66%;
-    bottom:3%;
+    top:61%;
+    bottom:4%;
     border-left:1px solid white;
 }
 #referrer_button {
