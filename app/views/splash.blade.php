@@ -7,10 +7,11 @@
 @section('content')
 	<div id="patients_referrers" class="row">
 		<img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" class="img-responsive center-block"/>
-		<a href="/theme/home" id="referrer_button" class="img-responsive"></a>
-		<img src="/assets/images/elements/vertical_line.png" alt="vertical_line" width="1" height="215" id="vertical_line" class="img-responsive" />
-		<a href="/patients-home" id="patient_button" class="img-responsive"></a>
-		<img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="50" height="50" id="glyphicon" />
+		<img src="/assets/images/buttons/referrer_info.png" alt="referrer_info" width="353" height="77" id="referrer_button" class="img-responsive" />
+<!-- 		<img src="/assets/images/elements/vertical_line.png" alt="vertical_line" width="1" height="215" id="vertical_line" class="img-responsive" /> -->
+		<div id="right"></div>
+		<img src="/assets/images/buttons/patient_info.png" alt="patient_info" width="353" height="77" id="patient_button" class="img-responsive"/>
+<!-- 		<img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="50" height="50" id="glyphicon" class="img-responsive" /> -->
 	</div>
     
 	<div class="row">
