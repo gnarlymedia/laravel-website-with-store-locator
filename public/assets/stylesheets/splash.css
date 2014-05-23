@@ -46,11 +46,10 @@ a:hover {
 	text-decoration: none;
 }
 #social {
-	margin-top: 2%;
+	margin-top: 3%;
 }
 #social img {
 	display: inline;
-    max-width:16%;
     height: auto;
     width: auto\9; /* ie8 */
 }
@@ -60,6 +59,7 @@ a:hover {
 }
 #copyright {
 	margin-top: 5%;
+	margin-bottom: 5%;
 	font-size: 10px;
 }
 #referrer_button {
