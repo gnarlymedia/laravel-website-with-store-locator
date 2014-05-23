@@ -78,10 +78,10 @@ a:hover {
     border-left:1px solid white;
 }
 #referrer_button {
-	margin: 4% 3% 5% 0;
+	margin: 4% 3% 6% 0;
 }
 #patient_button {
-	margin: 4% 0 5% 3%;
+	margin: 4% 0 6% 3%;
 }
 #referrer_button:hover {
 /*     background:url(../images/buttons/referrer_portal_roll.png) no-repeat 0 0; */
