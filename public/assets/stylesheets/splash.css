@@ -19,10 +19,10 @@ body {
 	position:relative;
 }
 #logo {
-	margin-bottom: 4%;
+    max-width:18%;
+	margin-bottom: 3%;
 }
 #patients_referrers img {
-    max-width:25%;
     height: auto;
     width: auto\9; /* ie8 */
 }
@@ -93,6 +93,8 @@ a:hover {
     width:265px;
     height:77px;
 */
+    max-width:25%;
+
 	display: inline;
 	opacity: 1;
 	transition: opacity .20s ease-in-out;
