@@ -7,9 +7,9 @@
 @section('content')
 	<div id="patients_referrers" class="row">
 		<img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" class="img-responsive center-block"/>
-		<img src="/assets/images/buttons/referrer_info.png" alt="referrer_info" width="353" height="77" id="referrer_button" class="img-responsive" />
+		<a href="/theme/home"><img src="/assets/images/buttons/referrer_info.png" alt="referrer_info" width="353" height="77" id="referrer_button" class="img-responsive" /></a>
 		<div id="right"></div>
-		<img src="/assets/images/buttons/patient_info.png" alt="patient_info" width="353" height="77" id="patient_button" class="img-responsive"/>
+		<a href="/patients-home"><img src="/assets/images/buttons/patient_info.png" alt="patient_info" width="353" height="77" id="patient_button" class="img-responsive"/></a>
 	</div>
     
 	<div class="row">
