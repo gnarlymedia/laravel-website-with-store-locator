@@ -14,12 +14,12 @@ body {
 	text-align: center;
 	margin: 0;
 	vertical-align: bottom;
-	padding: 20% 0 1% 0;
+	padding: 25% 0 1% 0;
 	white-space: nowrap;
 	position:relative;
 }
 #logo {
-	margin-bottom: 25px;
+	margin-bottom: 4%;
 }
 #patients_referrers img {
     max-width:25%;
@@ -78,10 +78,10 @@ a:hover {
     border-left:1px solid white;
 }
 #referrer_button {
-	margin: 4% 3% 4% 0;
+	margin: 4% 3% 5% 0;
 }
 #patient_button {
-	margin: 4% 0 4% 3%;
+	margin: 4% 0 5% 3%;
 }
 #referrer_button:hover {
 /*     background:url(../images/buttons/referrer_portal_roll.png) no-repeat 0 0; */
