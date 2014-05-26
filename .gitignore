@@ -1,8 +1,0 @@
-/nbproject/private/
-.env.php
-.env.local.php
-.env.testing.php
-apache_error_log
-public/.htaccess
-public/assets/php/phpsqlsearch_dbinfo.php
-.idea/dictionaries/simonhudson.xml
