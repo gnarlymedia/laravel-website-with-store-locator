@@ -87,20 +87,24 @@ a:hover {
     height:77px;
 */
     max-width:25%;
+	display: inline;
+}
 
+#patient_button:hover, #referrer_button:hover {
+/*     background:url(../images/buttons/patient_portal_roll.png) no-repeat 0 0; */
+}
+.row {
+	margin: 0;
+}
+.fadeover {
 	display: inline;
 	opacity: 1;
 	transition: opacity .20s ease-in-out;
 	-moz-transition: opacity .20s ease-in-out;
 	-webkit-transition: opacity .20s ease-in-out;
 }
-
-#patient_button:hover, #referrer_button:hover {
-/*     background:url(../images/buttons/patient_portal_roll.png) no-repeat 0 0; */
+.fadeover:hover {
 	opacity: 0.4;
-}
-.row {
-	margin: 0;
 }
 
 

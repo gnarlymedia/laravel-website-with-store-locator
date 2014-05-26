@@ -29,7 +29,7 @@ body, container {
 	background-color: inherit;
 }
 a.navbar-brand img {
-    max-width:100%;	
+    max-width:100%;
 }
 .navbar-nav > li > a {
 /* 	line-height: 76px; */
