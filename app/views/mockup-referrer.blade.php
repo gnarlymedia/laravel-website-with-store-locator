@@ -7,9 +7,9 @@
 @stop
 
 @section('nav')
-	<li><a href="#"><img src="/assets/images/buttons/referrer_info.png" alt="referrer_info" width="232" height="51" class="img-responsive" /></a></li>
-	<li><a href="#"><img src="/assets/images/buttons/results.png" alt="results" width="94" height="51" class="img-responsive" /></a></li>
-	<li><a href="#"><img src="/assets/images/buttons/billing.png" alt="billing" width="177" height="51" class="img-responsive" /></a></li>
+	<li><a href="#"><img src="/assets/images/buttons/referrer_info.png" alt="referrer_info" width="232" height="51" class="img-responsive fadeover" /></a></li>
+	<li><a href="#"><img src="/assets/images/buttons/results.png" alt="results" width="94" height="51" class="img-responsive fadeover" /></a></li>
+	<li><a href="#"><img src="/assets/images/buttons/billing.png" alt="billing" width="177" height="51" class="img-responsive fadeover" /></a></li>
 @stop
 
 @section('content')

@@ -13,8 +13,6 @@
 	{{ HTML::style('/assets/stylesheets/combined.css'); }}
 
 	<!-- Extras -->	
-   	{{ HTML::script('/assets/javascript/jquery.vegas.min.js'); }}
-   	{{ HTML::style('/assets/stylesheets/jquery.vegas.min.css'); }}
    	{{ HTML::style('/assets/stylesheets/navbar.css'); }}
    	{{ HTML::style('/assets/stylesheets/splash.css'); }}
    	

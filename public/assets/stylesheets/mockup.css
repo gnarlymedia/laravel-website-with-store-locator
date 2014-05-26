@@ -4,6 +4,7 @@ body, container {
 #nav-container {
 	background-color: none;
 	background: url(../images/background/background_1800_short.jpg) center bottom no-repeat;
+    background-size: 100% auto;
 	min-height:10%;
 	padding-top: 4%;
 	padding-bottom: 1%;
@@ -13,17 +14,26 @@ body, container {
 /* 	white-space: nowrap; */
 /* 	overflow: hidden; */
 }
-ul.nav li img {
+.fadeover {
+	display: inline;
 	opacity: 1;
 	transition: opacity .20s ease-in-out;
 	-moz-transition: opacity .20s ease-in-out;
 	-webkit-transition: opacity .20s ease-in-out;
 }
+.fadeover:hover {
+	opacity: 0.4;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	text-decoration: none;
+	background-color: inherit;
+}
+
+.navbar-nav {
+	position: relative;
+}
 a.navbar-brand img {
     max-width:100%;	
-}
-ul.nav li img:hover {
-	opacity: 0.4;
 }
 .navbar-nav > li > a {
 /* 	line-height: 76px; */
