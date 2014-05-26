@@ -45,6 +45,20 @@ a.navbar-brand img {
 	position:absolute;
 	bottom: -15px;
 }
-div.navbar {
-
+#social {
+	margin-top: 3%;
 }
+#social img {
+	display: inline;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#social img {
+	padding: 0;
+	margin: 0;
+}
+#copyright {
+	margin-bottom: 5%;
+	font-size: 10px;
+}
+
