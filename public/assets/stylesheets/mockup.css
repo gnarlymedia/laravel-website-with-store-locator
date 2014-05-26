@@ -1,0 +1,40 @@
+body, container {
+}
+
+#nav-container {
+	background-color: none;
+	background: url(../images/background/background_1800_short.jpg) center bottom no-repeat;
+	min-height:10%;
+	padding-top: 4%;
+	padding-bottom: 1%;
+	position: relative;
+}
+#no-wrap {
+/* 	white-space: nowrap; */
+/* 	overflow: hidden; */
+}
+ul.nav li img {
+	opacity: 1;
+	transition: opacity .20s ease-in-out;
+	-moz-transition: opacity .20s ease-in-out;
+	-webkit-transition: opacity .20s ease-in-out;
+}
+a.navbar-brand img {
+    max-width:100%;	
+}
+ul.nav li img:hover {
+	opacity: 0.4;
+}
+.navbar-nav > li > a {
+/* 	line-height: 76px; */
+}
+.nav > li > a {
+	padding: 10px 5px;
+}
+#pointer {
+	position:absolute;
+	bottom: -15px;
+}
+div.navbar {
+
+}
