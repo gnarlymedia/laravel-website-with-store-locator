@@ -13,7 +13,7 @@
 
 @section('nav')
 	<li><a href="#"><img src="/assets/images/buttons/patient_info.png" alt="patient_info" width="216" height="51" class="img-responsive fadeover" /></a></li>
-	<li><a href="#"><img src="/assets/images/buttons/locations.png" alt="locations" width="177" height="51" class="img-responsive fadeover" /></a></li>
+	<li><a href="#"><img src="/assets/images/buttons/locations.png" alt="locations" width="177" height="51" class="img-responsive" /></a></li>
 	<li><a href="#"><img src="/assets/images/buttons/procedures.png" alt="procedures" width="177" height="51" class="img-responsive fadeover" /></a></li>	
 	<li><a href="#"><img src="/assets/images/buttons/billing.png" alt="billing" width="177" height="51" class="img-responsive fadeover" /></a></li>
 	<li><a href="#"><img src="/assets/images/buttons/contact.png" alt="contact" width="177" height="51" class="img-responsive fadeover" /></a></li>

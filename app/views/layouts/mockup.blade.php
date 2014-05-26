@@ -34,8 +34,8 @@
   <body>
   	<div id="nav-container">
       <!-- Static navbar -->
-      <div class="navbar" role="navigation">
-        <div class="container" id="no-wrap">
+      <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -59,7 +59,7 @@
 	      @endif >
 	    </div>
       </div>
-      <div id="pointer">
+      <div id="pointer" class="hidden-xs">
     	<img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31">
       </div>
   	</div>
