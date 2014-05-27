@@ -1,0 +1,142 @@
+html {
+    height:100%;
+    width:100%;
+}
+body {
+    width:100%;
+    height: 100%;
+    padding-top: 0;
+}
+#patients_referrers {
+    /*background:	url(/assets/images/background/background_1800_short.jpg) no-repeat;*/
+    /*background-position: center center;*/
+    /*background-size: 100% auto;*/
+    text-align: center;
+    margin: 0;
+    vertical-align: bottom;
+    padding: 23% 0 1% 0;
+    white-space: nowrap;
+    position:relative;
+}
+#logo {
+    max-width:18%;
+    margin-bottom: 5%;
+}
+#patients_referrers img {
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#glyphicon {
+    display:block;
+    margin: 0 auto;
+    z-index: 1001;
+}
+a {
+    color: none;
+    text-decoration: none;
+}
+a:hover {
+    color: none;
+    text-decoration: none;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#social {
+    margin-top: 3%;
+}
+#social img {
+    display: inline;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#social img {
+    padding: 0;
+    margin: 0;
+}
+#copyright {
+    color: #ffffff;
+    margin-bottom: 5%;
+    font-size: 10px;
+}
+#referrer_button {
+    /*
+        background:url(../images/buttons/referrer_portal.png) no-repeat 0 0;
+        display: inline-block;
+        width:265px;
+        height:77px;
+    */
+}
+#right {
+    position:absolute;
+    left:50%;
+    top:61%;
+    bottom:4%;
+    border-left:1px solid white;
+}
+#referrer_button {
+    margin: 4% 3% 6% 0;
+}
+#patient_button {
+    margin: 4% 0 6% 3%;
+}
+#referrer_button:hover {
+    /*     background:url(../images/buttons/referrer_portal_roll.png) no-repeat 0 0; */
+}
+#patient_button, #referrer_button {
+    /*
+        background:url(../images/buttons/patient_portal.png) no-repeat 0 0;
+        display: inline-block;
+        width:265px;
+        height:77px;
+    */
+    max-width:25%;
+    display: inline;
+}
+
+#patient_button:hover, #referrer_button:hover {
+    /*     background:url(../images/buttons/patient_portal_roll.png) no-repeat 0 0; */
+}
+.row {
+    margin: 0;
+}
+.fadeover {
+    display: inline;
+    opacity: 1;
+    transition: opacity .20s ease-in-out;
+    -moz-transition: opacity .20s ease-in-out;
+    -webkit-transition: opacity .20s ease-in-out;
+}
+.fadeover:hover {
+    opacity: 0.4;
+}
+.drop-shadow {
+    -moz-box-shadow:    3px 3px 5px 6px #222;
+    -webkit-box-shadow: 3px 3px 5px 6px #222;
+    box-shadow:         3px 3px 5px 6px #222;
+}
+.background-color {
+    background: #222;
+}
+/*.shadowed {*/
+    /*-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));*/
+    /*filter: url(#drop-shadow);*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";*/
+    /*filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";*/
+/*}*/
+/*.shadowed {*/
+    /*-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));*/
+    /*filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='12' dy='12' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";*/
+    /*filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";*/
+/*}*/
+.shadowed {
+    -webkit-filter: drop-shadow(8px 8px 7px #222);
+    filter: url(shadow.svg#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+    Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
