@@ -8,7 +8,7 @@ window.onload = function() {
     var background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
 
     $.vegas({
-        src: background,
-        fade:500
+        src: background
+//        fade:500
     });
 };
