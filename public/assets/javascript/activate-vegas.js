@@ -1,4 +1,4 @@
-window.onload = function() {
+//window.onload = function() {
     var backgrounds = [
         '/assets/images/background/background_1800_short.jpg',
         '/assets/images/iStock_4.jpg',
@@ -12,4 +12,4 @@ window.onload = function() {
         loading: true,
         fade:1500
     });
-};
+//};
