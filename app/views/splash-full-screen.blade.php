@@ -41,7 +41,7 @@
 <div class="row" id="footer">
     <div class="col-md-1 col-sm-1 col-xs-1"></div>
     <div id="social" class="col-md-6 col-sm-6 col-xs-12">
-        <a href="#"><img src="/assets/images/social/combined.png" alt="Sample-1.pdf-1_03" width="268" height="45" class="img-responsive fadeover shadowed" /></a>
+        <a href="#" id="social-placeholder"></a>
     </div>
     <div id="copyright" class="col-md-4 col-sm-4 col-xs-12">
         Copyright (©) 2011-2014 Capital Radiology
