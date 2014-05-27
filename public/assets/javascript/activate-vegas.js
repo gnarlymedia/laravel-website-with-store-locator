@@ -9,6 +9,6 @@ window.onload = function() {
 
     $.vegas({
         src: background,
-        fade:1000
+        fade:500
     });
 };
