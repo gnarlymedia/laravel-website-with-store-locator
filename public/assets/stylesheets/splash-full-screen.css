@@ -6,6 +6,7 @@ body {
     width:100%;
     height: 100%;
     padding-top: 0;
+    background-color: #222;
 }
 #patients_referrers {
     /*background:	url(/assets/images/background/background_1800_short.jpg) no-repeat;*/

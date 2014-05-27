@@ -9,7 +9,7 @@ window.onload = function() {
 
     $.vegas({
         src: background,
-        loading: true
-//        fade:500
+        loading: true,
+        fade:1500
     });
 };
