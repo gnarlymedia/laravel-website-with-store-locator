@@ -10,6 +10,6 @@
     $.vegas({
         src: background,
         loading: true,
-        fade:10000
+        fade:1000
     });
 //};
