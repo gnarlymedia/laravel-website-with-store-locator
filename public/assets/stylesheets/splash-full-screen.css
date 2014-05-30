@@ -67,7 +67,7 @@ a:hover {
     position:absolute;
     left:50%;
     top:61%;
-    bottom:4%;
+    bottom:0;
     border-left:1px solid white;
 }
 #referrer_button {
@@ -77,7 +77,7 @@ a:hover {
     margin: 4% 0 6% 3%;
 }
 #patient_button, #referrer_button {
-    max-width:25%;
+    max-width:30%;
     display: inline;
 }
 

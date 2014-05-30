@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Underscore\\' => array($vendorDir . '/anahkiasen/underscore-php/src', $vendorDir . '/anahkiasen/underscore-php/tests'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'League\\OAuth1\\' => array($vendorDir . '/league/oauth1-client/src'),
 );

@@ -1,0 +1,42 @@
+{
+    "name": "league/oauth1-client",
+    "description": "OAuth 1.0 Client Library",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0",
+        "guzzle/guzzle": "3.*",
+        "symfony/http-foundation": "~2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "mockery/mockery": "0.7.2"
+    },
+    "keywords": [
+        "oauth",
+        "oauth1",
+        "authorization",
+        "authentication",
+        "idp",
+        "identity",
+        "sso",
+        "single sign on"
+    ],
+    "authors": [
+        {
+            "name": "Ben Corlett",
+            "email": "bencorlett@me.com",
+            "homepage": "http://www.webcomm.com.au",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "League\\OAuth1\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

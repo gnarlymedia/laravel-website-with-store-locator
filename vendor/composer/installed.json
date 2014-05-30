@@ -1426,100 +1426,6 @@
         ]
     },
     {
-        "name": "zizaco/factory-muff",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Zizaco/factory-muff.git",
-            "reference": "b7c9297102baa03bdcbd851da33aa1d02080719a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Zizaco/factory-muff/zipball/b7c9297102baa03bdcbd851da33aa1d02080719a",
-            "reference": "b7c9297102baa03bdcbd851da33aa1d02080719a",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "time": "2014-04-28 10:49:45",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Zizaco\\FactoryMuff": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Zizaco Zizuini",
-                "email": "zizaco@gmail.com",
-                "homepage": "http://www.zizaco.net"
-            }
-        ],
-        "description": "The goal of this Package is to enable the rapid creation of objects for the purpose of testing.",
-        "keywords": [
-            "factory",
-            "laravel",
-            "testing"
-        ]
-    },
-    {
-        "name": "way/generators",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/JeffreyWay/Laravel-4-Generators.git",
-            "reference": "1d7c9338d363899e17c13e7365a3a1c45ca13e8b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/1d7c9338d363899e17c13e7365a3a1c45ca13e8b",
-            "reference": "1d7c9338d363899e17c13e7365a3a1c45ca13e8b",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/support": "~4.0",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "behat/behat": "~2.5.1",
-            "behat/mink": "~1.5.0",
-            "behat/mink-extension": "~1.2.0",
-            "behat/mink-goutte-driver": "~1.0.9",
-            "behat/mink-selenium2-driver": "~1.1.1",
-            "phpspec/phpspec": "~2.0",
-            "phpunit/phpunit": "~3.7"
-        },
-        "time": "2014-04-28 21:58:48",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Way\\Generators": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jeffrey Way",
-                "email": "jeffrey@jeffrey-way.com",
-                "homepage": "http://jeffrye-way.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Rapidly generate resources, migrations, models, and much more."
-    },
-    {
         "name": "itsgoingd/clockwork",
         "version": "v1.5",
         "version_normalized": "1.5.0.0",
@@ -1744,64 +1650,6 @@
             }
         ],
         "description": "A set of classes to create and manipulate HTML objects abstractions"
-    },
-    {
-        "name": "patricktalmadge/bootstrapper",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/patricktalmadge/bootstrapper.git",
-            "reference": "968b81c736de98ada686438ec947f6c21c3c5537"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/patricktalmadge/bootstrapper/zipball/968b81c736de98ada686438ec947f6c21c3c5537",
-            "reference": "968b81c736de98ada686438ec947f6c21c3c5537",
-            "shasum": ""
-        },
-        "require": {
-            "anahkiasen/html-object": "~1",
-            "anahkiasen/underscore-php": "~1",
-            "illuminate/html": "4.1.*",
-            "illuminate/support": "4.1.*",
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "mockery/mockery": "dev-master",
-            "phpunit/phpunit": "dev-master"
-        },
-        "time": "2014-05-03 21:47:02",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Bootstrapper": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Maxime Fabre",
-                "email": "ehtnam6@gmail.com"
-            },
-            {
-                "name": "Patrick Talmadge",
-                "email": "ptalmadge@gmail.com"
-            },
-            {
-                "name": "Patrick Rose",
-                "email": "pjr0911025@gmail.com"
-            }
-        ],
-        "description": "Twitter Bootstrap markup generator",
-        "keywords": [
-            "bootstrap",
-            "laravel"
-        ]
     },
     {
         "name": "anahkiasen/former",
@@ -2282,58 +2130,6 @@
             "eventmanager",
             "persistence",
             "spl"
-        ]
-    },
-    {
-        "name": "magniloquent/magniloquent",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/philipbrown/magniloquent.git",
-            "reference": "739edeacec2a9d4982c0c8109b0132856536f86c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/philipbrown/magniloquent/zipball/739edeacec2a9d4982c0c8109b0132856536f86c",
-            "reference": "739edeacec2a9d4982c0c8109b0132856536f86c",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/database": "4.x",
-            "illuminate/support": "4.x",
-            "illuminate/validation": "4.x",
-            "php": ">=5.3.0"
-        },
-        "time": "2014-05-20 19:19:43",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Magniloquent\\Magniloquent": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Philip Brown",
-                "email": "phil@ipbrown.com",
-                "role": "Creator/Developer"
-            },
-            {
-                "name": "Alex Sears",
-                "email": "alexwsears@gmail.com",
-                "homepage": "http://alexsears.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Self-validating models for Laravel 4's Eloquent",
-        "keywords": [
-            "eloquent",
-            "laravel"
         ]
     },
     {
@@ -3266,5 +3062,365 @@
         ],
         "description": "Symfony Security Component - Core Library",
         "homepage": "http://symfony.com"
+    },
+    {
+        "name": "guzzle/guzzle",
+        "version": "v3.9.1",
+        "version_normalized": "3.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/guzzle3.git",
+            "reference": "92d9934f2fca1da15178c91239576ae26e505e60"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/92d9934f2fca1da15178c91239576ae26e505e60",
+            "reference": "92d9934f2fca1da15178c91239576ae26e505e60",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3.3",
+            "symfony/event-dispatcher": "~2.1"
+        },
+        "replace": {
+            "guzzle/batch": "self.version",
+            "guzzle/cache": "self.version",
+            "guzzle/common": "self.version",
+            "guzzle/http": "self.version",
+            "guzzle/inflection": "self.version",
+            "guzzle/iterator": "self.version",
+            "guzzle/log": "self.version",
+            "guzzle/parser": "self.version",
+            "guzzle/plugin": "self.version",
+            "guzzle/plugin-async": "self.version",
+            "guzzle/plugin-backoff": "self.version",
+            "guzzle/plugin-cache": "self.version",
+            "guzzle/plugin-cookie": "self.version",
+            "guzzle/plugin-curlauth": "self.version",
+            "guzzle/plugin-error-response": "self.version",
+            "guzzle/plugin-history": "self.version",
+            "guzzle/plugin-log": "self.version",
+            "guzzle/plugin-md5": "self.version",
+            "guzzle/plugin-mock": "self.version",
+            "guzzle/plugin-oauth": "self.version",
+            "guzzle/service": "self.version",
+            "guzzle/stream": "self.version"
+        },
+        "require-dev": {
+            "doctrine/cache": "~1.3",
+            "monolog/monolog": "~1.0",
+            "phpunit/phpunit": "3.7.*",
+            "psr/log": "~1.0",
+            "symfony/class-loader": "~2.1",
+            "zendframework/zend-cache": "2.*,<2.3",
+            "zendframework/zend-log": "2.*,<2.3"
+        },
+        "time": "2014-05-07 17:04:22",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.8-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Guzzle": "src/",
+                "Guzzle\\Tests": "tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            },
+            {
+                "name": "Guzzle Community",
+                "homepage": "https://github.com/guzzle/guzzle/contributors"
+            }
+        ],
+        "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "client",
+            "curl",
+            "framework",
+            "http",
+            "http client",
+            "rest",
+            "web service"
+        ]
+    },
+    {
+        "name": "league/oauth1-client",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thephpleague/oauth1-client.git",
+            "reference": "f1db4b8f97605cd6e88cf2a4e164b5cf5e5b68e8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/f1db4b8f97605cd6e88cf2a4e164b5cf5e5b68e8",
+            "reference": "f1db4b8f97605cd6e88cf2a4e164b5cf5e5b68e8",
+            "shasum": ""
+        },
+        "require": {
+            "guzzle/guzzle": "3.*",
+            "php": ">=5.3.0",
+            "symfony/http-foundation": "~2"
+        },
+        "require-dev": {
+            "mockery/mockery": "0.7.2",
+            "phpunit/phpunit": "*"
+        },
+        "time": "2014-01-31 23:08:45",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "League\\OAuth1\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ben Corlett",
+                "email": "bencorlett@me.com",
+                "homepage": "http://www.webcomm.com.au",
+                "role": "Developer"
+            }
+        ],
+        "description": "OAuth 1.0 Client Library",
+        "keywords": [
+            "Authentication",
+            "SSO",
+            "authorization",
+            "identity",
+            "idp",
+            "oauth",
+            "oauth1",
+            "single sign on"
+        ]
+    },
+    {
+        "name": "zizaco/factory-muff",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Zizaco/factory-muff.git",
+            "reference": "0ea9c55d4d3f49ccc22854dc2f24f2e4b14998e1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Zizaco/factory-muff/zipball/0ea9c55d4d3f49ccc22854dc2f24f2e4b14998e1",
+            "reference": "0ea9c55d4d3f49ccc22854dc2f24f2e4b14998e1",
+            "shasum": ""
+        },
+        "require": {
+            "fzaninotto/faker": "~1.3",
+            "php": ">=5.3.0"
+        },
+        "time": "2014-05-28 14:04:32",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Zizaco\\FactoryMuff": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Zizaco Zizuini",
+                "email": "zizaco@gmail.com",
+                "homepage": "http://www.zizaco.net"
+            }
+        ],
+        "description": "The goal of this Package is to enable the rapid creation of objects for the purpose of testing.",
+        "keywords": [
+            "factory",
+            "laravel",
+            "testing"
+        ]
+    },
+    {
+        "name": "way/generators",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/JeffreyWay/Laravel-4-Generators.git",
+            "reference": "484d379c6bc1d38c75e4f52f74efcbcd11f7dd2c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/484d379c6bc1d38c75e4f52f74efcbcd11f7dd2c",
+            "reference": "484d379c6bc1d38c75e4f52f74efcbcd11f7dd2c",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~4.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "behat/behat": "~2.5.1",
+            "behat/mink": "~1.5.0",
+            "behat/mink-extension": "~1.2.0",
+            "behat/mink-goutte-driver": "~1.0.9",
+            "behat/mink-selenium2-driver": "~1.1.1",
+            "phpspec/phpspec": "~2.0",
+            "phpunit/phpunit": "~3.7"
+        },
+        "time": "2014-05-27 14:21:26",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Way\\Generators": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeffrey Way",
+                "email": "jeffrey@jeffrey-way.com",
+                "homepage": "http://jeffrye-way.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Rapidly generate resources, migrations, models, and much more."
+    },
+    {
+        "name": "patricktalmadge/bootstrapper",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/patricktalmadge/bootstrapper.git",
+            "reference": "ff481c18e200da48e7627cb47951b28c943c6303"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/patricktalmadge/bootstrapper/zipball/ff481c18e200da48e7627cb47951b28c943c6303",
+            "reference": "ff481c18e200da48e7627cb47951b28c943c6303",
+            "shasum": ""
+        },
+        "require": {
+            "anahkiasen/html-object": "~1",
+            "anahkiasen/underscore-php": "~1",
+            "illuminate/html": "4.1.*",
+            "illuminate/support": "4.1.*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "dev-master",
+            "phpunit/phpunit": "dev-master"
+        },
+        "time": "2014-05-25 21:05:20",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Bootstrapper": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Maxime Fabre",
+                "email": "ehtnam6@gmail.com"
+            },
+            {
+                "name": "Patrick Talmadge",
+                "email": "ptalmadge@gmail.com"
+            },
+            {
+                "name": "Patrick Rose",
+                "email": "pjr0911025@gmail.com"
+            }
+        ],
+        "description": "Twitter Bootstrap markup generator",
+        "keywords": [
+            "bootstrap",
+            "laravel"
+        ]
+    },
+    {
+        "name": "magniloquent/magniloquent",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/philipbrown/magniloquent.git",
+            "reference": "5aa7c7ca655c546315f24f6225b4be2b3e90964d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/philipbrown/magniloquent/zipball/5aa7c7ca655c546315f24f6225b4be2b3e90964d",
+            "reference": "5aa7c7ca655c546315f24f6225b4be2b3e90964d",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/database": "4.x",
+            "illuminate/support": "4.x",
+            "illuminate/validation": "4.x",
+            "php": ">=5.3.0"
+        },
+        "time": "2014-05-24 10:03:24",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Magniloquent\\Magniloquent": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Philip Brown",
+                "email": "phil@ipbrown.com",
+                "role": "Creator/Developer"
+            },
+            {
+                "name": "Alex Sears",
+                "email": "alexwsears@gmail.com",
+                "homepage": "http://alexsears.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Self-validating models for Laravel 4's Eloquent",
+        "keywords": [
+            "eloquent",
+            "laravel"
+        ]
     }
 ]
