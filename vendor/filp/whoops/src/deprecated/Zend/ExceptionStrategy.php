@@ -7,11 +7,14 @@
 namespace Whoops\Provider\Zend;
 
 use Whoops\Run;
-
 use Zend\Mvc\View\Http\ExceptionStrategy as BaseExceptionStrategy;
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\Application;
+use Zend\Http\Response;
 
+/**
+ * @deprecated Use https://github.com/ghislainf/zf2-whoops
+ */
 class ExceptionStrategy extends BaseExceptionStrategy {
 
     protected $run;
