@@ -4,7 +4,7 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*",
+		"laravel/framework": "4.1.*",
 		"phpunit/phpunit": "3.7.*",
 		"doctrine/dbal": "2.3.4",
 		"laravelbook/ardent": "dev-master",

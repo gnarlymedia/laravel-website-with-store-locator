@@ -182,16 +182,4 @@ return array(
 
 	),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Encryption Defaults
-    |--------------------------------------------------------------------------
-    |
-    | This setting may be used to control the default cipher used by the Laravel
-    | encryption facilities. This was added by s.hudson as it is required for
-    | upgrading Laravel from 4.1 -> 4.2
-    |
-    */
-    'cipher' => MCRYPT_RIJNDAEL_256,
-
 );
