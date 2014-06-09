@@ -1,6 +1,5 @@
 <?php namespace Illuminate\Queue;
 
-use IlluminateQueueClosure;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Queue\Console\WorkCommand;
 use Illuminate\Queue\Console\ListenCommand;
@@ -37,8 +36,6 @@ class QueueServiceProvider extends ServiceProvider {
 		$this->registerSubscriber();
 
 		$this->registerFailedJobServices();
-
-		$this->registerQueueClosure();
 	}
 
 	/**
@@ -48,14 +45,16 @@ class QueueServiceProvider extends ServiceProvider {
 	 */
 	protected function registerManager()
 	{
-		$this->app->bindShared('queue', function($app)
+		$me = $this;
+
+		$this->app->bindShared('queue', function($app) use ($me)
 		{
 			// Once we have an instance of the queue manager, we will register the various
 			// resolvers for the queue connectors. These connectors are responsible for
 			// creating the classes that accept queue configs and instantiate queues.
 			$manager = new QueueManager($app);
 
-			$this->registerConnectors($manager);
+			$me->registerConnectors($manager);
 
 			return $manager;
 		});
@@ -254,19 +253,6 @@ class QueueServiceProvider extends ServiceProvider {
 			$config = $app['config']['queue.failed'];
 
 			return new DatabaseFailedJobProvider($app['db'], $config['database'], $config['table']);
-		});
-	}
-
-	/**
-	 * Register the Illuminate queued closure job.
-	 *
-	 * @return void
-	 */
-	protected function registerQueueClosure()
-	{
-		$this->app->bindShared('IlluminateQueueClosure', function($app)
-		{
-			return new IlluminateQueueClosure($app['encrypter']);
 		});
 	}
 

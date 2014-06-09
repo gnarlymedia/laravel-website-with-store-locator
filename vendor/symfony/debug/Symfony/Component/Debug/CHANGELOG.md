@@ -1,13 +1,6 @@
 CHANGELOG
 =========
 
-2.5.0
------
-
-* added ExceptionHandler::setHandler()
-* added UndefinedMethodFatalErrorHandler
-* deprecated DummyException
-
 2.4.0
 -----
 

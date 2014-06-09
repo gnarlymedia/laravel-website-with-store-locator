@@ -321,12 +321,11 @@ class Migrator {
 	/**
 	 * Resolve the database connection instance.
 	 *
-	 * @param  string  $connection
 	 * @return \Illuminate\Database\Connection
 	 */
-	public function resolveConnection($connection)
+	public function resolveConnection()
 	{
-		return $this->resolver->connection($connection);
+		return $this->resolver->connection($this->connection);
 	}
 
 	/**

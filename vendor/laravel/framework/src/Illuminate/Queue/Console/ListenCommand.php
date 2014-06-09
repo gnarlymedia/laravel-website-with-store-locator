@@ -101,11 +101,6 @@ class ListenCommand extends Command {
 		$this->listener->setSleep($this->option('sleep'));
 
 		$this->listener->setMaxTries($this->option('tries'));
-
-		$this->listener->setOutputHandler(function($type, $line)
-		{
-			$this->output->write($line);
-		});
 	}
 
 	/**

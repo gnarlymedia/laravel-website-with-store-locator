@@ -105,9 +105,11 @@ class Dispatcher {
 	 */
 	public function queue($event, $payload = array())
 	{
-		$this->listen($event.'_queue', function() use ($event, $payload)
+		$me = $this;
+
+		$this->listen($event.'_queue', function() use ($me, $event, $payload)
 		{
-			$this->fire($event, $payload);
+			$me->fire($event, $payload);
 		});
 	}
 

@@ -8,9 +8,13 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
         "predis/predis": "0.8.*"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "4.0.*"
     },
     "autoload": {
         "psr-0": {
@@ -20,7 +24,7 @@
     "target-dir": "Illuminate/Redis",
     "extra": {
         "branch-alias": {
-            "dev-master": "4.2-dev"
+            "dev-master": "4.1-dev"
         }
     },
     "minimum-stability": "dev"

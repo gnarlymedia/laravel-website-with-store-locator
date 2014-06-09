@@ -121,7 +121,7 @@ class CookieJar {
 	/**
 	 * Remove a cookie from the queue.
 	 *
-	 * @param string $name
+	 * @param $cookieName
 	 */
 	public function unqueue($name)
 	{

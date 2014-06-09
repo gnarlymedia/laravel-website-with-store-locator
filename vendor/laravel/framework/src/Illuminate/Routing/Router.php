@@ -440,12 +440,14 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	protected function getNestedResourceUri(array $segments)
 	{
+		$me = $this;
+
 		// We will spin through the segments and create a place-holder for each of the
 		// resource segments, as well as the resource itself. Then we should get an
 		// entire string for the resource URI that contains all nested resources.
-		return implode('/', array_map(function($s)
+		return implode('/', array_map(function($s) use ($me)
 		{
-			return $s.'/{'.$this->getResourceWildcard($s).'}';
+			return $s.'/{'.$me->getResourceWildcard($s).'}';
 
 		}, $segments));
 	}
@@ -911,16 +913,18 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	protected function getClassClosure($controller)
 	{
+		$me = $this;
+
 		// Here we'll get an instance of this controller dispatcher and hand it off to
 		// the Closure so it will be used to resolve the class instances out of our
 		// IoC container instance and call the appropriate methods on the class.
 		$d = $this->getControllerDispatcher();
 
-		return function() use ($d, $controller)
+		return function() use ($me, $d, $controller)
 		{
-			$route = $this->current();
+			$route = $me->current();
 
-			$request = $this->getCurrentRequest();
+			$request = $me->getCurrentRequest();
 
 			// Now we can split the controller and method out of the action string so that we
 			// can call them appropriately on the class. This controller and method are in
@@ -1551,7 +1555,7 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 * @param  dynamic  string
 	 * @return bool
 	 */
-	public function uses()
+	public function isAction()
 	{
 		foreach (func_get_args() as $pattern)
 		{

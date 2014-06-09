@@ -30,16 +30,13 @@ class ProcessPipes
     private $useFiles;
     /** @var bool    */
     private $ttyMode;
-    /** @var bool    */
-    private $ptyMode;
 
     const CHUNK_SIZE = 16384;
 
-    public function __construct($useFiles, $ttyMode, $ptyMode = false)
+    public function __construct($useFiles, $ttyMode)
     {
         $this->useFiles = (bool) $useFiles;
         $this->ttyMode = (bool) $ttyMode;
-        $this->ptyMode = (bool) $ptyMode;
 
         // Fix for PHP bug #51800: reading from STDOUT pipe hangs forever on Windows if the output is too big.
         // Workaround for this problem is to use temporary files instead of pipes on Windows platform.
@@ -107,22 +104,10 @@ class ProcessPipes
     /**
      * Returns an array of descriptors for the use of proc_open.
      *
-     * @param bool    $disableOutput Whether to redirect STDOUT and STDERR to /dev/null or not.
-     *
      * @return array
      */
-    public function getDescriptors($disableOutput)
+    public function getDescriptors()
     {
-        if ($disableOutput) {
-            $nullstream = fopen(defined('PHP_WINDOWS_VERSION_BUILD') ? 'NUL' : '/dev/null', 'c');
-
-            return array(
-                array('pipe', 'r'),
-                $nullstream,
-                $nullstream,
-            );
-        }
-
         if ($this->useFiles) {
             // We're not using pipe on Windows platform as it hangs (https://bugs.php.net/bug.php?id=51800)
             // We're not using file handles as it can produce corrupted output https://bugs.php.net/bug.php?id=65650
@@ -139,12 +124,6 @@ class ProcessPipes
                 array('file', '/dev/tty', 'r'),
                 array('file', '/dev/tty', 'w'),
                 array('file', '/dev/tty', 'w'),
-            );
-        } elseif ($this->ptyMode && Process::isPtySupported()) {
-            return array(
-                array('pty'),
-                array('pty'),
-                array('pty'),
             );
         }
 

@@ -30,7 +30,7 @@ class ClearCompiledCommand extends Command {
 			@unlink($path);
 		}
 
-		if (file_exists($path = $this->laravel['config']['app.manifest'].'/services.json'))
+		if (file_exists($path = $this->laravel['path.storage'].'/meta/services.json'))
 		{
 			@unlink($path);
 		}

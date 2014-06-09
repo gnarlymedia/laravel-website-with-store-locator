@@ -24,12 +24,11 @@ class ProcessBuilder
     private $arguments;
     private $cwd;
     private $env = array();
-    private $input;
+    private $stdin;
     private $timeout = 60;
     private $options = array();
     private $inheritEnv = true;
     private $prefix = array();
-    private $outputDisabled = false;
 
     /**
      * Constructor
@@ -156,17 +155,15 @@ class ProcessBuilder
     /**
      * Sets the input of the process.
      *
-     * Deprecation: As of Symfony 2.5, this method only accepts string values.
-     *
-     * @param string|null $input The input as a string
+     * @param string|null $stdin The input as a string
      *
      * @return ProcessBuilder
      *
      * @throws InvalidArgumentException In case the argument is invalid
      */
-    public function setInput($input)
+    public function setInput($stdin)
     {
-        $this->input = ProcessUtils::validateInput(sprintf('%s::%s', __CLASS__, __FUNCTION__), $input);
+        $this->stdin = ProcessUtils::validateInput(sprintf('%s::%s', __CLASS__, __FUNCTION__), $stdin);
 
         return $this;
     }
@@ -217,30 +214,6 @@ class ProcessBuilder
     }
 
     /**
-     * Disables fetching output and error output from the underlying process.
-     *
-     * @return Process
-     */
-    public function disableOutput()
-    {
-        $this->outputDisabled = true;
-
-        return $this;
-    }
-
-    /**
-     * Enables fetching output and error output from the underlying process.
-     *
-     * @return Process
-     */
-    public function enableOutput()
-    {
-        $this->outputDisabled = false;
-
-        return $this;
-    }
-
-    /**
      * Creates a Process instance and returns it.
      *
      * @return Process
@@ -265,12 +238,6 @@ class ProcessBuilder
             $env = $this->env;
         }
 
-        $process = new Process($script, $this->cwd, $env, $this->input, $this->timeout, $options);
-
-        if ($this->outputDisabled) {
-            $process->disableOutput();
-        }
-
-        return $process;
+        return new Process($script, $this->cwd, $env, $this->stdin, $this->timeout, $options);
     }
 }

@@ -28,13 +28,6 @@ class MorphTo extends BelongsTo {
 	 */
 	protected $dictionary = array();
 
-	/*
-	 * Indicates if soft-deleted model instances should be fetched.
-	 *
-	 * @var bool
-	 */
-	protected $withTrashed = false;
-
 	/**
 	 * Create a new belongs to relationship instance.
 	 *
@@ -157,11 +150,6 @@ class MorphTo extends BelongsTo {
 	{
 		$instance = $this->createModelByType($type);
 
-		if ($this->withTrashed && $instance->newQuery()->getMacro('withTrashed') !== null)
-		{
-			$instance = $instance->withTrashed();
-		}
-
 		$key = $instance->getKeyName();
 
 		return $instance->whereIn($key, $this->gatherKeysByType($type)->all())->get();
@@ -203,18 +191,6 @@ class MorphTo extends BelongsTo {
 	public function getDictionary()
 	{
 		return $this->dictionary;
-	}
-
-	/**
-	 * Fetch soft-deleted model instances with query
-	 *
-	 * @return MorphTo
-	 */
-	public function withTrashed()
-	{
-		$this->withTrashed = true;
-
-		return $this;
 	}
 
 }

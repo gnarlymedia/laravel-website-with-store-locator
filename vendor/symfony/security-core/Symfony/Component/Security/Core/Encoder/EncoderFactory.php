@@ -30,32 +30,19 @@ class EncoderFactory implements EncoderFactoryInterface
      */
     public function getEncoder($user)
     {
-        $encoderKey = null;
-
-        if ($user instanceof EncoderAwareInterface && (null !== $encoderName = $user->getEncoderName())) {
-            if (!array_key_exists($encoderName, $this->encoders)) {
-                throw new \RuntimeException(sprintf('The encoder "%s" was not configured.', $encoderName));
+        foreach ($this->encoders as $class => $encoder) {
+            if ((is_object($user) && !$user instanceof $class) || (!is_object($user) && !is_subclass_of($user, $class) && $user != $class)) {
+                continue;
             }
 
-            $encoderKey = $encoderName;
-        } else {
-            foreach ($this->encoders as $class => $encoder) {
-                if ((is_object($user) && $user instanceof $class) || (!is_object($user) && (is_subclass_of($user, $class) || $user == $class))) {
-                    $encoderKey = $class;
-                    break;
-                }
+            if (!$encoder instanceof PasswordEncoderInterface) {
+                return $this->encoders[$class] = $this->createEncoder($encoder);
             }
+
+            return $this->encoders[$class];
         }
 
-        if (null === $encoderKey) {
-            throw new \RuntimeException(sprintf('No encoder has been configured for account "%s".', is_object($user) ? get_class($user) : $user));
-        }
-
-        if (!$this->encoders[$encoderKey] instanceof PasswordEncoderInterface) {
-            $this->encoders[$encoderKey] = $this->createEncoder($this->encoders[$encoderKey]);
-        }
-
-        return $this->encoders[$encoderKey];
+        throw new \RuntimeException(sprintf('No encoder has been configured for account "%s".', is_object($user) ? get_class($user) : $user));
     }
 
     /**

@@ -23,10 +23,7 @@ class RunTest extends TestCase
      */
     protected function getException($message = null)
     {
-        // HHVM does not support mocking exceptions
-        // Since we do not use any additional features of Mockery for exceptions,
-        // we can just use native Exceptions instead.
-        return new \Exception($message);
+        return m::mock('Exception', array($message));
     }
 
     /**
@@ -294,7 +291,7 @@ class RunTest extends TestCase
         ;
 
         try {
-            trigger_error('foo', E_USER_NOTICE);
+            trigger_error(E_USER_NOTICE, 'foo');
             $this->fail('Should not continue after error thrown');
         } catch (\ErrorException $e) {
             // Do nothing
@@ -350,7 +347,7 @@ class RunTest extends TestCase
             })
         ;
 
-        $run->silenceErrorsInPaths('@^'.preg_quote(__FILE__, '@').'$@', E_USER_NOTICE);
+        $run->silenceErrorsInPaths('@^'.preg_quote(__FILE__).'$@', E_USER_NOTICE);
         trigger_error('Test', E_USER_NOTICE);
         $this->assertTrue(true);
     }

@@ -28,6 +28,5 @@ class ClassNotFoundException extends FatalErrorException
             $previous->getLine(),
             $previous->getPrevious()
         );
-        $this->setTrace($previous->getTrace());
     }
 }

@@ -828,7 +828,7 @@ class Connection implements ConnectionInterface {
 	/**
 	 * Get the paginator environment instance.
 	 *
-	 * @return \Illuminate\Pagination\Factory
+	 * @return \Illuminate\Pagination\Environment
 	 */
 	public function getPaginator()
 	{
@@ -843,7 +843,7 @@ class Connection implements ConnectionInterface {
 	/**
 	 * Set the pagination environment instance.
 	 *
-	 * @param  \Illuminate\Pagination\Factory|\Closure  $paginator
+	 * @param  \Illuminate\Pagination\Environment|\Closure  $paginator
 	 * @return void
 	 */
 	public function setPaginator($paginator)

@@ -18,6 +18,8 @@
           <li class="active"><a href="/logout">Log Out</a></li>
         </ul>
 	</li>
+    <li><a href="/google-locations">Locations</a></li>
+    <li><a href="/blog">Blog</a></li>
 @stop
 
 @section('content')

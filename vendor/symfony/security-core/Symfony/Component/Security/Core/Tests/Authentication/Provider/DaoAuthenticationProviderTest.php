@@ -14,7 +14,6 @@ namespace Symfony\Component\Security\Core\Tests\Authentication\Provider;
 use Symfony\Component\Security\Core\Encoder\PlaintextPasswordEncoder;
 
 use Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider;
-use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
 class DaoAuthenticationProviderTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,7 +37,7 @@ class DaoAuthenticationProviderTest extends \PHPUnit_Framework_TestCase
         $userProvider = $this->getMock('Symfony\\Component\\Security\\Core\\User\\UserProviderInterface');
         $userProvider->expects($this->once())
                      ->method('loadUserByUsername')
-                     ->will($this->throwException(new UsernameNotFoundException()))
+                     ->will($this->throwException($this->getMock('Symfony\\Component\\Security\\Core\\Exception\\UsernameNotFoundException', null, array(), '', false)))
         ;
 
         $provider = new DaoAuthenticationProvider($userProvider, $this->getMock('Symfony\\Component\\Security\\Core\\User\\UserCheckerInterface'), 'key', $this->getMock('Symfony\\Component\\Security\\Core\\Encoder\\EncoderFactoryInterface'));
@@ -56,7 +55,7 @@ class DaoAuthenticationProviderTest extends \PHPUnit_Framework_TestCase
         $userProvider = $this->getMock('Symfony\\Component\\Security\\Core\\User\\UserProviderInterface');
         $userProvider->expects($this->once())
                      ->method('loadUserByUsername')
-                     ->will($this->throwException(new \RuntimeException()))
+                     ->will($this->throwException($this->getMock('RuntimeException', null, array(), '', false)))
         ;
 
         $provider = new DaoAuthenticationProvider($userProvider, $this->getMock('Symfony\\Component\\Security\\Core\\User\\UserCheckerInterface'), 'key', $this->getMock('Symfony\\Component\\Security\\Core\\Encoder\\EncoderFactoryInterface'));

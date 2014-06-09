@@ -9,7 +9,6 @@ use Whoops\Exception\Frame;
 use UnexpectedValueException;
 use IteratorAggregate;
 use ArrayIterator;
-use ArrayAccess;
 use Serializable;
 use Countable;
 
@@ -17,7 +16,7 @@ use Countable;
  * Exposes a fluent interface for dealing with an ordered list
  * of stack-trace frames.
  */
-class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, Countable
+class FrameCollection implements IteratorAggregate, Serializable, Countable
 {
     /**
      * @var array[]
@@ -36,19 +35,19 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
 
     /**
      * Filters frames using a callable, returns the same FrameCollection
-     *
+     * 
      * @param  callable $callable
      * @return FrameCollection
      */
     public function filter($callable)
     {
         $this->frames = array_filter($this->frames, $callable);
-        return $this;
+        return $this;        
     }
 
     /**
      * Map the collection of frames
-     *
+     * 
      * @param  callable $callable
      * @return FrameCollection
      */
@@ -74,7 +73,7 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
     /**
      * Returns an array with all frames, does not affect
      * the internal array.
-     *
+     * 
      * @todo   If this gets any more complex than this,
      *         have getIterator use this method.
      * @see    FrameCollection::getIterator
@@ -92,42 +91,6 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
     public function getIterator()
     {
         return new ArrayIterator($this->frames);
-    }
-
-    /**
-     * @see ArrayAccess::offsetExists
-     * @param int $offset
-     */
-    public function offsetExists($offset)
-    {
-        return isset($this->frames[$offset]);
-    }
-
-    /**
-     * @see ArrayAccess::offsetGet
-     * @param int $offset
-     */
-    public function offsetGet($offset)
-    {
-        return $this->frames[$offset];
-    }
-
-    /**
-     * @see ArrayAccess::offsetSet
-     * @param int $offset
-     */
-    public function offsetSet($offset, $value)
-    {
-        throw new \Exception(__CLASS__ . ' is read only');
-    }
-
-    /**
-     * @see ArrayAccess::offsetUnset
-     * @param int $offset
-     */
-    public function offsetUnset($offset)
-    {
-        throw new \Exception(__CLASS__ . ' is read only');
     }
 
     /**
@@ -155,37 +118,5 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
     public function unserialize($serializedFrames)
     {
         $this->frames = unserialize($serializedFrames);
-    }
-
-    /**
-     * @param Frame[] $frames Array of Frame instances, usually from $e->getPrevious()
-     */
-    public function prependFrames(array $frames)
-    {
-        $this->frames = array_merge($frames, $this->frames);
-    }
-
-    /**
-     * Gets the innermost part of stack trace that is not the same as that of outer exception
-     *
-     * @param FrameCollection $parentFrames Outer exception frames to compare tail against
-     * @return Frame[]
-     */
-    public function topDiff(FrameCollection $parentFrames)
-    {
-        $diff = $this->frames;
-
-        $parentFrames = $parentFrames->getArray();
-        $p = count($parentFrames)-1;
-
-        for($i = count($diff)-1; $i >= 0 && $p >= 0; $i--) {
-            /** @var Frame $tailFrame */
-            $tailFrame = $diff[$i];
-            if($tailFrame->equals($parentFrames[$p])) {
-                unset($diff[$i]);
-            }
-            $p--;
-        }
-        return $diff;
     }
 }

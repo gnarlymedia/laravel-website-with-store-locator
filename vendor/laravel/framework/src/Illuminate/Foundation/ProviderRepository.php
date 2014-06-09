@@ -200,7 +200,7 @@ class ProviderRepository {
 	{
 		$path = $this->manifestPath.'/services.json';
 
-		$this->files->put($path, json_encode($manifest, JSON_PRETTY_PRINT));
+		$this->files->put($path, json_encode($manifest));
 
 		return $manifest;
 	}

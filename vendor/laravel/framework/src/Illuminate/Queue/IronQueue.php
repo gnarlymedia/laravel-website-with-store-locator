@@ -4,6 +4,7 @@ use IronMQ;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Queue\Jobs\IronJob;
+use Illuminate\Encryption\Encrypter;
 
 class IronQueue extends Queue implements QueueInterface {
 
@@ -13,6 +14,13 @@ class IronQueue extends Queue implements QueueInterface {
 	 * @var IronMQ
 	 */
 	protected $iron;
+
+	/**
+	 * The encrypter instance.
+	 *
+	 * @var \Illuminate\Encryption\Encrypter
+	 */
+	protected $crypt;
 
 	/**
 	 * The current request instance.
@@ -29,27 +37,20 @@ class IronQueue extends Queue implements QueueInterface {
 	protected $default;
 
 	/**
-	 * Indicates if the messages should be encrypted.
-	 *
-	 * @var bool
-	 */
-	protected $shouldEncrypt;
-
-	/**
 	 * Create a new IronMQ queue instance.
 	 *
 	 * @param  \IronMQ  $iron
+	 * @param  \Illuminate\Encryption\Encrypter  $crypt
 	 * @param  \Illuminate\Http\Request  $request
 	 * @param  string  $default
-	 * @param  bool  $shouldEncrypt
 	 * @return void
 	 */
-	public function __construct(IronMQ $iron, Request $request, $default, $shouldEncrypt = false)
+	public function __construct(IronMQ $iron, Encrypter $crypt, Request $request, $default)
 	{
 		$this->iron = $iron;
+		$this->crypt = $crypt;
 		$this->request = $request;
 		$this->default = $default;
-		$this->shouldEncrypt = $shouldEncrypt;
 	}
 
 	/**
@@ -75,7 +76,7 @@ class IronQueue extends Queue implements QueueInterface {
 	 */
 	public function pushRaw($payload, $queue = null, array $options = array())
 	{
-		if ($this->shouldEncrypt) $payload = $this->crypt->encrypt($payload);
+		$payload = $this->crypt->encrypt($payload);
 
 		return $this->iron->postMessage($this->getQueue($queue), $payload, $options)->id;
 	}
@@ -130,7 +131,7 @@ class IronQueue extends Queue implements QueueInterface {
 		// queues will be a security hazard to unsuspecting developers using it.
 		if ( ! is_null($job))
 		{
-			$job->body = $this->parseJobBody($job->body);
+			$job->body = $this->crypt->decrypt($job->body);
 
 			return new IronJob($this->container, $this, $job);
 		}
@@ -169,7 +170,7 @@ class IronQueue extends Queue implements QueueInterface {
 	{
 		$r = $this->request;
 
-		$body = $this->parseJobBody($r->getContent());
+		$body = $this->crypt->decrypt($r->getContent());
 
 		return (object) array(
 			'id' => $r->header('iron-message-id'), 'body' => $body, 'pushed' => true,
@@ -200,17 +201,6 @@ class IronQueue extends Queue implements QueueInterface {
 		$payload = $this->setMeta(parent::createPayload($job, $data), 'attempts', 1);
 
 		return $this->setMeta($payload, 'queue', $this->getQueue($queue));
-	}
-
-	/**
-	 * Parse the job body for firing.
-	 *
-	 * @param  string  $body
-	 * @return string
-	 */
-	protected function parseJobBody($body)
-	{
-		return $this->shouldEncrypt ? $this->crypt->decrypt($body) : $body;
 	}
 
 	/**

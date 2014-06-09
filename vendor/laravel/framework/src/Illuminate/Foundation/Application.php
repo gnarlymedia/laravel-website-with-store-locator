@@ -27,7 +27,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
 	 *
 	 * @var string
 	 */
-	const VERSION = '4.2.1';
+	const VERSION = '4.1.30';
 
 	/**
 	 * Indicates if the application has "booted".
@@ -289,7 +289,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
 	 * @param  array  $options
 	 * @return \Illuminate\Support\ServiceProvider
 	 */
-	public function forceRegister($provider, $options = array())
+	public function forgeRegister($provider, $options = array())
 	{
 		return $this->register($provider, $options, true);
 	}
@@ -654,7 +654,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
 	 */
 	protected function registerBaseMiddlewares()
 	{
-		//
+		$this->middleware('Illuminate\Http\FrameGuard');
 	}
 
 	/**
@@ -839,7 +839,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
 	 */
 	public function isDownForMaintenance()
 	{
-		return file_exists($this['config']['app.manifest'].'/down');
+		return file_exists($this['path.storage'].'/meta/down');
 	}
 
 	/**
@@ -1081,7 +1081,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
 			'translator'     => 'Illuminate\Translation\Translator',
 			'log'            => 'Illuminate\Log\Writer',
 			'mailer'         => 'Illuminate\Mail\Mailer',
-			'paginator'      => 'Illuminate\Pagination\Factory',
+			'paginator'      => 'Illuminate\Pagination\Environment',
 			'auth.reminder'  => 'Illuminate\Auth\Reminders\PasswordBroker',
 			'queue'          => 'Illuminate\Queue\QueueManager',
 			'redirect'       => 'Illuminate\Routing\Redirector',
@@ -1093,7 +1093,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
 			'remote'         => 'Illuminate\Remote\RemoteManager',
 			'url'            => 'Illuminate\Routing\UrlGenerator',
 			'validator'      => 'Illuminate\Validation\Factory',
-			'view'           => 'Illuminate\View\Factory',
+			'view'           => 'Illuminate\View\Environment',
 		);
 
 		foreach ($aliases as $key => $alias)

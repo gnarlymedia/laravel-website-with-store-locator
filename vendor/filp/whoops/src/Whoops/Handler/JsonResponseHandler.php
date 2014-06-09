@@ -6,7 +6,7 @@
 
 namespace Whoops\Handler;
 use Whoops\Handler\Handler;
-use Whoops\Exception\Formatter;
+use Whoops\Exception\Frame;
 
 /**
  * Catches an exception and converts it to a JSON
@@ -27,7 +27,7 @@ class JsonResponseHandler extends Handler
 
     /**
      * @param  bool|null $returnFrames
-     * @return bool|$this
+     * @return null|bool
      */
     public function addTraceToOutput($returnFrames = null)
     {
@@ -36,7 +36,6 @@ class JsonResponseHandler extends Handler
         }
 
         $this->returnFrames = (bool) $returnFrames;
-        return $this;
     }
 
     /**
@@ -74,15 +73,34 @@ class JsonResponseHandler extends Handler
             return Handler::DONE;
         }
 
+        $exception = $this->getException();
+
         $response = array(
-            'error' => Formatter::formatExceptionAsDataArray(
-                $this->getInspector(),
-                $this->addTraceToOutput()
-            ),
+            'error' => array(
+                'type'    => get_class($exception),
+                'message' => $exception->getMessage(),
+                'file'    => $exception->getFile(),
+                'line'    => $exception->getLine()
+            )
         );
 
-        if (\Whoops\Util\Misc::canSendHeaders()) {
-            header('Content-Type: application/json');
+        if($this->addTraceToOutput()) {
+            $inspector = $this->getInspector();
+            $frames    = $inspector->getFrames();
+            $frameData = array();
+
+            foreach($frames as $frame) {
+                /** @var Frame $frame */
+                $frameData[] = array(
+                    'file'     => $frame->getFile(),
+                    'line'     => $frame->getLine(),
+                    'function' => $frame->getFunction(),
+                    'class'    => $frame->getClass(),
+                    'args'     => $frame->getArgs()
+                );
+            }
+
+            $response['error']['trace'] = $frameData;
         }
 
         echo json_encode($response);
