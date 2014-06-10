@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder {
         $this->call('PatientTableSeeder');
         $this->call('ModalityTableSeeder');
         $this->call('MarkersTableSeeder');
+        $this->call('PostTableFakeSeeder');
 	}
 }
 
