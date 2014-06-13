@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Anahkiasen/former.git",
-                "reference": "e5c4ba1e749c421465d7edad2fa9e9ab922f8a2d"
+                "reference": "d64ebdd245721da18dcefc4e1136b607434fd6f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Anahkiasen/former/zipball/e5c4ba1e749c421465d7edad2fa9e9ab922f8a2d",
-                "reference": "e5c4ba1e749c421465d7edad2fa9e9ab922f8a2d",
+                "url": "https://api.github.com/repos/Anahkiasen/former/zipball/d64ebdd245721da18dcefc4e1136b607434fd6f2",
+                "reference": "d64ebdd245721da18dcefc4e1136b607434fd6f2",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "foundation",
                 "laravel"
             ],
-            "time": "2014-06-01 09:29:29"
+            "time": "2014-06-12 10:04:33"
         },
         {
             "name": "anahkiasen/html-object",
@@ -1558,12 +1558,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "58e2d1a815802067d267d3a19d068336b7a4b13f"
+                "reference": "096a36f21e7ff0768a8a42d524964f3896acd1c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/58e2d1a815802067d267d3a19d068336b7a4b13f",
-                "reference": "58e2d1a815802067d267d3a19d068336b7a4b13f",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/096a36f21e7ff0768a8a42d524964f3896acd1c6",
+                "reference": "096a36f21e7ff0768a8a42d524964f3896acd1c6",
                 "shasum": ""
             },
             "require": {
@@ -1616,7 +1616,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2014-06-01 21:22:37"
+            "time": "2014-06-10 19:25:07"
         },
         {
             "name": "monolog/monolog",
