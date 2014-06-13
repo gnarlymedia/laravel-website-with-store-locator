@@ -6,3 +6,7 @@ apache_error_log
 public/.htaccess
 public/assets/php/phpsqlsearch_dbinfo.php
 .idea/dictionaries/simonhudson.xml
+vendor
+public/uploads/
+app/storage/clockwork/
+.idea
