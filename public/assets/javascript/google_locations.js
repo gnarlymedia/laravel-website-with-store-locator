@@ -112,6 +112,8 @@ function positionSuccess(position) {
       center: userLatLng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true,
+      scrollwheel: false,
+      draggable: false,
       mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}
     }
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);

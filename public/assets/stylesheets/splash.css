@@ -7,42 +7,28 @@ body {
 	height: 100%;
 	padding-top: 0;
 }
-#centering_container {
-	max-width:1600px;
-	margin:0 auto;
-	position: relative;
+#patients_referrers {
+	background:	url(/assets/images/background/background_1800_short.jpg) no-repeat;
+	background-position: center center;
+    background-size: 100% auto;
+	text-align: center;
+	margin: 0;
+	vertical-align: bottom;
+	padding: 23% 0 1% 0;
+	white-space: nowrap;
+	position:relative;
 }
-#background-image {
-	max-width: 100%;
+#logo {
+    max-width:18%;
+	margin-bottom: 5%;
+}
+#patients_referrers img {
     height: auto;
     width: auto\9; /* ie8 */
 }
-#logo {
-	margin: 0 auto 30px auto;
-	display: block;
-}
-#portal_buttons {
-	display:block;
-	margin: 0 auto;
-}
-#patients_referrers {
-/*
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-*/
-   max-width: 599px;
-   height: 321px;
-   position: absolute;
-   left: 50%;
-   top: 57%;
-   margin-left: -300px;
-   margin-top: -160px;
-}
 #glyphicon {
 	display:block;
-	margin: -25px auto 0 auto;
+	margin: 0 auto;
 	z-index: 1001;
 }
 a {
@@ -53,104 +39,72 @@ a:hover {
 	color: none;
 	text-decoration: none;
 }
-#footer {
-   	padding: 30px 60px 45px 60px;
-	width: 100%;
-	background-color: white;
-}
 #social {
-	float:left;
+	margin-top: 3%;
 }
-#footer img, #footer a {
+#social img {
+	display: inline;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#social img {
 	padding: 0;
 	margin: 0;
 }
 #copyright {
-	float:right;
+	margin-bottom: 5%;
 	font-size: 10px;
-	margin: 50px 0 0 0;
 }
-
-#vertical_line {
-	margin:0 30px 55px 30px;
-}
-
 #referrer_button {
+/*
 	background:url(../images/buttons/referrer_portal.png) no-repeat 0 0;
     display: inline-block;
     width:265px;
     height:77px;
+*/
 }
-
-#referrer_button:hover {
-    background:url(../images/buttons/referrer_portal_roll.png) no-repeat 0 0;
+#right {
+	position:absolute;
+    left:50%;
+    top:61%;
+    bottom:4%;
+    border-left:1px solid white;
 }
-
+#referrer_button {
+	margin: 4% 3% 6% 0;
+}
 #patient_button {
+	margin: 4% 0 6% 3%;
+}
+#referrer_button:hover {
+/*     background:url(../images/buttons/referrer_portal_roll.png) no-repeat 0 0; */
+}
+#patient_button, #referrer_button {
+/*
 	background:url(../images/buttons/patient_portal.png) no-repeat 0 0;
     display: inline-block;
     width:265px;
     height:77px;
-/*
-	opacity: 1;
-	transition: opacity .30s ease-in-out;
-	-moz-transition: opacity .30s ease-in-out;
-	-webkit-transition: opacity .30s ease-in-out;
 */
+    max-width:25%;
+	display: inline;
 }
 
-#patient_button:hover {
-    background:url(../images/buttons/patient_portal_roll.png) no-repeat 0 0;
-/* 	opacity: 0.4; */
+#patient_button:hover, #referrer_button:hover {
+/*     background:url(../images/buttons/patient_portal_roll.png) no-repeat 0 0; */
 }
-
-@media only screen and (max-width: 1199px) {
-	#patients_referrers {
- -webkit-transform: scale(0.8); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.8); /* FF3.5+ */
-      -ms-transform: scale(0.8); /* IE9 */
-       -o-transform: scale(0.8); /* Opera 10.5+ */
-          transform: scale(0.8);
-             /* IE6–IE9 */
-             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
-	}
+.row {
+	margin: 0;
 }
-
-@media only screen and (max-width: 1000px) {
-	#patients_referrers {
- -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.5); /* FF3.5+ */
-      -ms-transform: scale(0.5); /* IE9 */
-       -o-transform: scale(0.5); /* Opera 10.5+ */
-          transform: scale(0.5);
-             /* IE6–IE9 */
-             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
-	}
+.fadeover {
+	display: inline;
+	opacity: 1;
+	transition: opacity .20s ease-in-out;
+	-moz-transition: opacity .20s ease-in-out;
+	-webkit-transition: opacity .20s ease-in-out;
 }
-
-@media only screen and (max-width: 800px) {
-	#patients_referrers {
- -webkit-transform: scale(0.4); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.4); /* FF3.5+ */
-      -ms-transform: scale(0.4); /* IE9 */
-       -o-transform: scale(0.4); /* Opera 10.5+ */
-          transform: scale(0.4);
-             /* IE6–IE9 */
-             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
-	}
+.fadeover:hover {
+	opacity: 0.4;
 }
-
-@media only screen and (max-width: 700px) {
-	#patients_referrers {
- -webkit-transform: scale(0.3); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.3); /* FF3.5+ */
-      -ms-transform: scale(0.3); /* IE9 */
-       -o-transform: scale(0.3); /* Opera 10.5+ */
-          transform: scale(0.3);
-             /* IE6–IE9 */
-             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
-	}
-}
-
 
 

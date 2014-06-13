@@ -1,2 +1,42 @@
 @import 'base.less'; 
-//styles specific for the frontend 
+
+// Small screens
+@media (max-width: @screen-xs-max){
+	#copyright, #social {
+		text-align: center;
+	}
+	#patients_referrers {
+		background-position: center top;
+	}
+	#social img {
+//    	max-width:12%;
+    }
+    #copyright {
+		margin-top: 2%;
+	}
+	div#nav-container {
+	    background-size: cover;
+	}
+}
+
+// Larger screens
+@media (min-width: @screen-xs-max) {
+	#copyright {
+		text-align: right;
+	}
+	#social img {
+//    	max-width:16%;
+    }
+    #copyright {
+		margin-top: 7%;
+	}
+	div#nav-container {
+	    background-size: 100% auto;
+	}
+}
+
+// @media(min-width: @screen-tablet){}     /* or @screen-sm */
+
+// @media(min-width: @screen-desktop){}    /* or @screen-md */
+
+// @media(min-width: @screen-lg-desktop){} /* or @screen-lg */

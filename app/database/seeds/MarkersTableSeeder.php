@@ -24,21 +24,20 @@ class MarkersTableSeeder extends Seeder {
 			}
 		}
 
-		/* Kilmore Imaging */
-		$marker = Marker::create(array(
-			'name' => 'Kilmore Imaging',
-			'address' => 'Rutledge Street Kilmore VIC 3764',
-			'lat' => '-37.301622',
-			'lng' => '144.958031'
-		));
-		$modalities_short_codes = array(
-			'general_xray',
-			'ultrasound',
-			'doppler',
-			'ct'
-		);
-		add_modalities($marker, $modalities_short_codes);
-		
+        // Broadford
+        $marker = Marker::create(array(
+            'name' => 'Broadford',
+            'address' => '81 High Street Broadford VIC 3658',
+            'lat' => '-37.204205',
+            'lng' => '145.046741'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
 		// Brunswick
 		$marker = Marker::create(array(
 			'name' => 'Brunswick',
@@ -71,20 +70,35 @@ class MarkersTableSeeder extends Seeder {
 			'echocardiography'
 		);
 		add_modalities($marker, $modalities_short_codes);
-		
-		// Broadford
-		$marker = Marker::create(array(
-			'name' => 'Broadford',
-			'address' => '81 High Street Broadford VIC 3658',
-			'lat' => '-37.204205',
-			'lng' => '145.046741'
-		));
-		$modalities_short_codes = array(
-			'general_xray',
-			'ultrasound',
-			'doppler'
-		);
-		add_modalities($marker, $modalities_short_codes);
+
+        // Glenroy
+        $marker = Marker::create(array(
+            'name' => 'Glenroy',
+            'address' => '163 Wheatsheaf Road Glenroy VIC 3046',
+            'lat' => '-37.706306',
+            'lng' => '144.918556'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'opg'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Kilmore Imaging
+        $marker = Marker::create(array(
+            'name' => 'Kilmore Imaging',
+            'address' => 'Rutledge Street Kilmore VIC 3764',
+            'lat' => '-37.301622',
+            'lng' => '144.958031'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'ct'
+        );
+        add_modalities($marker, $modalities_short_codes);
 
 		$faker = Faker\Factory::create();
 		 

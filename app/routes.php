@@ -15,7 +15,7 @@
 // General
 Route::get('/', function()
 {
-	return View::make('splash');
+	return View::make('splash-full-screen');
 });
 
 Route::get('locations', array('as' => 'locations', function()
@@ -53,6 +53,23 @@ Route::get('theme/stellar', function()
 {
 	return View::make('theme2-stellar');
 });
+
+// Mockup
+Route::get('/mockup-patients', function()
+{
+	return View::make('mockup-patients');
+});
+
+Route::get('/mockup-referrer', function()
+{
+	return View::make('mockup-referrer');
+});
+
+Route::get('/mockup-offcanvas', function()
+{
+	return View::make('mockup-offcanvas');
+});
+
 
 // Patients
 Route::get('/patients-home', function()

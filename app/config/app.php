@@ -182,4 +182,16 @@ return array(
 
 	),
 
+    /*
+	|--------------------------------------------------------------------------
+	| Class Aliases
+	|--------------------------------------------------------------------------
+	|
+	| This setting may be used to control the default cipher used by the Laravel
+	| encryption facilities. Added by s.hudson in upgrading Laravel
+	| from 4.1 -> 4.2.
+	|
+	*/
+    'cipher' => MCRYPT_RIJNDAEL_256,
+
 );

@@ -4,7 +4,7 @@ html {
 	height:100%;
 }
 body {
-	margin: 10px;
+/* 	margin: 10px; */
 	height:100%;
 }
 div#map_canvas {
@@ -17,12 +17,13 @@ div.container {
 }
 div#info {
 	width:100%;
-	position:absolute;
+/* 	position:absolute; */
 	overflow:hidden;
 	text-align:center;
-	top:0;
-	left:0;
+/* 	top:0; */
+/* 	left:0; */
 	font-size: small;
+	padding-top: 3%;
 }
 div#info_msg {
 	position:relative;
