@@ -54,6 +54,113 @@ Route::get('theme/stellar', function()
 	return View::make('theme2-stellar');
 });
 
+// For reals
+Route::get('patient-info', function()
+{
+    return View::make('patient-info');
+});
+
+Route::get('patient-procedures', function()
+{
+    return View::make('patient-procedures');
+});
+
+Route::get('patient-billing', function()
+{
+    return View::make('patient-billing');
+});
+
+Route::get('patient-contact', function()
+{
+    return View::make('patient-contact');
+});
+
+// Procedures
+Route::get('bone-densitometry', function()
+{
+    return View::make('bone-densitometry');
+});
+
+Route::get('ct', function()
+{
+    return View::make('ct');
+});
+
+Route::get('ct-angiography', function()
+{
+    return View::make('ct-angiography');
+});
+
+Route::get('doppler', function()
+{
+    return View::make('doppler');
+});
+
+Route::get('echocardiography', function()
+{
+    return View::make('echocardiography');
+});
+
+Route::get('general-x-ray', function()
+{
+    return View::make('general-x-ray');
+});
+
+Route::get('mammography', function()
+{
+    return View::make('mammography');
+});
+
+Route::get('mri', function()
+{
+    return View::make('mri');
+});
+
+Route::get('nuclear-medicine', function()
+{
+    return View::make('nuclear-medicine');
+});
+
+Route::get('ultrasound', function()
+{
+    return View::make('ultrasound');
+});
+
+Route::get('platelet-rich-plasma', function()
+{
+    return View::make('platelet-rich-plasma');
+});
+
+Route::get('dental-x-ray', function()
+{
+    return View::make('dental-x-ray');
+});
+
+Route::get('dexa', function()
+{
+    return View::make('dexa');
+});
+
+Route::get('cardiac-imaging', function()
+{
+    return View::make('cardiac-imaging');
+});
+
+
+Route::get('opg', function()
+{
+    return View::make('opg');
+});
+
+
+
+
+
+
+
+
+
+
 // Mockup
 Route::get('/mockup-patients', function()
 {

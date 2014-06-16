@@ -17,6 +17,9 @@
 	div#nav-container {
 	    background-size: cover;
 	}
+    ul.nav.navbar-nav li {
+      margin: 10px 5px;
+    }
 }
 
 // Larger screens
@@ -33,6 +36,36 @@
 	div#nav-container {
 	    background-size: 100% auto;
 	}
+    ul.nav.navbar-nav li:first-child {
+      margin-left: 0;
+    }
+    ul.nav.navbar-nav li:last-child {
+      margin-right: 0;
+    }
+    ul.nav.navbar-nav li {
+      margin: 0 5px;
+    }
+
+    @animation-time: 1s;
+    @animation-left-position: -1000px;
+    @animation-right-position: 0;
+
+    #pointer {
+      -webkit-animation: myfirst @animation-time; /* Chrome, Safari, Opera */
+      animation: myfirst @animation-time ease-in-out;
+    }
+
+    /* Chrome, Safari, Opera */
+    @-webkit-keyframes myfirst {
+      from {left: @animation-left-position}
+      to {right: @animation-right-position}
+    }
+
+    /* Standard syntax */
+    @keyframes myfirst {
+      from {left: @animation-left-position}
+      to {right: @animation-right-position}
+    }
 }
 
 // @media(min-width: @screen-tablet){}     /* or @screen-sm */
@@ -40,3 +73,35 @@
 // @media(min-width: @screen-desktop){}    /* or @screen-md */
 
 // @media(min-width: @screen-lg-desktop){} /* or @screen-lg */
+
+
+//Static
+
+ul.nav.navbar-nav li {
+  padding: 5px;
+  border: 1px solid #fff;
+}
+ul.nav.navbar-nav li a {
+  padding: 12px 25px;
+  border: 1px solid #fff;
+}
+div.container {
+  padding-top:5%;
+}
+div#social {
+  padding-top:2%;
+}
+div.navbar-collapse.collapse {
+  float: left;
+  white-space: nowrap;
+}
+ul.nav.navbar-nav li {
+//  width: 25%
+}
+.shadowed {
+  -webkit-filter: drop-shadow(8px 8px 7px #222);
+  filter: url(shadow.svg#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+    Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}

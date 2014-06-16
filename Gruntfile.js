@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     less: {
         development: {
             options: {
-              compress: true,  //minifying the result
+              compress: true  //minifying the result
             },
             files: {
               //compiling frontend.less into frontend.css
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     },
     concat: {
       options: {
-        separator: ';',
+        separator: ';'
       },
       js_frontend: {
         src: [
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
           './bower_components/bootstrap/docs/assets/js/vendor/holder.js',
           './app/assets/javascript/frontend.js'
         ],
-        dest: './public/assets/javascript/frontend.js',
+        dest: './public/assets/javascript/frontend.js'
       },
       js_backend: {
         src: [
@@ -38,15 +38,16 @@ module.exports = function(grunt) {
           './bower_components/bootstrap/dist/js/bootstrap.js',
           './app/assets/javascript/backend.js'
         ],
-        dest: './public/assets/javascript/backend.js',
+        dest: './public/assets/javascript/backend.js'
       },
       css_frontend: {
         src: [
-          './public/assets/stylesheets/frontend.css',
-          './bower_components/bootstrap/docs/examples/theme/theme.css'
+            './public/assets/stylesheets/frontend.css',
+            './bower_components/bootstrap/docs/examples/theme/theme.css',
+            './public/assets/fonts/webfontkit/stylesheet.css'
         ],
-        dest: './public/assets/stylesheets/combined.css',
-      },
+        dest: './public/assets/stylesheets/combined.css'
+      }
     },
     uglify: {
       options: {
@@ -54,14 +55,14 @@ module.exports = function(grunt) {
       },
       frontend: {
         files: {
-          './public/assets/javascript/frontend.js': './public/assets/javascript/frontend.js',
+          './public/assets/javascript/frontend.js': './public/assets/javascript/frontend.js'
         }
       },
       backend: {
         files: {
-          './public/assets/javascript/backend.js': './public/assets/javascript/backend.js',
+          './public/assets/javascript/backend.js': './public/assets/javascript/backend.js'
         }
-      },
+      }
     },
     phpunit: {
         classes: {
@@ -106,8 +107,8 @@ module.exports = function(grunt) {
           files: [
             //watched files
             './app/routes.php',
-            './app/views/**',
-            './app/views/*/**',
+            './app/views/*',
+            './app/views/**/*',
             './app/views/layouts/**',
             './app/models/**',
             './app/controllers/**',
@@ -119,7 +120,10 @@ module.exports = function(grunt) {
           }
         },
         less: {
-          files: ['./app/assets/stylesheets/*.less'],  //watched files
+          files: [
+              './app/assets/stylesheets/*.less',
+              './bower_components/bootstrap/less/**'
+          ],  //watched files
           tasks: ['less','concat:css_frontend'],                          //tasks to run
           options: {
             livereload: true                        //reloads the browser

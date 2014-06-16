@@ -1,8 +1,5 @@
-body, container {
-}
-
 #nav-container {
-	background-color: none;
+	background: none;
 	background: url(../images/background/background_1800_short.jpg) no-repeat;
 	background-position: center center;
 	min-height:10%;
@@ -15,7 +12,7 @@ body, container {
 /* 	overflow: hidden; */
 }
 .fadeover {
-	display: inline;
+	/*display: inline;*/
 	opacity: 1;
 	transition: opacity .20s ease-in-out;
 	-moz-transition: opacity .20s ease-in-out;
@@ -39,7 +36,9 @@ a.navbar-brand img {
 }
 #pointer {
 	position:absolute;
-	bottom: -15px;
+	bottom: -50px;
+    left:50%;
+    margin-left: -15px;
 }
 #social {
 	margin-top: 3%;
