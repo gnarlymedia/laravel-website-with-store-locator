@@ -38,6 +38,7 @@
         </ul>
     </li>
     <li class="fadeover"><a href="patient-billing">BILLING</a></li>
+    <li><a href="/blog">Blog</a></li>
     <li class="fadeover"><a href="patient-contact">CONTACT</a></li>
 @stop
 

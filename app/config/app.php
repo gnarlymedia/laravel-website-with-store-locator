@@ -110,7 +110,9 @@ return array(
 		'WebsiteModel\Storage\StorageServiceProvider',
 		'Clockwork\Support\Laravel\ClockworkServiceProvider',
 		'Way\Form\FormServiceProvider',
-		'Former\FormerServiceProvider'
+		'Former\FormerServiceProvider',
+        'Fbf\LaravelBlog\LaravelBlogServiceProvider',
+        'Frozennode\Administrator\AdministratorServiceProvider',
 
 	),
 
