@@ -25,7 +25,8 @@ class RemindersController extends Controller {
 				return Redirect::back()->with('error', Lang::get($response));
 
 			case Password::REMINDER_SENT:
-				return Redirect::back()->with('status', Lang::get($response));
+                return "reminder-sent";
+//				return Redirect::back()->with('status', Lang::get($response));
 		}
 	}
 

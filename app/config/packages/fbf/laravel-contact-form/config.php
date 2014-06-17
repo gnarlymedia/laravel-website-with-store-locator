@@ -2,32 +2,32 @@
 
 return array(
 
-	'uri' => 'contact',
+	'uri' => 'patient-contact',
 
 	'view' => 'laravel-contact-form::contact',
 
 	'fields' => array(
-//		'name' => array(
+		'name' => array(
+			'type' => 'text',
+		),
+//		'title' => array(
+//			'type' => 'select',
+//			'choices' => array(
+//				'' => 'Please select',
+//				'Mr' => 'Mr',
+//				'Mrs' => 'Mrs',
+//				'Miss' => 'Miss',
+//				'Ms' => 'Ms',
+//				'Dr' => 'Dr',
+//				'Other' => 'Other',
+//			),
+//		),
+//		'first_name' => array(
 //			'type' => 'text',
 //		),
-		'title' => array(
-			'type' => 'select',
-			'choices' => array(
-				'' => 'Please select',
-				'Mr' => 'Mr',
-				'Mrs' => 'Mrs',
-				'Miss' => 'Miss',
-				'Ms' => 'Ms',
-				'Dr' => 'Dr',
-				'Other' => 'Other',
-			),
-		),
-		'first_name' => array(
-			'type' => 'text',
-		),
-		'last_name' => array(
-			'type' => 'text',
-		),
+//		'last_name' => array(
+//			'type' => 'text',
+//		),
 		'email' => array(
 			'type' => 'text',
 		),
@@ -51,8 +51,8 @@ return array(
 			'laravel-contact-form::emails.text.enquiry',
 		),
 		'to' => array(
-			'name' => 'Customer Service',
-			'email' => 'customer.service@domain.com',
+			'name' => 'Simon Hudson',
+			'email' => 's.hudson@capitalradiology.com.au',
 		),
 		'subject' => 'Website Enquiry',
 	),

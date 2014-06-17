@@ -23,7 +23,8 @@
         "fbf/laravel-blog": "dev-master",
         "frozennode/administrator": "dev-master",
         "fbf/laravel-comments": "dev-master",
-        "fbf/laravel-contact-form": "dev-master"
+        "fbf/laravel-contact-form": "dev-master",
+        "guzzlehttp/guzzle": "~4.0"
 	},
 	"autoload": {
 		"classmap": [
