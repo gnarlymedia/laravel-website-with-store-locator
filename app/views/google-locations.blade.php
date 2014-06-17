@@ -55,8 +55,8 @@
 			<option value="20000">20000km</option>
 		</select>
 	
-		<input class="btn" type="button" onclick="searchLocations()" value="Search This Address"/>
-        <input class="btn" type="button" onclick="geolocate()" value="Find My Current Location"/>
+		<input class="btn btn-default" type="button" onclick="searchLocations()" value="Search This Address"/>
+        <input class="btn btn-default" type="button" onclick="geolocate()" value="Find My Current Location"/>
 	</div>
 	<div>
 		<select id="locationSelect"></select>

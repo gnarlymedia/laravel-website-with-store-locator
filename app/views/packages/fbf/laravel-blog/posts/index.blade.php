@@ -41,7 +41,7 @@
 @stop
 
 @section('content')
-    <a class="btn btn-primary" id="blog-login-link" href="admin">Blog admin login</a>
+    <a class="btn btn-default" id="blog-login-link" href="admin">Blog admin login</a>
 	@include('laravel-blog::partials.list')
 	@include('laravel-blog::partials.archives')
 @stop
