@@ -289,7 +289,7 @@ Route::get('users', function()
 
 Route::get('logged-in', array('as' => 'logged-in', function()
 {
-	return View::make('patient-portal');
+	return Redirect::to('admin');
 }));
 
 Route::get('user-created', function()
