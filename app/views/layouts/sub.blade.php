@@ -12,7 +12,6 @@
    	
 	{{ HTML::style('/assets/stylesheets/combined.css'); }}
     {{ HTML::style('/assets/fonts/webfontkit/stylesheet.css'); }}
-    {{ HTML::style('/assets/stylesheets/sub.css'); }}
    	
 	@yield('head')
 
@@ -59,19 +58,15 @@
 
 	@yield('content', 'This content could not be found')
 
-        <div class="row">
-            <div class="col-md-1 col-sm-1 col-xs-1"></div>
-            <div id="social" class="col-md-6 col-sm-6 col-xs-12">
-                <a href="#"><img src="/assets/images/social/Sample-1.pdf-1_03.jpg" alt="Sample-1.pdf-1_03" width="97" height="83" class="img-responsive fadeover" /></a>
-                <a href="#"><img src="/assets/images/social/Sample-1.pdf-1_04.jpg" alt="Sample-1.pdf-1_04" width="104" height="83" class="img-responsive fadeover" /></a>
-                <a href="#"><img src="/assets/images/social/Sample-1.pdf-1_05.jpg" alt="Sample-1.pdf-1_05" width="105" height="83" class="img-responsive fadeover"/></a>
-                <a href="#"><img src="/assets/images/social/Sample-1.pdf-1_06.jpg" alt="Sample-1.pdf-1_06" width="100" height="83" class="img-responsive fadeover"/></a>
-                <a href="#"><img src="/assets/images/social/Sample-1.pdf-1_07.jpg" alt="Sample-1.pdf-1_07" width="104" height="83" class="img-responsive fadeover"/></a>
+        <div class="row-fluid">
+            <div id="social" class="col-md-7 col-sm-7 col-xs-12">
+                <a href="#"><img src="/assets/images/social/pngs/Gray/Facebook.png" alt="Facebook" width="33" height="32"></a>
+                <a href="#"><img src="/assets/images/social/pngs/Gray/Twitter.png" alt="Twitter" width="33" height="33"></a>
+                <a href="#"><img src="/assets/images/social/pngs/Gray/YouTube.png" alt="YouTube" width="33" height="32"></a>
             </div>
-            <div id="copyright" class="col-md-4 col-sm-4 col-xs-12">
+            <div id="copyright" class="col-md-5 col-sm-5 col-xs-12">
                 Copyright (©) 2011-2014 Capital Radiology
             </div>
-            <div class="col-md-1 col-sm-1 col-xs-1"></div>
         </div>
 
         <svg height="0" xmlns="http://www.w3.org/2000/svg">

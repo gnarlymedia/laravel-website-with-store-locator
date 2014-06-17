@@ -13,7 +13,9 @@ module.exports = function(grunt) {
               //compiling frontend.less into frontend.css
               "./public/assets/stylesheets/frontend.css":"./app/assets/stylesheets/frontend.less",
               //compiling backend.less into backend.css
-              "./public/assets/stylesheets/backend.css":"./app/assets/stylesheets/backend.less"
+              "./public/assets/stylesheets/backend.css":"./app/assets/stylesheets/backend.less",
+              //compiling splash.less into splash.css
+              "./public/assets/stylesheets/splash.css":"./app/assets/stylesheets/splash.less"
             }
         }
     },
@@ -43,8 +45,10 @@ module.exports = function(grunt) {
       css_frontend: {
         src: [
             './public/assets/stylesheets/frontend.css',
-            './bower_components/bootstrap/docs/examples/theme/theme.css',
-            './public/assets/fonts/webfontkit/stylesheet.css'
+            './public/assets/stylesheets/splash.css',
+//            './bower_components/bootstrap/docs/examples/theme/theme.css',
+            './public/assets/fonts/webfontkit/stylesheet.css',
+            './public/assets/stylesheets/sub.css'
         ],
         dest: './public/assets/stylesheets/combined.css'
       }

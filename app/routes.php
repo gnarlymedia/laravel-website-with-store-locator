@@ -94,9 +94,9 @@ Route::get('referrer-billing', function()
 
 
 // Procedures
-Route::get('bone-densitometry', function()
+Route::get('bone-densitometry-dexa', function()
 {
-    return View::make('bone-densitometry');
+    return View::make('bone-densitometry-dexa');
 });
 
 Route::get('ct', function()

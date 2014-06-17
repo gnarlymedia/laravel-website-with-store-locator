@@ -18,7 +18,7 @@
     <li class="dropdown">
         <a href="#" class="dropdown-toggle fadeover" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li><a href="bone-densitometry">BONE DENSITOMETRY</a></li>
+            <li><a href="bone-densitometry-dexa">BONE DENSITOMETRY (DEXA)</a></li>
             <li><a href="ct">CT</a></li>
             <li><a href="ct-angiography">CT ANGIOGRAPHY</a></li>
             <li><a href="doppler">DOPPLER ULTRASOUND</a></li>

@@ -86,7 +86,7 @@ ul.nav.navbar-nav li a {
   border: 1px solid #fff;
 }
 div.container {
-  padding-top:5%;
+  padding-top:8%;
 }
 div#social {
   padding-top:2%;
@@ -126,19 +126,16 @@ ul.nav.navbar-nav > li > ul > li {
   padding-bottom: 1%;
   position: relative;
 }
-#no-wrap {
-  /* 	white-space: nowrap; */
-  /* 	overflow: hidden; */
-}
-.fadeover {
+.fadeover, #social > a > img, #social-splash > a > img,  {
   /*display: inline;*/
   opacity: 1;
   transition: opacity .20s ease-in-out;
   -moz-transition: opacity .20s ease-in-out;
   -webkit-transition: opacity .20s ease-in-out;
-}
-.fadeover:hover {
-  opacity: 0.6;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
@@ -186,7 +183,7 @@ div#nav-container > div.navbar.navbar-inverse {
   border: none;
 }
 .navbar-inverse .navbar-toggle {
-  background-color: #222;
+  background-color: darken(@capital-light-blue, 30%);
 }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
   border: none;
@@ -196,4 +193,8 @@ div#nav-container > div.navbar.navbar-inverse {
 }
 #blog-login-link {
   float: right;
+}
+.body-images-left {
+  float: left;
+  padding-right:2%;
 }

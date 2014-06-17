@@ -43,7 +43,8 @@ a:hover {
     width: 100%;
 }
 #social {
-    margin-top: 3%;
+    padding-top: 3%;
+    padding-left: 5%;
 }
 #social img {
     display: inline;
@@ -62,6 +63,7 @@ a:hover {
     color: #ffffff;
     margin-bottom: 5%;
     font-size: 10px;
+    padding-right: 5%;
 }
 #right {
     position:absolute;
