@@ -33,7 +33,7 @@
 <body>
 <div id="patients_referrers" class="row">
     <img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" class="img-responsive center-block shadowed"/>
-    <a href="/mockup-referrer"><img src="/assets/images/buttons/referrer_info_larger.png" alt="referrer_info" width="353" height="77" id="referrer_button" class="img-responsive fadeover shadowed" /></a>
+    <a href="/referrer-info"><img src="/assets/images/buttons/referrer_info_larger.png" alt="referrer_info" width="353" height="77" id="referrer_button" class="img-responsive fadeover shadowed" /></a>
     <div id="right"></div>
     <a href="/patient-info"><img src="/assets/images/buttons/patient_info_larger.png" alt="patient_info" width="353" height="77" id="patient_button" class="img-responsive fadeover shadowed"/></a>
 </div>

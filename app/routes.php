@@ -55,6 +55,7 @@ Route::get('theme/stellar', function()
 });
 
 // For reals
+// Patients
 Route::get('patient-info', function()
 {
     return View::make('patient-info');
@@ -74,6 +75,23 @@ Route::get('patient-contact', function()
 {
     return View::make('patient-contact');
 });
+
+// Referrers
+Route::get('referrer-info', function()
+{
+    return View::make('referrer-info');
+});
+
+Route::get('referrer-results', function()
+{
+    return View::make('referrer-results');
+});
+
+Route::get('referrer-billing', function()
+{
+    return View::make('referrer-billing');
+});
+
 
 // Procedures
 Route::get('bone-densitometry', function()
