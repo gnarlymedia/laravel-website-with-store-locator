@@ -22,7 +22,8 @@
         "thujohn/rss": "dev-master",
         "fbf/laravel-blog": "dev-master",
         "frozennode/administrator": "dev-master",
-        "fbf/laravel-comments": "dev-master"
+        "fbf/laravel-comments": "dev-master",
+        "fbf/laravel-contact-form": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
