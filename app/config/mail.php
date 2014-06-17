@@ -15,9 +15,9 @@ return array(
 	|
 	*/
 
-//	'driver' => 'smtp',
+	'driver' => 'smtp',
 //    'driver' => 'sendmail',
-    'driver' => 'mail',
+//    'driver' => 'mail',
 //    'driver' => 'mailgun',
 
 	/*
@@ -32,8 +32,8 @@ return array(
 	*/
 
 // 	'host' => 'smtp.mailgun.org',
-//	'host' => 'mail.capitalradiology.com.au',
-    'host' => 'smtp.sendgrid.net',
+	'host' => 'mail.capitalradiology.com.au',
+//    'host' => 'smtp.sendgrid.net',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -46,8 +46,8 @@ return array(
 	|
 	*/
 
-//    'port' => 25,
-	  'port' => 587,
+    'port' => 25,
+//	  'port' => 587,
 //    'port' => 443,
 //    'port' => 465,
 
@@ -92,8 +92,8 @@ return array(
 	|
 	*/
 
-//	'username' => 's.hudson',
-    'username' => 'capitalradio',
+	'username' => 's.hudson',
+//    'username' => 'capitalradio',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -106,8 +106,8 @@ return array(
 	|
 	*/
 
-//	'password' => 'simon31',
-    'password' => 'Capital381Radio',
+	'password' => 'simon31',
+//    'password' => 'Capital381Radio',
 
 	/*
 	|--------------------------------------------------------------------------

@@ -37,6 +37,17 @@ class UserTableSeeder extends Seeder {
 			'surname' => 'Radiology',
 			'phone_number' => 1234567890
 		));
+
+        // Another test user
+        $user = User::create(array(
+            'email' => 's.hudson@capitalradiology.com.au',
+            'password' => 'capital123',
+            'password_confirmation' => 'capital123',
+            'dob' => '25/04/2008',
+            'first_name' => 'Capital',
+            'surname' => 'Radiology',
+            'phone_number' => 1234567890
+        ));
 		
 /*         $this->command->info('var_dump($user): ' + var_dump($user)); */
     }

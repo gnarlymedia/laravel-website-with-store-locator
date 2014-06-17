@@ -37,10 +37,10 @@ return array(
 	),
 
 	'rules' => array(
-//		'name' => 'required',
-		'title' => 'required',
-		'first_name' => 'required',
-		'last_name' => 'required',
+		'name' => 'required',
+//		'title' => 'required',
+//		'first_name' => 'required',
+//		'last_name' => 'required',
 		'email' => 'required|email',
 		'enquiry' => 'required',
 	),
@@ -53,6 +53,7 @@ return array(
 		'to' => array(
 			'name' => 'Simon Hudson',
 			'email' => 's.hudson@capitalradiology.com.au',
+//            'email' => 'capitalradio12345@gmail.com',
 		),
 		'subject' => 'Website Enquiry',
 	),
