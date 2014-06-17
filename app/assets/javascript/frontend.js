@@ -5,4 +5,7 @@ $(function() {
     backgroundTarget: '.patients_referrers'
   });
 });
-*/
+window.onload = function() {
+    $('ul.nav.navbar-nav > li.dropdown.fadeover').children().removeClass('fadeover');
+};
+ */

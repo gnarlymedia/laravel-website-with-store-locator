@@ -11,8 +11,8 @@
    	{{ HTML::script('/assets/javascript/frontend.js'); }}
    	
 	{{ HTML::style('/assets/stylesheets/combined.css'); }}
-   	{{ HTML::style('/assets/stylesheets/mockup.css'); }}
     {{ HTML::style('/assets/fonts/webfontkit/stylesheet.css'); }}
+    {{ HTML::style('/assets/stylesheets/sub.css'); }}
    	
 	@yield('head')
 
@@ -38,7 +38,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo_sm.png" alt="capital_radiology" width="113" height="36" class="img-responsive fadeover"></a>
+            <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo_sm.png" alt="capital_radiology" width="113" height="36" class="img-responsive fadeover shadowed"></a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

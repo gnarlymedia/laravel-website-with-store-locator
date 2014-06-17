@@ -20,7 +20,7 @@
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li class="fadeover"><a href="patient-procedures">BONE DENSITOMETRY</a></li>
+            <li><a href="bone-densitometry">BONE DENSITOMETRY</a></li>
             <li><a href="ct">CT</a></li>
             <li><a href="ct-angiography">CT ANGIOGRAPHY</a></li>
             <li><a href="doppler">DOPPLER ULTRASOUND</a></li>
@@ -38,7 +38,7 @@
         </ul>
     </li>
     <li class="fadeover"><a href="patient-billing">BILLING</a></li>
-    <li><a href="/blog">Blog</a></li>
+    <li class="fadeover"><a href="blog">BLOG</a></li>
     <li class="fadeover"><a href="patient-contact">CONTACT</a></li>
 @stop
 

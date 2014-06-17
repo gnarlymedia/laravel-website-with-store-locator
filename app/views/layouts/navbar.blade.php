@@ -62,7 +62,6 @@
 	    </div>
       </div>
 
-
 	@yield('content', 'This content could not be found')
 
     </div> <!-- /container -->

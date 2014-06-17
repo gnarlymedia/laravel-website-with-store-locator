@@ -28,8 +28,8 @@
         </ul>
     </li>
 	<li class="fadeover"><a href="#">BILLING</a></li>
-	<li><a href="#">CONTACT</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon-new.png" alt="glyphicon" width="31" height="31">
-        </div></li>
+    <li class="fadeover"><a href="blog">BLOG</a></li>
+	<li><a href="#">CONTACT</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon-new.png" alt="glyphicon" width="31" height="31"></div></li>
 @stop
 
 @section('content')

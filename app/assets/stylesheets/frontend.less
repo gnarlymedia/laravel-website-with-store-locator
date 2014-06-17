@@ -36,10 +36,10 @@
 	div#nav-container {
 	    background-size: 100% auto;
 	}
-    ul.nav.navbar-nav li:first-child {
+    ul.nav.navbar-nav > li:first-child {
       margin-left: 0;
     }
-    ul.nav.navbar-nav li:last-child {
+    ul.nav.navbar-nav > li:last-child {
       margin-right: 0;
     }
     ul.nav.navbar-nav li {
@@ -78,11 +78,11 @@
 //Static
 
 ul.nav.navbar-nav li {
-  padding: 5px;
+  padding: 3px;
   border: 1px solid #fff;
 }
 ul.nav.navbar-nav li a {
-  padding: 12px 25px;
+  padding: 11px 22px;
   border: 1px solid #fff;
 }
 div.container {
@@ -98,10 +98,99 @@ div.navbar-collapse.collapse {
 ul.nav.navbar-nav li {
 //  width: 25%
 }
-.shadowed {
-  -webkit-filter: drop-shadow(8px 8px 7px #222);
-  filter: url(shadow.svg#drop-shadow);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
-    Color='#444')";
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+.shadowed-elements {
+  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
+}
+ul.nav.navbar-nav > li {
+  text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
+  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
+}
+ul.nav.navbar-nav > li > a {
+//  text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
+//  box-shadow: @shadow-box-h-distance/2 @shadow-box-v-distance/2 @shadow-box-blur-distance/2 @shadow-box-spread-distance/2 @shadow-box-colour;
+}
+ul.nav.navbar-nav > li > ul > li {
+  text-shadow: none;
+  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
+}
+
+
+/* Styles that used to be in mockup.css */
+
+#nav-container {
+  background: none;
+  background: url(../images/background/background_1800_short.jpg) no-repeat;
+  background-position: center center;
+  min-height:10%;
+  padding-top: 4%;
+  padding-bottom: 1%;
+  position: relative;
+}
+#no-wrap {
+  /* 	white-space: nowrap; */
+  /* 	overflow: hidden; */
+}
+.fadeover {
+  /*display: inline;*/
+  opacity: 1;
+  transition: opacity .20s ease-in-out;
+  -moz-transition: opacity .20s ease-in-out;
+  -webkit-transition: opacity .20s ease-in-out;
+}
+.fadeover:hover {
+  opacity: 0.6;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: inherit;
+}
+a.navbar-brand img {
+  max-width:100%;
+}
+.navbar-nav > li > a {
+  /* 	line-height: 76px; */
+}
+.nav > li > a {
+  padding: 10px 5px;
+}
+#pointer {
+  position:absolute;
+  bottom: -50px;
+  left:50%;
+  margin-left: -15px;
+}
+#social {
+  margin-top: 3%;
+}
+#social img {
+  display: inline;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+#social img {
+  padding: 0;
+  margin: 0;
+}
+#copyright {
+  margin-bottom: 5%;
+  font-size: 10px;
+}
+button.navbar-toggle.collapsed {
+  z-index: 1000;
+}
+.navbar-collapse.in, .navbar-collapse.collapsing {
+  overflow-y: inherit;
+}
+div#nav-container > div.navbar.navbar-inverse {
+  background-color: inherit;
+  border: none;
+}
+.navbar-inverse .navbar-toggle {
+  background-color: #222;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border: none;
+}
+.navbar-collapse.collapsing img {
+  /* 	display: none; */
 }

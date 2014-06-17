@@ -7,6 +7,7 @@
 </head>
 <body>
 <div class="content">
+    Dog
     @yield('content')
 </div>
 </body>

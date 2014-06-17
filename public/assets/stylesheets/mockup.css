@@ -19,7 +19,7 @@
 	-webkit-transition: opacity .20s ease-in-out;
 }
 .fadeover:hover {
-	opacity: 0.4;
+	opacity: 0.6;
 }
 .nav > li > a:hover, .nav > li > a:focus {
 	text-decoration: none;

@@ -15,7 +15,7 @@
 // General
 Route::get('/', function()
 {
-	return View::make('splash-full-screen');
+	return View::make('splash');
 });
 
 Route::get('locations', array('as' => 'locations', function()
