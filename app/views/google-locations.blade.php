@@ -43,22 +43,28 @@
 
 @section('content')
 	<div id="addressFinder">
-		<input type="text" id="addressInput" size="40" placeholder="Start typing your address or landmark"/>
-		<select id="radiusSelect" onchange="">
-			<option value="5">5km</option>
-			<option value="10">10km</option>
-			<option value="25">25km</option>
-			<option value="50">50km</option>
-			<option value="100">100km</option>
-			<option value="200" selected>200km</option>
-			<option value="20000">20000km</option>
-		</select>
-	
-		<input class="btn btn-default" type="button" onclick="searchLocations()" value="Search This Address"/>
-        <input class="btn btn-default" type="button" onclick="geolocate()" value="Find My Current Location"/>
+        <div>
+            <h3>Locations</h3>
+            <input type="text" id="addressInput" size="40" placeholder="Start typing your address or landmark" onblur="searchLocations()" />
+            <input class="btn btn-default" type="button" onclick="searchLocations()" value="Search this address"/>
+            <input class="btn btn-default" type="button" onclick="geolocate()" value="Find my current location again"/>
+            <h4>Search distance</h4>
+            <select id="radiusSelect" onchange="">
+                <option value="5">5km</option>
+                <option value="10">10km</option>
+                <option value="25">25km</option>
+                <option value="50">50km</option>
+                <option value="100">100km</option>
+                <option value="200" selected>200km</option>
+                <option value="20000">20000km</option>
+            </select>
+        </div>
+        <h4>Filter results</h4>
 		<select id="locationSelect"></select>
 		<select id="modalitySelect"></select>
 	</div>
+    <div id="info_container">
+        <div id="info" class="lightbox">Detecting your location...</div>
+    </div>
 	<div id="map_canvas"></div>
-	<div id="info" class="lightbox">Detecting your location...</div>
 @stop

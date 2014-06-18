@@ -8,7 +8,7 @@ var currentCentre;
 var userLatLng;
 var radius;
 var currentModality;
-var modalitySelectDefaultText = "Filter by modality:";
+var modalitySelectDefaultText = "All modalities/procedures";
 var userMarker;
 var youInfoWindow;
 
@@ -125,6 +125,7 @@ function positionSuccess(position) {
 	    icon: {
         	url: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 		},
+        zIndex: 0
     });
     
    	var html = "You are here";
@@ -197,7 +198,7 @@ function clearLocations() {
      locationSelect.innerHTML = "";
      var option = document.createElement("option");
      option.value = "none";
-     option.innerHTML = "See all results:";
+     option.innerHTML = "All clinics";
      locationSelect.appendChild(option);
      
      modalitySelect.innerHTML = "";
