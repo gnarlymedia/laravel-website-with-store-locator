@@ -56,9 +56,9 @@
   	</div>
     <div class="container">
 
-	@yield('content', 'This content could not be found')
+	    @yield('content', 'This content could not be found')
 
-        <div class="row-fluid">
+        <div>
             <div id="social" class="col-md-7 col-sm-7 col-xs-12">
                 <a href="#"><img src="/assets/images/social/pngs/Gray/Facebook.png" alt="Facebook" width="33" height="32" class="img-responsive"></a>
                 <a href="#"><img src="/assets/images/social/pngs/Gray/Twitter.png" alt="Twitter" width="33" height="33" class="img-responsive"></a>

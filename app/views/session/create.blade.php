@@ -48,4 +48,6 @@
 	  <p>{{ Form::submit('Submit') }}</p>
 	 
 	{{ Form::close() }}
+
+    <a href="" class="btn btn-default">Register here</a>
 @stop
