@@ -49,5 +49,5 @@
 	 
 	{{ Form::close() }}
 
-    <a href="" class="btn btn-default">Register here</a>
+    <a href="register" class="btn btn-default">Register here</a>
 @stop
