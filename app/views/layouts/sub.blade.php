@@ -60,9 +60,9 @@
 
         <div class="row-fluid">
             <div id="social" class="col-md-7 col-sm-7 col-xs-12">
-                <a href="#"><img src="/assets/images/social/pngs/Gray/Facebook.png" alt="Facebook" width="33" height="32"></a>
-                <a href="#"><img src="/assets/images/social/pngs/Gray/Twitter.png" alt="Twitter" width="33" height="33"></a>
-                <a href="#"><img src="/assets/images/social/pngs/Gray/YouTube.png" alt="YouTube" width="33" height="32"></a>
+                <a href="#"><img src="/assets/images/social/pngs/Gray/Facebook.png" alt="Facebook" width="33" height="32" class="img-responsive"></a>
+                <a href="#"><img src="/assets/images/social/pngs/Gray/Twitter.png" alt="Twitter" width="33" height="33" class="img-responsive"></a>
+                <a href="#"><img src="/assets/images/social/pngs/Gray/YouTube.png" alt="YouTube" width="33" height="32" class="img-responsive"></a>
             </div>
             <div id="copyright" class="col-md-5 col-sm-5 col-xs-12">
                 Copyright (©) 2011-2014 Capital Radiology
