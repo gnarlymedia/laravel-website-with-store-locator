@@ -45,7 +45,7 @@
 	<div id="addressFinder">
         <div>
             <h3>Locations</h3>
-            <input type="text" id="addressInput" size="40" placeholder="Start typing your address or landmark" onblur="searchLocations()" />
+            <input type="text" id="addressInput" size="40" placeholder="Start typing your address or landmark" />
             <input class="btn btn-default" type="button" onclick="searchLocations()" value="Search this address"/>
             <input class="btn btn-default" type="button" onclick="geolocate()" value="Find my current location again"/>
             <h4>Search distance</h4>
@@ -59,7 +59,7 @@
                 <option value="20000">20000km</option>
             </select>
         </div>
-        <h4>Filter results</h4>
+        <h4 id="filterResults">Filter results</h4>
 		<select id="locationSelect"></select>
 		<select id="modalitySelect"></select>
 	</div>

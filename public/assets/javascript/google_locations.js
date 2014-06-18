@@ -4,6 +4,7 @@ var infoWindow;
 var locationSelect;
 var radiusSelect;
 var modalitySelect;
+var filterResults;
 var currentCentre;
 var userLatLng;
 var radius;
@@ -28,6 +29,7 @@ function initialise() {
     locationSelect = document.getElementById("locationSelect");
     radiusSelect = document.getElementById("radiusSelect");
     modalitySelect = document.getElementById("modalitySelect");
+    filterResults = document.getElementById("filterResults");
 
     radius = radiusSelect.value;
     currentModality =  getCurrentModality();
@@ -111,7 +113,7 @@ function positionSuccess(position) {
 /*       zoom: 12, */
       center: userLatLng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      disableDefaultUI: true,
+//      disableDefaultUI: true,
       scrollwheel: false,
       draggable: false,
       mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}
@@ -333,6 +335,7 @@ function downloadComplete(data) {
 
     locationSelect.style.visibility = "visible";
     modalitySelect.style.visibility = "visible";
+    filterResults.style.visibility = "visible";
 
     function makeMarkerModalitiesOutput(markerModalities) {
         var output = "";
