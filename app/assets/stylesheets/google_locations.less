@@ -1,0 +1,76 @@
+@import 'base.less';
+
+/* Small screens */
+@media (max-width: @screen-xs-max){
+    div#addressFinder input {
+        margin-bottom: 3px;
+    }
+    input.btn {
+      width: 100%;
+    }
+    select#locationSelect {
+        width:100%;
+    }
+    select#modalitySelect {
+        width:100%;
+    }
+    select#radiusSelect {
+      width:100%;
+      margin-bottom: 3px;
+    }
+    #addressInput {
+      width: 100%;
+      margin-bottom: 3px;
+    }
+}
+
+/* Static */
+html {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+body {
+/* 	margin: 10px; */
+	height:100%;
+}
+div#map_canvas {
+	width:100%;
+	height:80%;
+	margin-top:5px;
+}
+div.container {
+	height:100%;
+}
+div#info {
+	width:100%;
+/* 	position:absolute; */
+	overflow:hidden;
+	text-align:center;
+/* 	top:0; */
+/* 	left:0; */
+	font-size: small;
+	padding-top: 3%;
+}
+div#info_msg {
+	position:relative;
+	margin:0 auto;
+	top:50%
+}
+.lightBox {
+	filter:alpha(opacity=60);
+	-moz-opacity:0.6;
+	-khtml-opacity: 0.6;
+	opacity: 0.6;
+	background-color:white;
+	padding:2px;
+}
+div#addressFinder {
+	margin-top: 20px;
+}
+select#locationSelect {
+	visibility:hidden;
+}
+select#modalitySelect {
+	visibility:hidden;
+}

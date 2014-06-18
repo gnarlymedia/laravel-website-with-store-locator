@@ -15,7 +15,9 @@ module.exports = function(grunt) {
               //compiling backend.less into backend.css
               "./public/assets/stylesheets/backend.css":"./app/assets/stylesheets/backend.less",
               //compiling splash.less into splash.css
-              "./public/assets/stylesheets/splash.css":"./app/assets/stylesheets/splash.less"
+              "./public/assets/stylesheets/splash.css":"./app/assets/stylesheets/splash.less",
+              //compiling splash.less into splash.css
+              "./public/assets/stylesheets/google_locations.css":"./app/assets/stylesheets/google_locations.less"
             }
         }
     },
@@ -46,9 +48,9 @@ module.exports = function(grunt) {
         src: [
             './public/assets/stylesheets/frontend.css',
             './public/assets/stylesheets/splash.css',
-//            './bower_components/bootstrap/docs/examples/theme/theme.css',
             './public/assets/fonts/webfontkit/stylesheet.css',
-            './public/assets/stylesheets/sub.css'
+            './public/assets/stylesheets/sub.css',
+            './public/assets/stylesheets/google_locations.css'
         ],
         dest: './public/assets/stylesheets/combined.css'
       }

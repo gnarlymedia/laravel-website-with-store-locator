@@ -7,7 +7,6 @@
    	{{ HTML::script('/assets/javascript/google_locations.js') }}
     {{ HTML::script('http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false') }}
     {{ HTML::script('/assets/javascript/geometa.js') }}
-	{{ HTML::style('/assets/stylesheets/google_locations.css') }}
 	
 	<style type="text/css">
 
@@ -44,7 +43,7 @@
 
 @section('content')
 	<div id="addressFinder">
-		<input type="text" id="addressInput" size="50" placeholder="Start typing your address or landmark"/>
+		<input type="text" id="addressInput" size="40" placeholder="Start typing your address or landmark"/>
 		<select id="radiusSelect" onchange="">
 			<option value="5">5km</option>
 			<option value="10">10km</option>
@@ -57,11 +56,7 @@
 	
 		<input class="btn btn-default" type="button" onclick="searchLocations()" value="Search This Address"/>
         <input class="btn btn-default" type="button" onclick="geolocate()" value="Find My Current Location"/>
-	</div>
-	<div>
 		<select id="locationSelect"></select>
-	</div>
-	<div>
 		<select id="modalitySelect"></select>
 	</div>
 	<div id="map_canvas"></div>
