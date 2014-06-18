@@ -48,10 +48,10 @@ return array(
 	|
 	*/
 
-//    'port' => 25,
+    'port' => 25,
 //	  'port' => 587,
 //    'port' => 443,
-    'port' => 465,
+//    'port' => 465,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,8 +65,8 @@ return array(
 	*/
 
 	'from' => array(
-        'address' => 's.hudson@capitalradiology.com.au',
-        'name' => 'Simon Hudson'
+        'address' => 'capital@capitalrad.com.au',
+        'name' => 'Capital Radiology'
     ),
 
 	/*
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	  'encryption' => 'tls',
+//	  'encryption' => 'tls',
 //    'encryption' => 'ssl',
 
 	/*
