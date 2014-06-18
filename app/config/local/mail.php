@@ -32,10 +32,10 @@ return array(
 	*/
 
 // 	'host' => 'smtp.mailgun.org',
-//	'host' => 'mail.capitalradiology.com.au',
+	'host' => 'mail.capitalradiology.com.au',
 //    'host' => 'smtp.sendgrid.net',
 //    'host' => 'server.capitalradiology.com',
-    'host' => 'mail.capitalrad.com.au',
+//    'host' => 'mail.capitalrad.com.au',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,8 +65,8 @@ return array(
 	*/
 
 	'from' => array(
-        'address' => 'capital@capitalrad.com.au',
-        'name' => 'Capital Radiology'
+        'address' => 's.hudson@capitalradiology.com.au',
+        'name' => 'Simon Hudson'
     ),
 
 	/*
@@ -94,9 +94,9 @@ return array(
 	|
 	*/
 
-//	'username' => 's.hudson',
+	'username' => 's.hudson',
 //    'username' => 'capitalradio',
-    'username' => 'capital@capitalrad.com.au',
+//    'username' => 'capital@capitalrad.com.au',
 
 
 	/*
@@ -110,9 +110,9 @@ return array(
 	|
 	*/
 
-//	'password' => 'simon31',
+	'password' => 'simon31',
 //    'password' => 'Capital381Radio',
-    'password' => 'UHH^n~(W&Q^@',
+//    'password' => 'UHH^n~(W&Q^@',
 
 	/*
 	|--------------------------------------------------------------------------

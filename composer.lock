@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6c9fe8895a7e48ede4036b40dc079c4f",
+    "hash": "f679c9373cddfef891977dcbf1f49cd3",
     "packages": [
         {
             "name": "anahkiasen/former",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Anahkiasen/former.git",
-                "reference": "d64ebdd245721da18dcefc4e1136b607434fd6f2"
+                "reference": "50a6e4bac88f536bb12f375c6834994e959dbddd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Anahkiasen/former/zipball/d64ebdd245721da18dcefc4e1136b607434fd6f2",
-                "reference": "d64ebdd245721da18dcefc4e1136b607434fd6f2",
+                "url": "https://api.github.com/repos/Anahkiasen/former/zipball/50a6e4bac88f536bb12f375c6834994e959dbddd",
+                "reference": "50a6e4bac88f536bb12f375c6834994e959dbddd",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "foundation",
                 "laravel"
             ],
-            "time": "2014-06-12 10:04:33"
+            "time": "2014-06-13 14:31:51"
         },
         {
             "name": "anahkiasen/html-object",
@@ -895,6 +895,46 @@
             "time": "2014-05-30 12:17:37"
         },
         {
+            "name": "fbf/laravel-contact-form",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FbF/Laravel-Contact-Form.git",
+                "reference": "88a67d2deb20671ee2d67ae0e7821fb952d64be6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FbF/Laravel-Contact-Form/zipball/88a67d2deb20671ee2d67ae0e7821fb952d64be6",
+                "reference": "88a67d2deb20671ee2d67ae0e7821fb952d64be6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/controllers"
+                ],
+                "psr-0": {
+                    "Fbf\\LaravelContactForm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Neil Crookes",
+                    "email": "neil.crookes@fivebyfiveuk.com"
+                }
+            ],
+            "description": "A Laravel 4 package for adding a simple contact form to a website",
+            "time": "2014-01-07 12:05:13"
+        },
+        {
             "name": "filp/whoops",
             "version": "1.0.10",
             "source": {
@@ -1134,6 +1174,124 @@
                 "web service"
             ],
             "time": "2014-05-07 17:04:22"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "577a69ff7d0a24e9576a2885c3a7afbaadd51ec1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/577a69ff7d0a24e9576a2885c3a7afbaadd51ec1",
+                "reference": "577a69ff7d0a24e9576a2885c3a7afbaadd51ec1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/streams": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0",
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2014-06-08 20:00:20"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "cf0c8c33ca95cc147efba4c714f630ee44767180"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/cf0c8c33ca95cc147efba4c714f630ee44767180",
+                "reference": "cf0c8c33ca95cc147efba4c714f630ee44767180",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data (Guzzle 4+)",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-04-03 04:48:24"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1833,12 +1991,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/patricktalmadge/bootstrapper.git",
-                "reference": "a20473b7a55e6b842fb13b007edc526f2015a65c"
+                "reference": "155672b5f28db983275950382c19a3e5917e4753"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/patricktalmadge/bootstrapper/zipball/a20473b7a55e6b842fb13b007edc526f2015a65c",
-                "reference": "a20473b7a55e6b842fb13b007edc526f2015a65c",
+                "url": "https://api.github.com/repos/patricktalmadge/bootstrapper/zipball/155672b5f28db983275950382c19a3e5917e4753",
+                "reference": "155672b5f28db983275950382c19a3e5917e4753",
                 "shasum": ""
             },
             "require": {
@@ -1881,7 +2039,7 @@
                 "bootstrap",
                 "laravel"
             ],
-            "time": "2014-06-06 12:51:33"
+            "time": "2014-06-13 16:58:37"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -2481,16 +2639,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "043e336b871f17a117f76ef8e190eddfc04c8d48"
+                "reference": "2b9af56cc676c338d52fca4c657e5bdff73bb7af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/043e336b871f17a117f76ef8e190eddfc04c8d48",
-                "reference": "043e336b871f17a117f76ef8e190eddfc04c8d48",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/2b9af56cc676c338d52fca4c657e5bdff73bb7af",
+                "reference": "2b9af56cc676c338d52fca4c657e5bdff73bb7af",
                 "shasum": ""
             },
             "require": {
@@ -2531,7 +2689,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-05-08 08:11:19"
+            "time": "2014-06-13 11:44:54"
         },
         {
             "name": "symfony/browser-kit",
@@ -3577,7 +3735,8 @@
         "thujohn/rss": 20,
         "fbf/laravel-blog": 20,
         "frozennode/administrator": 20,
-        "fbf/laravel-comments": 20
+        "fbf/laravel-comments": 20,
+        "fbf/laravel-contact-form": 20
     },
     "platform": [
 

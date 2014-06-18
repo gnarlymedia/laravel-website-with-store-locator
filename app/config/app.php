@@ -113,6 +113,7 @@ return array(
 		'Former\FormerServiceProvider',
         'Fbf\LaravelBlog\LaravelBlogServiceProvider',
         'Frozennode\Administrator\AdministratorServiceProvider',
+        'Fbf\LaravelContactForm\LaravelContactFormServiceProvider'
 
 	),
 
