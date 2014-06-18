@@ -33,6 +33,6 @@
 @stop
 
 @section('content')
-    <p>Get in contact today!</p>
+    <h2>Get in contact today!</h2>
     @include('laravel-contact-form::form')
 @stop
