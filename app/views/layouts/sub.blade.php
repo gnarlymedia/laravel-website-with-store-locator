@@ -38,7 +38,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo_sm.png" alt="capital_radiology" width="113" height="36" class="img-responsive fadeover shadowed"></a>
-          </div>
+          </div><!--/.nav-header -->
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
             
