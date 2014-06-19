@@ -422,3 +422,32 @@ div#nav-container > div.navbar.navbar-inverse {
   float: left;
   padding-right:3%;
 }
+.shadowed {
+  -webkit-filter: drop-shadow(8px 8px 7px #222);
+  filter: url(shadow.svg#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+.drop-shadow-xs {
+  -webkit-filter: drop-shadow(4px 4px 3px #222);
+  filter: url(shadow.svg#drop-shadow-xs);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+div#patients_referrers img {
+  // Small screens (@screen-xs)
+  @media (max-width: @screen-desktop){
+    -webkit-filter: drop-shadow(4px 4px 3px #222);
+    filter: url(shadow.svg#drop-shadow-xs);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  }
+
+  // Screen desktop (@screen-md)
+  @media(min-width: @screen-desktop){
+    -webkit-filter: drop-shadow(8px 8px 7px #222);
+    filter: url(shadow.svg#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  }
+}
