@@ -42,14 +42,14 @@
 @stop
 
 @section('content')
-	<div id="addressFinder">
+	<div id="addressFinder" class="form-inline">
         <div>
             <h3>Locations</h3>
-            <input type="text" id="addressInput" size="40" placeholder="Start typing your address or landmark" />
+            <input type="text" id="addressInput" size="40" placeholder="Start typing your address or landmark" class="form-control" />
             <input class="btn btn-default" type="button" onclick="searchLocations()" value="Search this address"/>
             <input class="btn btn-default" type="button" onclick="geolocate()" value="Find my current location again"/>
             <h4>Search distance</h4>
-            <select id="radiusSelect" onchange="">
+            <select id="radiusSelect" onchange="" class="form-control">
                 <option value="5">5km</option>
                 <option value="10">10km</option>
                 <option value="25">25km</option>
@@ -60,8 +60,8 @@
             </select>
         </div>
         <h4 id="filterResults">Filter results</h4>
-		<select id="locationSelect"></select>
-		<select id="modalitySelect"></select>
+		<select id="locationSelect" class="form-control"></select>
+		<select id="modalitySelect" class="form-control"></select>
 	</div>
     <div id="info_container">
         <div id="info" class="lightbox">Detecting your location...</div>

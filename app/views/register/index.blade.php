@@ -28,7 +28,7 @@
         </ul>
     </li>
     <li class="fadeover"><a href="patient-billing">BILLING</a></li>
-    <li><a href="#">BLOG</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div></li>
+    <li><a href="blog">BLOG</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div></li>
     <li class="fadeover"><a href="patient-contact">CONTACT</a></li>
 @stop
 
