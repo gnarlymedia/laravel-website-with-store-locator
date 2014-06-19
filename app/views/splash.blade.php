@@ -11,6 +11,7 @@
     <!-- Compiled -->
     {{ HTML::script('/assets/javascript/frontend.js') }}
     {{ HTML::style('/assets/stylesheets/combined.css') }}
+    {{ HTML::style('/assets/stylesheets/sub.css') }}
 
     <!-- Extras -->
     {{ HTML::script('/assets/javascript/jquery.vegas.min.js') }}

@@ -125,7 +125,8 @@ module.exports = function(grunt) {
         less: {
           files: [
               './app/assets/stylesheets/*.less',
-              './bower_components/bootstrap/less/**'
+              './bower_components/bootstrap/less/**',
+              './public/assets/stylesheets/sub.css'
           ],  //watched files
           tasks: ['less','concat:css_frontend'],                          //tasks to run
           options: {
