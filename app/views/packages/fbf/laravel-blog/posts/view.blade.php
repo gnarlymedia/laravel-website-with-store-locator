@@ -18,12 +18,12 @@
     <li class="dropdown">
         <a href="#" class="dropdown-toggle fadeover" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li><a href="bone-densitometry-dexa">BONE DENSITOMETRY (DEXA)</a></li>
+            <li><a href="bone-densitometry-dexa">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
             <li><a href="ct">CT</a></li>
             <li><a href="ct-angiography">CT ANGIOGRAPHY</a></li>
             <li><a href="doppler">DOPPLER ULTRASOUND</a></li>
             <li><a href="echocardiography">ECHOCARDIOGRAPHY</a></li>
-            <li><a href="general-x-ray">GENERAL X&#45;RAY</a></li>
+            <li><a href="general-x-ray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
             <li><a href="mammography">MAMMOGRAPHY</a></li>
             <li><a href="mri">MRI</a></li>
             <li><a href="nuclear-medicine">NUCLEAR MEDICINE</a></li>
