@@ -1,4 +1,11 @@
-@import 'base.less'; 
+@import 'base.less';
+
+// Super small screens (custom)
+@media (max-width: 200px){
+  #patients_referrers {
+//    padding: (@splash-buttons-padding-top-xs * 2) 0 @splash-buttons-padding-bottom-xs 0;
+  }
+}
 
 // Small screens (@screen-xs)
 @media (max-width: @screen-xs-max){
@@ -211,7 +218,8 @@ div#nav-container div.navbar.navbar-inverse div.container, #nav-container > div 
 }
 
 div#social-splash {
-  padding-top:2%;
+  margin-top:2%;
+  margin-bottom:2%;
 }
 div.navbar-collapse.collapse {
 //  float: left;
@@ -230,11 +238,104 @@ div.navbar-collapse.collapse {
   white-space: nowrap;
   position:relative;
 }
-
 #right {
   position:absolute;
   left:50%;
   border-left:1px solid white;
+}
+#footer-splash {
+  margin-top:15%;
+  //    position: absolute;
+  //    bottom: 0;
+  //    right: 0;
+  //    width: 100%;
+}
+body {
+  padding-top: 0;
+  background-color: #222;
+}
+#logo {
+  max-width:18%;
+  margin-bottom: 5%;
+}
+#patients_referrers img {
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+#glyphicon {
+  display:block;
+  margin: 0 auto;
+  z-index: 1001;
+}
+a {
+  color: none;
+  text-decoration: none;
+}
+a:hover {
+  color: none;
+  text-decoration: none;
+}
+#social-splash {
+  //    padding-top: 3%;
+  padding-left: 5%;
+}
+#social-splash img {
+  display: inline;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+#social-splash img {
+  padding: 0;
+  margin: 0;
+}
+#copyright-splash {
+  color: #ffffff;
+  margin-bottom: 5%;
+  font-size: 10px;
+  padding-right: 5%;
+}
+#referrer_button {
+  margin: 4% 3% 6% 0;
+}
+#patient_button {
+  margin: 4% 0 6% 3%;
+}
+#patient_button, #referrer_button {
+  display: inline;
+
+  // Small screens (@screen-xs)
+  @media (max-width: @screen-xs-max){
+    max-width:40%;
+  }
+
+  // Screen tablet (@screen-sm)
+  @media(min-width: @screen-tablet){
+    max-width:30%;
+  }
+
+  // Screen desktop (@screen-md)
+  @media(min-width: @screen-desktop){
+    max-width:30%;
+  }
+
+  // Screen large desktop (@screen-lg)
+  @media(min-width: @screen-lg-desktop){
+    max-width:30%;
+  }
+}
+.drop-shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #222;
+  -webkit-box-shadow: 3px 3px 5px 6px #222;
+  box-shadow:         3px 3px 5px 6px #222;
+}
+.background-color {
+  background: #222;
+}
+.vegas-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 /* Styles that used to be in mockup.css */
