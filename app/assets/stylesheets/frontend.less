@@ -1,6 +1,6 @@
 @import 'base.less'; 
 
-// Small screens
+// Small screens (@screen-xs)
 @media (max-width: @screen-xs-max){
 	#copyright, #social {
 		text-align: center;
@@ -25,9 +25,76 @@
     padding-bottom: 4%;
     padding-left:3%;
   }
+  a.navbar-brand img {
+    height: @navbar-brand-height-xs;
+  }
 }
 
-// Larger screens
+// Screen tablet (@screen-sm)
+@media(min-width: @screen-tablet){
+  ul.nav.navbar-nav li {
+    padding: @navbar-li-padding-factor-sm;
+  }
+  ul.nav.navbar-nav li a {
+    padding: @navbar-a-padding-ver-factor-sm @navbar-a-padding-hor-factor-sm;
+  }
+  .navbar-nav {
+    > li > a {
+      font-size: @navbar-font-size-factor-sm;
+    }
+  }
+  #pointer {
+    bottom: @navbar-glyphicon-bottom-factor-sm;
+  }
+  a.navbar-brand img {
+    height: @navbar-brand-height-sm;
+  }
+}
+
+// Screen desktop (@screen-md)
+@media(min-width: @screen-desktop){
+  ul.nav.navbar-nav li {
+    padding: @navbar-li-padding-factor-md;
+  }
+  ul.nav.navbar-nav li a {
+    padding: @navbar-a-padding-ver-factor-md @navbar-a-padding-hor-factor-md;
+  }
+  .navbar-nav {
+    > li > a {
+      font-size: @navbar-font-size-factor-md;
+    }
+  }
+  #pointer {
+    bottom: @navbar-glyphicon-bottom-factor-md;
+  }
+  a.navbar-brand img {
+    height: @navbar-brand-height-md;
+  }
+}
+
+// Screen large desktop (@screen-lg)
+@media(min-width: @screen-lg-desktop){
+  ul.nav.navbar-nav li {
+    padding: @navbar-li-padding-factor-lg;
+  }
+  ul.nav.navbar-nav li a {
+    padding: @navbar-a-padding-ver-factor-lg @navbar-a-padding-hor-factor-lg;
+  }
+  .navbar-nav {
+    > li > a {
+      font-size: @navbar-font-size-factor-lg;
+    }
+  }
+  #pointer {
+    bottom: @navbar-glyphicon-bottom-factor-lg;
+  }
+  a.navbar-brand img {
+    height: @navbar-brand-height-lg;
+  }
+}
+
+
+// Larger screens (eveything larger than @screen-xs)
 @media (min-width: @screen-xs-max) {
 	#copyright {
 		text-align: right;
@@ -73,21 +140,12 @@
     }
 }
 
-// @media(min-width: @screen-tablet){}     /* or @screen-sm */
-
-// @media(min-width: @screen-desktop){}    /* or @screen-md */
-
-// @media(min-width: @screen-lg-desktop){} /* or @screen-lg */
-
-
 //Static
-
+// Navbar
 ul.nav.navbar-nav li {
-  padding: 3px;
   border: 1px solid #fff;
 }
 ul.nav.navbar-nav li a {
-  padding: 11px 22px;
   border: 1px solid #fff;
 }
 div.container, div.container-fluid {
@@ -97,7 +155,32 @@ div.container, div.container-fluid {
     margin-bottom: 5%;
   }
 }
+ul.nav.navbar-nav > li {
+  text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
+  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
+}
+ul.nav.navbar-nav > li > a {
+  //  text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
+  //  box-shadow: @shadow-box-h-distance/2 @shadow-box-v-distance/2 @shadow-box-blur-distance/2 @shadow-box-spread-distance/2 @shadow-box-colour;
+}
+ul.nav.navbar-nav > li > ul > li {
+  text-shadow: none;
+  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
+}
+div.navbar {
+  text-align: center;
 
+  div.container-fluid {
+    margin-left: auto;
+    marigin-right: auto;
+  }
+}
+div#nav-container div.navbar.navbar-inverse div.container, #nav-container > div > div.container {
+//    padding-left: 0 !important;
+//    padding-right: 0 !important;
+}
+
+// Forms
 .form-horizontal {
   margin-top: 5%;
 }
@@ -106,28 +189,12 @@ div#social {
   padding-top:2%;
 }
 div.navbar-collapse.collapse {
-  float: left;
-  white-space: nowrap;
-}
-ul.nav.navbar-nav li {
-//  width: 25%
+//  float: left;
+//  white-space: nowrap;
 }
 .shadowed-elements {
   box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
 }
-ul.nav.navbar-nav > li {
-  text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
-  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
-}
-ul.nav.navbar-nav > li > a {
-//  text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
-//  box-shadow: @shadow-box-h-distance/2 @shadow-box-v-distance/2 @shadow-box-blur-distance/2 @shadow-box-spread-distance/2 @shadow-box-colour;
-}
-ul.nav.navbar-nav > li > ul > li {
-  text-shadow: none;
-  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
-}
-
 
 /* Styles that used to be in mockup.css */
 
@@ -157,6 +224,7 @@ ul.nav.navbar-nav > li > ul > li {
 }
 a.navbar-brand img {
   max-width:100%;
+  width: auto;
 }
 .navbar-nav > li > a {
   /* 	line-height: 76px; */
@@ -166,7 +234,6 @@ a.navbar-brand img {
 }
 #pointer {
   position:absolute;
-  bottom: -50px;
   left:50%;
   margin-left: -15px;
 }

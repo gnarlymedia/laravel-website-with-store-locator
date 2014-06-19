@@ -1,6 +1,5 @@
 .navbar-nav {
   > li > a {
-    font-size: @font-size-large;
     font-weight: normal;
     font-family: 'intro_condlight_free', "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
@@ -26,9 +25,47 @@
 @link-hover-color: @capital-light-blue;
 //@link-hover-color: lighten(@link-color, 15%);
 
-// navbar
+// Navbar
 @navbar-inverse-link-color:  #fff;
 @navbar-padding-vertical: 10px;
+
+// Padding
+@navbar-li-padding-base: 3px;
+@navbar-a-padding-hor-base: 22px;
+@navbar-a-padding-ver-base: 11px;
+
+@navbar-li-padding-factor-xs: ceil(@navbar-li-padding-base / 4);
+@navbar-li-padding-factor-sm: ceil(@navbar-li-padding-base / 1.6);
+@navbar-li-padding-factor-md: ceil(@navbar-li-padding-base / 1);
+@navbar-li-padding-factor-lg: ceil(@navbar-li-padding-base / 1);
+
+@navbar-a-padding-hor-factor-xs: ceil(@navbar-a-padding-hor-base / 4);
+@navbar-a-padding-hor-factor-sm: ceil(@navbar-a-padding-hor-base / 3.7);
+@navbar-a-padding-hor-factor-md: ceil(@navbar-a-padding-hor-base / 1.6);
+@navbar-a-padding-hor-factor-lg: ceil(@navbar-a-padding-hor-base / 1);
+
+@navbar-a-padding-ver-factor-xs: ceil(@navbar-a-padding-ver-base / 4);
+@navbar-a-padding-ver-factor-sm: ceil(@navbar-a-padding-ver-base / 3.9);
+@navbar-a-padding-ver-factor-md: ceil(@navbar-a-padding-ver-base / 1.5);
+@navbar-a-padding-ver-factor-lg: ceil(@navbar-a-padding-ver-base / 1);
+
+@navbar-font-size-factor-xs: ceil(@font-size-large / 4);
+@navbar-font-size-factor-sm: ceil(@font-size-large / 1.5);
+@navbar-font-size-factor-md: ceil(@font-size-large / 1.2);
+@navbar-font-size-factor-lg: ceil(@font-size-large / 1);
+
+// Brand
+@navbar-brand-height-base: 36px;
+@navbar-brand-height-xs: ceil(@navbar-brand-height-base * 1);
+@navbar-brand-height-sm: ceil(@navbar-brand-height-base * 0.6);
+@navbar-brand-height-md: ceil(@navbar-brand-height-base * 0.8);
+@navbar-brand-height-lg: ceil(@navbar-brand-height-base * 1);
+
+// Glyphicon
+@navbar-glyphicon-bottom-base: -50px;
+@navbar-glyphicon-bottom-factor-sm: ceil(@navbar-glyphicon-bottom-base * 1.2);
+@navbar-glyphicon-bottom-factor-md: ceil(@navbar-glyphicon-bottom-base * 1);
+@navbar-glyphicon-bottom-factor-lg: ceil(@navbar-glyphicon-bottom-base * 1);
 
 @shadow-box-h-distance: 1px;
 @shadow-box-v-distance: 1px;

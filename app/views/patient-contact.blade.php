@@ -8,7 +8,7 @@
 	<li class="fadeover"><a href="patient-info">PATIENT INFORMATION</a></li>
 	<li class="fadeover"><a href="google-locations">LOCATIONS</a></li>
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle fadeover" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li class="fadeover"><a href="bone-densitometry-dexa">BONE DENSITOMETRY (DEXA)</a></li>
             <li><a href="ct">CT</a></li>
