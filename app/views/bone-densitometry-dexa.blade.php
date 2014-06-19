@@ -21,7 +21,7 @@
             <li><a href="nuclear-medicine">NUCLEAR MEDICINE</a></li>
             <li><a href="ultrasound">ULTRASOUND</a></li>
             <li><a href="platelet-rich-plasma">PLATELET RICH PLASMA</a></li>
-            <li><a href="dental-x-ray">DENTAL X&#45;RAY</a></li>
+            <li><a href="dental-x-ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
             <li><a href="dexa">BONE MINERAL DENSITOMETRY</a></li>
             <li><a href="cardiac-imaging">CARDIAC IMAGING</a></li>
             <li><a href="opg">OPG</a></li>
