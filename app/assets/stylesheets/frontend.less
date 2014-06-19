@@ -2,16 +2,13 @@
 
 // Small screens (@screen-xs)
 @media (max-width: @screen-xs-max){
-	#copyright, #social {
+	#copyright-splash, #social-splash {
 		text-align: center;
         padding-bottom: 5px;
 	}
 	#patients_referrers {
 		background-position: center top;
 	}
-	#social img {
-//    	max-width:12%;
-    }
     #copyright {
 		margin-top: 2%;
 	}
@@ -27,6 +24,13 @@
   }
   a.navbar-brand img {
     height: @navbar-brand-height-xs;
+  }
+  #patients_referrers {
+    padding: @splash-buttons-padding-top-xs 0 @splash-buttons-padding-bottom-xs 0;
+  }
+  #right {
+    top: @splash-divider-top-posn-xs;
+    bottom:@splash-divider-bottom-posn-xs;
   }
 }
 
@@ -49,6 +53,13 @@
   a.navbar-brand img {
     height: @navbar-brand-height-sm;
   }
+  #patients_referrers {
+    padding: @splash-buttons-padding-top-sm 0 @splash-buttons-padding-bottom-sm 0;
+  }
+  #right {
+    top: @splash-divider-top-posn-sm;
+    bottom:@splash-divider-bottom-posn-sm;
+  }
 }
 
 // Screen desktop (@screen-md)
@@ -69,6 +80,13 @@
   }
   a.navbar-brand img {
     height: @navbar-brand-height-md;
+  }
+  #patients_referrers {
+    padding: @splash-buttons-padding-top-md 0 @splash-buttons-padding-bottom-md 0;
+  }
+  #right {
+    top: @splash-divider-top-posn-md;
+    bottom:@splash-divider-bottom-posn-md;
   }
 }
 
@@ -91,17 +109,21 @@
   a.navbar-brand img {
     height: @navbar-brand-height-lg;
   }
+  #patients_referrers {
+    padding: @splash-buttons-padding-top-lg 0 @splash-buttons-padding-bottom-lg 0;
+  }
+  #right {
+    top: @splash-divider-top-posn-lg;
+    bottom:@splash-divider-bottom-posn-lg;
+  }
 }
 
 
 // Larger screens (eveything larger than @screen-xs)
 @media (min-width: @screen-xs-max) {
-	#copyright {
+	#copyright-splash {
 		text-align: right;
 	}
-	#social img {
-//    	max-width:16%;
-    }
     #copyright {
 		margin-top: 7%;
 	}
@@ -137,6 +159,9 @@
     @keyframes myfirst {
       from {left: @animation-left-position}
       to {right: @animation-right-position}
+    }
+    #copyright-splash {
+      text-align: right;
     }
 }
 
@@ -185,7 +210,7 @@ div#nav-container div.navbar.navbar-inverse div.container, #nav-container > div 
   margin-top: 5%;
 }
 
-div#social {
+div#social-splash {
   padding-top:2%;
 }
 div.navbar-collapse.collapse {
@@ -194,6 +219,22 @@ div.navbar-collapse.collapse {
 }
 .shadowed-elements {
   box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
+}
+
+
+// Styles transferred from splash.less
+#patients_referrers {
+  text-align: center;
+  margin: 0;
+  vertical-align: bottom;
+  white-space: nowrap;
+  position:relative;
+}
+
+#right {
+  position:absolute;
+  left:50%;
+  border-left:1px solid white;
 }
 
 /* Styles that used to be in mockup.css */
@@ -250,7 +291,7 @@ a.navbar-brand img {
   padding: 0;
   margin: 0;
 }
-#copyright {
+#copyright-splash {
   margin-bottom: 5%;
   font-size: 10px;
 }
