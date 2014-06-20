@@ -14,7 +14,14 @@
         padding-bottom: 5px;
 	}
 	#patients_referrers {
-		background-position: center top;
+	  background-position: center top;
+
+      @media (orientation: portrait){
+        padding: @splash-buttons-padding-top-xs-portrait 0 @splash-buttons-padding-bottom-xs-portrait 0;
+      }
+      @media (orientation: landscape){
+        padding: @splash-buttons-padding-top-xs-landscape 0 @splash-buttons-padding-bottom-xs-landscape 0;
+      }
 	}
     #copyright {
 		margin-top: 2%;
@@ -25,73 +32,96 @@
     ul.nav.navbar-nav li {
       margin: 10px 5px;
     }
-  .body-images-left {
-    padding-bottom: 4%;
-    padding-left:3%;
-  }
-  a.navbar-brand img {
-    height: @navbar-brand-height-xs;
-  }
-  #patients_referrers {
-    padding: @splash-buttons-padding-top-xs 0 @splash-buttons-padding-bottom-xs 0;
-  }
-  #right {
-    top: @splash-divider-top-posn-xs;
-    bottom:@splash-divider-bottom-posn-xs;
-  }
-  div.navbar-collapse.collapsing ul.nav.navbar-nav {
-    display: none;
-  }
-  #logo {
-    max-width: @splash-logo-size-xs;
-    margin-bottom: @splash-logo-margin-bottom-xs;
-  }
+    .body-images-left {
+      padding-bottom: 4%;
+      padding-left:3%;
+    }
+    a.navbar-brand img {
+      height: @navbar-brand-height-xs;
+    }
+    #right {
+        @media (orientation: portrait){
+          top: @splash-divider-top-posn-xs-portrait;
+        }
+        @media (orientation: landscape){
+          top: @splash-divider-top-posn-xs-landscape;
+        }
+        bottom:@splash-divider-bottom-posn-xs;
+    }
+    div.navbar-collapse.collapsing ul.nav.navbar-nav {
+        display: none;
+    }
+    #logo {
+        @media (orientation: portrait){
+          max-width: @splash-logo-size-xs-portrait;
+        }
+        @media (orientation: landscape){
+          max-width: @splash-logo-size-xs-landscape;
+        }
+        margin-bottom: @splash-logo-margin-bottom-xs;
+    }
+    #footer-splash {
+        @media (orientation: portrait){
+            margin-top: @splash-footer-margin-top-xs-portrait;
+        }
+        @media (orientation: landscape){
+            margin-top: @splash-footer-margin-top-xs-landscape;
+        }
+    }
 }
 
 // Screen tablet (@screen-sm)
 @media(min-width: @screen-tablet){
-  ul.nav.navbar-nav li {
-    padding: @navbar-li-padding-factor-sm;
-  }
-  ul.nav.navbar-nav li a {
-    padding: @navbar-a-padding-ver-factor-sm @navbar-a-padding-hor-factor-sm;
-  }
-  .navbar-nav {
-    > li > a {
-      font-size: @navbar-font-size-factor-sm;
+    ul.nav.navbar-nav li {
+        padding: @navbar-li-padding-factor-sm;
     }
-  }
-  #pointer {
-    bottom: @navbar-glyphicon-bottom-factor-sm;
-  }
-  a.navbar-brand img {
-    height: @navbar-brand-height-sm;
-  }
-  #patients_referrers {
-    padding: @splash-buttons-padding-top-sm 0 @splash-buttons-padding-bottom-sm 0;
-  }
-  #right {
-    top: @splash-divider-top-posn-sm;
-    bottom:@splash-divider-bottom-posn-sm;
-  }
-  #logo {
-    max-width: @splash-logo-size-sm;
-    margin-bottom: @splash-logo-margin-bottom-sm;
-  }
+    ul.nav.navbar-nav li a {
+        padding: @navbar-a-padding-ver-factor-sm @navbar-a-padding-hor-factor-sm;
+    }
+    .navbar-nav {
+        > li > a {
+          font-size: @navbar-font-size-factor-sm;
+        }
+    }
+    #pointer {
+        bottom: @navbar-glyphicon-bottom-factor-sm;
+    }
+    a.navbar-brand img {
+        height: @navbar-brand-height-sm;
+    }
+    #patients_referrers {
+        padding: @splash-buttons-padding-top-sm 0 @splash-buttons-padding-bottom-sm 0;
+    }
+    #right {
+        top: @splash-divider-top-posn-sm;
+        bottom:@splash-divider-bottom-posn-sm;
+    }
+    #logo {
+        max-width: @splash-logo-size-sm;
+        margin-bottom: @splash-logo-margin-bottom-sm;
+    }
+    #footer-splash {
+        @media (orientation: portrait){
+            margin-top: @splash-footer-margin-top-sm-portrait;
+        }
+        @media (orientation: landscape){
+            margin-top: @splash-footer-margin-top-sm-landscape;
+        }
+    }
 }
 
 // Screen desktop (@screen-md)
 @media(min-width: @screen-desktop){
-  ul.nav.navbar-nav li {
-    padding: @navbar-li-padding-factor-md;
-  }
-  ul.nav.navbar-nav li a {
-    padding: @navbar-a-padding-ver-factor-md @navbar-a-padding-hor-factor-md;
-  }
-  .navbar-nav {
-    > li > a {
-      font-size: @navbar-font-size-factor-md;
+    ul.nav.navbar-nav li {
+        padding: @navbar-li-padding-factor-md;
     }
+    ul.nav.navbar-nav li a {
+        padding: @navbar-a-padding-ver-factor-md @navbar-a-padding-hor-factor-md;
+    }
+    .navbar-nav {
+        > li > a {
+            font-size: @navbar-font-size-factor-md;
+        }
   }
   #pointer {
     bottom: @navbar-glyphicon-bottom-factor-md;
@@ -261,13 +291,6 @@ div.navbar-collapse.collapse {
   position:absolute;
   left:50%;
   border-left:1px solid white;
-}
-#footer-splash {
-  margin-top:15%;
-  //    position: absolute;
-  //    bottom: 0;
-  //    right: 0;
-  //    width: 100%;
 }
 body {
   padding-top: 0;

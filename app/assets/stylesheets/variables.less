@@ -34,7 +34,8 @@
 @splash-logo-size-base: 18%;
 @splash-logo-margin-bottom-base: 5%;
 
-@splash-logo-size-xs: ceil(@splash-logo-size-base * 2);
+@splash-logo-size-xs-portrait: ceil(@splash-logo-size-base * 2);
+@splash-logo-size-xs-landscape: ceil(@splash-logo-size-base * 1.5);
 @splash-logo-size-sm: ceil(@splash-logo-size-base * 1.5);
 @splash-logo-size-md: ceil(@splash-logo-size-base * 1.2);
 @splash-logo-size-lg: ceil(@splash-logo-size-base * 1);
@@ -44,16 +45,18 @@
 @splash-logo-margin-bottom-md: ceil(@splash-logo-margin-bottom-base * 1);
 @splash-logo-margin-bottom-lg: ceil(@splash-logo-margin-bottom-base * 1);
 
-// Buttons
+// Button and logo group
 @splash-buttons-padding-top-base: 23%;
 @splash-buttons-padding-bottom-base: 1%;
 
-@splash-buttons-padding-top-xs: ceil(@splash-buttons-padding-top-base * 2);
+@splash-buttons-padding-top-xs-portrait: ceil(@splash-buttons-padding-top-base * 2);
+@splash-buttons-padding-top-xs-landscape: ceil(@splash-buttons-padding-top-base * 0.1);
 @splash-buttons-padding-top-sm: ceil(@splash-buttons-padding-top-base * 1.8);
 @splash-buttons-padding-top-md: ceil(@splash-buttons-padding-top-base * 1.5);
 @splash-buttons-padding-top-lg: ceil(@splash-buttons-padding-top-base * 1);
 
-@splash-buttons-padding-bottom-xs: ceil(@splash-buttons-padding-bottom-base * 3);
+@splash-buttons-padding-bottom-xs-portrait: ceil(@splash-buttons-padding-bottom-base * 3);
+@splash-buttons-padding-bottom-xs-landscape: ceil(@splash-buttons-padding-bottom-base * 0.01);
 @splash-buttons-padding-bottom-sm: ceil(@splash-buttons-padding-bottom-base * 2);
 @splash-buttons-padding-bottom-md: ceil(@splash-buttons-padding-bottom-base * 1.5);
 @splash-buttons-padding-bottom-lg: ceil(@splash-buttons-padding-bottom-base * 1);
@@ -62,7 +65,8 @@
 @splash-divider-top-posn-base: 61%;
 @splash-divider-bottom-posn-base: 0.1%;
 
-@splash-divider-top-posn-xs: ceil(@splash-divider-top-posn-base * 1.2);
+@splash-divider-top-posn-xs-portrait: ceil(@splash-divider-top-posn-base * 1.17);
+@splash-divider-top-posn-xs-landscape: ceil(@splash-divider-top-posn-base * 0.6);
 @splash-divider-top-posn-sm: ceil(@splash-divider-top-posn-base * 1.16);
 @splash-divider-top-posn-md: ceil(@splash-divider-top-posn-base * 1.07);
 @splash-divider-top-posn-lg: ceil(@splash-divider-top-posn-base * 1);
@@ -72,6 +76,18 @@
 @splash-divider-bottom-posn-md: ceil(@splash-divider-bottom-posn-base * 1);
 @splash-divider-bottom-posn-lg: ceil(@splash-divider-bottom-posn-base * 1);
 
+// Footer
+@splash-footer-margin-top-base: 15%;
+
+@splash-footer-margin-top-xs-portrait: ceil(@splash-footer-margin-top-base * 1);
+@splash-footer-margin-top-xs-landscape: ceil(@splash-footer-margin-top-base * 0.1);
+@splash-footer-margin-top-sm-portrait: ceil(@splash-footer-margin-top-base * 0.5);
+@splash-footer-margin-top-sm-landscape: ceil(@splash-footer-margin-top-base * 0.5);
+@splash-footer-margin-top-md: ceil(@splash-footer-margin-top-base * 0.5);
+@splash-footer-margin-top-lg: ceil(@splash-footer-margin-top-base * 0.5);
+
+
+// Sub pages
 // Navbar
 @navbar-inverse-link-color:  #fff;
 @navbar-padding-vertical: 10px;
