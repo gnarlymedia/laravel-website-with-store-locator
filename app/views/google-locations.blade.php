@@ -3,10 +3,9 @@
 @section('head')
 	<title>Locations</title>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	
+
    	{{ HTML::script('/assets/javascript/google_locations.js') }}
     {{ HTML::script('http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false') }}
-    {{ HTML::script('/assets/javascript/geometa.js') }}
 	
 	<style type="text/css">
 

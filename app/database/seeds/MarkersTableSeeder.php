@@ -100,33 +100,33 @@ class MarkersTableSeeder extends Seeder {
         );
         add_modalities($marker, $modalities_short_codes);
 
-		$faker = Faker\Factory::create();
-		 
-		for ($i = 0; $i < 50; $i++)
-		{
-			$marker = Marker::create(array(
-				'name' => $faker->lastName,
-				'address' => $faker->address,
-				'lat' => $faker->latitude,
-				'lng' => $faker->longitude
-			  ));
-			
-			$modalities_short_codes = array(
-				$faker->randomElement(
-					$array = array (
-						'general_xray',
-						'ultrasound',
-						'doppler',
-						'ct',
-						'opg',
-						'bone_densitometry',
-						'echocardiography',
-						'mammography',
-						'mri'
-					)
-				)
-			);
-			add_modalities($marker, $modalities_short_codes);
-		}        
+//		$faker = Faker\Factory::create();
+//
+//		for ($i = 0; $i < 50; $i++)
+//		{
+//			$marker = Marker::create(array(
+//				'name' => $faker->lastName,
+//				'address' => $faker->address,
+//				'lat' => $faker->latitude,
+//				'lng' => $faker->longitude
+//			  ));
+//
+//			$modalities_short_codes = array(
+//				$faker->randomElement(
+//					$array = array (
+//						'general_xray',
+//						'ultrasound',
+//						'doppler',
+//						'ct',
+//						'opg',
+//						'bone_densitometry',
+//						'echocardiography',
+//						'mammography',
+//						'mri'
+//					)
+//				)
+//			);
+//			add_modalities($marker, $modalities_short_codes);
+//		}
     }
 }

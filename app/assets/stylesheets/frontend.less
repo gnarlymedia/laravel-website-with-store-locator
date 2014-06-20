@@ -42,6 +42,10 @@
   div.navbar-collapse.collapsing ul.nav.navbar-nav {
     display: none;
   }
+  #logo {
+    max-width: @splash-logo-size-xs;
+    margin-bottom: @splash-logo-margin-bottom-xs;
+  }
 }
 
 // Screen tablet (@screen-sm)
@@ -69,6 +73,10 @@
   #right {
     top: @splash-divider-top-posn-sm;
     bottom:@splash-divider-bottom-posn-sm;
+  }
+  #logo {
+    max-width: @splash-logo-size-sm;
+    margin-bottom: @splash-logo-margin-bottom-sm;
   }
 }
 
@@ -98,6 +106,10 @@
     top: @splash-divider-top-posn-md;
     bottom:@splash-divider-bottom-posn-md;
   }
+  #logo {
+    max-width: @splash-logo-size-md;
+    margin-bottom: @splash-logo-margin-bottom-md;
+  }
 }
 
 // Screen large desktop (@screen-lg)
@@ -125,6 +137,10 @@
   #right {
     top: @splash-divider-top-posn-lg;
     bottom:@splash-divider-bottom-posn-lg;
+  }
+  #logo {
+    max-width: @splash-logo-size-lg;
+    margin-bottom: @splash-logo-margin-bottom-lg;
   }
 }
 
@@ -256,10 +272,6 @@ div.navbar-collapse.collapse {
 body {
   padding-top: 0;
   background-color: #222;
-}
-#logo {
-  max-width:18%;
-  margin-bottom: 5%;
 }
 #patients_referrers img {
   height: auto;
