@@ -31,15 +31,13 @@
 
 <body>
 <div id="patients_referrers" class="row">
-    <img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" class="img-responsive center-block shadowed"/>
-    <ul class="nav navbar-nav">
-        <li class="fadeover shadowed"><a href="referrer-info" id="patient_button">REFERRER INFORMATION</a></li>
-        <div id="right"></div>
-        <li class="fadeover shadowed"><a href="patient-info" id="referrer_button">PATIENT INFORMATON</a></li>
-    </ul>
+    <img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" class="img-responsive center-block"/>
+    <a href="/referrer-info"><img src="/assets/images/buttons/referrer_info_larger.png" alt="referrer_info" width="353" height="77" id="referrer_button" class="img-responsive fadeover" /></a>
+    <div id="right"></div>
+    <a href="/patient-info"><img src="/assets/images/buttons/patient_info_larger.png" alt="patient_info" width="353" height="77" id="patient_button" class="img-responsive fadeover"/></a>
 </div>
 
-<div class="row" id="footer-splash">
+<div id="footer-splash">
     <div id="social-splash" class="col-md-7 col-sm-7 col-xs-12">
         <a href="#"><img src="/assets/images/social/pngs/Color/Facebook.png" alt="Facebook" width="33" height="32"></a>
         <a href="#"><img src="/assets/images/social/pngs/Color/Twitter.png" alt="Twitter" width="33" height="33"></a>
@@ -48,19 +46,30 @@
     <div id="copyright-splash" class="col-md-5 col-sm-5 col-xs-12">
         Copyright (©) 2011-2014 Capital Radiology
     </div>
-    <svg height="0" xmlns="http://www.w3.org/2000/svg">
-        <filter id="drop-shadow">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
-            <feOffset dx="12" dy="12" result="offsetblur"/>
-            <feFlood flood-color="rgba(0,0,0,0.5)"/>
-            <feComposite in2="offsetblur" operator="in"/>
-            <feMerge>
-                <feMergeNode/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
-    </svg>
 </div>
+
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="drop-shadow">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
+        <feOffset dx="12" dy="12" result="offsetblur"/>
+        <feFlood flood-color="rgba(0,0,0,0.5)"/>
+        <feComposite in2="offsetblur" operator="in"/>
+        <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+    <filter id="drop-shadow-xs">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
+        <feOffset dx="6" dy="6" result="offsetblur"/>
+        <feFlood flood-color="rgba(0,0,0,0.5)"/>
+        <feComposite in2="offsetblur" operator="in"/>
+        <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+</svg>
 
 <!-- Olark chatbox -->
 <!-- begin olark code -->

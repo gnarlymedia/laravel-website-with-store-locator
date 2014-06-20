@@ -30,7 +30,9 @@ module.exports = function(grunt) {
 /*           './bower_components/bootstrap/js/modal.js', */
 /*           './bower_components/jquery.stellar/jquery.stellar.js', */
           './bower_components/bootstrap/docs/assets/js/vendor/holder.js',
-          './app/assets/javascript/frontend.js'
+          './app/assets/javascript/frontend.js',
+//          './app/assets/javascript/google_locations.js',
+          './app/assets/javascript/geometa.js'
         ],
         dest: './public/assets/javascript/frontend.js'
       },
@@ -82,7 +84,7 @@ module.exports = function(grunt) {
             //watched files
             './bower_components/jquery/jquery.js',
             './bower_components/bootstrap/dist/js/bootstrap.js',
-            './app/assets/javascript/frontend.js'
+            './app/assets/javascript/*'
             ],
           tasks: [     								//tasks to run
           	'concat:js_frontend',
@@ -125,7 +127,8 @@ module.exports = function(grunt) {
         less: {
           files: [
               './app/assets/stylesheets/*.less',
-              './bower_components/bootstrap/less/**'
+              './bower_components/bootstrap/less/**',
+              './public/assets/stylesheets/sub.css'
           ],  //watched files
           tasks: ['less','concat:css_frontend'],                          //tasks to run
           options: {
