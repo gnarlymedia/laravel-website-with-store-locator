@@ -9,10 +9,6 @@
 
 // Small screens (@screen-xs)
 @media (max-width: @screen-xs-max){
-	#copyright-splash, #social-splash {
-		text-align: center;
-        padding-bottom: 5px;
-	}
 	#patients_referrers {
 	  background-position: center top;
 
@@ -68,6 +64,20 @@
             margin-top: @splash-footer-margin-top-xs-landscape;
         }
     }
+    #social-splash {
+        text-align: center;
+    }
+    #copyright-splash {
+        text-align: center;
+        padding-top: 3%;
+        font-size: @splash-copyright-text-size-xs;
+        @media (orientation: portrait){
+            margin-bottom: @splash-copyright-margin-bottom-xs-portrait;
+        }
+        @media (orientation: landscape){
+            margin-bottom: @splash-copyright-margin-bottom-xs-landscape;
+        }
+    }
 }
 
 // Screen tablet (@screen-sm)
@@ -90,7 +100,12 @@
         height: @navbar-brand-height-sm;
     }
     #patients_referrers {
-        padding: @splash-buttons-padding-top-sm 0 @splash-buttons-padding-bottom-sm 0;
+        @media (orientation: portrait){
+            padding: @splash-buttons-padding-top-sm-portrait 0 @splash-buttons-padding-bottom-sm 0;
+        }
+        @media (orientation: landscape){
+            padding: @splash-buttons-padding-top-sm-landscape 0 @splash-buttons-padding-bottom-sm 0;
+        }
     }
     #right {
         top: @splash-divider-top-posn-sm;
@@ -108,6 +123,19 @@
             margin-top: @splash-footer-margin-top-sm-landscape;
         }
     }
+    #social-splash {
+        padding-left: 5%;
+    }
+    #copyright-splash {
+        padding-right: 4%;
+        font-size: @splash-copyright-text-size-sm;
+        @media (orientation: portrait){
+            margin-bottom: @splash-copyright-margin-bottom-sm-portrait;
+        }
+        @media (orientation: landscape){
+            margin-bottom: @splash-copyright-margin-bottom-sm-landscape;
+        }
+    }
 }
 
 // Screen desktop (@screen-md)
@@ -122,56 +150,88 @@
         > li > a {
             font-size: @navbar-font-size-factor-md;
         }
-  }
-  #pointer {
-    bottom: @navbar-glyphicon-bottom-factor-md;
-  }
-  a.navbar-brand img {
-    height: @navbar-brand-height-md;
-  }
-  #patients_referrers {
-    padding: @splash-buttons-padding-top-md 0 @splash-buttons-padding-bottom-md 0;
-  }
-  #right {
-    top: @splash-divider-top-posn-md;
-    bottom:@splash-divider-bottom-posn-md;
-  }
-  #logo {
-    max-width: @splash-logo-size-md;
-    margin-bottom: @splash-logo-margin-bottom-md;
-  }
+    }
+    #pointer {
+        bottom: @navbar-glyphicon-bottom-factor-md;
+    }
+    a.navbar-brand img {
+        height: @navbar-brand-height-md;
+    }
+    #patients_referrers {
+        @media (orientation: portrait){
+            padding: @splash-buttons-padding-top-md-portrait 0 @splash-buttons-padding-bottom-md 0;
+        }
+        @media (orientation: landscape){
+            padding: @splash-buttons-padding-top-md-landscape 0 @splash-buttons-padding-bottom-md 0;
+        }
+    }
+    #right {
+        @media (orientation: portrait){
+            top: @splash-divider-top-posn-md-portrait;
+        }
+        @media (orientation: landscape){
+            top: @splash-divider-top-posn-md-landscape;
+        }
+        bottom:@splash-divider-bottom-posn-md;
+    }
+    #logo {
+        max-width: @splash-logo-size-md;
+        margin-bottom: @splash-logo-margin-bottom-md;
+    }
+    #social-splash {
+        padding-left: 5%;
+    }
+    #footer-splash {
+        margin-top: @splash-footer-margin-top-md;
+    }
+    #copyright-splash {
+        padding-right: 4%;
+        font-size: @splash-copyright-text-size-md;
+        margin-bottom: @splash-copyright-margin-bottom-md;
+    }
 }
 
 // Screen large desktop (@screen-lg)
 @media(min-width: @screen-lg-desktop){
-  ul.nav.navbar-nav li {
-    padding: @navbar-li-padding-factor-lg;
-  }
-  ul.nav.navbar-nav li a {
-    padding: @navbar-a-padding-ver-factor-lg @navbar-a-padding-hor-factor-lg;
-  }
-  .navbar-nav {
-    > li > a {
-      font-size: @navbar-font-size-factor-lg;
+    ul.nav.navbar-nav li {
+        padding: @navbar-li-padding-factor-lg;
     }
-  }
-  #pointer {
-    bottom: @navbar-glyphicon-bottom-factor-lg;
-  }
-  a.navbar-brand img {
-    height: @navbar-brand-height-lg;
-  }
-  #patients_referrers {
-    padding: @splash-buttons-padding-top-lg 0 @splash-buttons-padding-bottom-lg 0;
-  }
-  #right {
-    top: @splash-divider-top-posn-lg;
-    bottom:@splash-divider-bottom-posn-lg;
-  }
-  #logo {
-    max-width: @splash-logo-size-lg;
-    margin-bottom: @splash-logo-margin-bottom-lg;
-  }
+    ul.nav.navbar-nav li a {
+        padding: @navbar-a-padding-ver-factor-lg @navbar-a-padding-hor-factor-lg;
+    }
+    .navbar-nav {
+        > li > a {
+          font-size: @navbar-font-size-factor-lg;
+        }
+    }
+    #pointer {
+        bottom: @navbar-glyphicon-bottom-factor-lg;
+    }
+    a.navbar-brand img {
+        height: @navbar-brand-height-lg;
+    }
+    #patients_referrers {
+        padding: @splash-buttons-padding-top-lg 0 @splash-buttons-padding-bottom-lg 0;
+    }
+    #right {
+        top: @splash-divider-top-posn-lg;
+        bottom:@splash-divider-bottom-posn-lg;
+    }
+    #logo {
+        max-width: @splash-logo-size-lg;
+        margin-bottom: @splash-logo-margin-bottom-lg;
+    }
+    #social-splash {
+        padding-left: 5%;
+    }
+    #footer-splash {
+//        margin-top: @splash-footer-margin-top-lg;
+    }
+    #copyright-splash {
+        padding-right: 4%;
+        font-size: @splash-copyright-text-size-lg;
+        margin-bottom: @splash-copyright-margin-bottom-lg;
+    }
 }
 
 
@@ -207,54 +267,54 @@
 
     /* Chrome, Safari, Opera */
     @-webkit-keyframes myfirst {
-      from {left: @animation-left-position}
-      to {right: @animation-right-position}
+        from {left: @animation-left-position}
+        to {right: @animation-right-position}
     }
 
     /* Standard syntax */
     @keyframes myfirst {
-      from {left: @animation-left-position}
-      to {right: @animation-right-position}
+        from {left: @animation-left-position}
+        to {right: @animation-right-position}
     }
     #copyright-splash {
-      text-align: right;
+        text-align: right;
     }
 }
 
-//Static
+// Static
 // Navbar
 ul.nav.navbar-nav li {
-  border: 1px solid #fff;
+    border: 1px solid #fff;
 }
 ul.nav.navbar-nav li a {
-  border: 1px solid #fff;
+    border: 1px solid #fff;
 }
 div.container, div.container-fluid {
-  padding-top:8%;
+    padding-top:8%;
 
-  &h1 {
-    margin-bottom: 5%;
-  }
+    &h1 {
+        margin-bottom: 5%;
+    }
 }
 ul.nav.navbar-nav > li {
-  text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
-  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
+    text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
+    box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
 }
 ul.nav.navbar-nav > li > a {
   //  text-shadow: @shadow-text-h-distance @shadow-text-v-distance @shadow-text-blur-distance @shadow-text-colour;
   //  box-shadow: @shadow-box-h-distance/2 @shadow-box-v-distance/2 @shadow-box-blur-distance/2 @shadow-box-spread-distance/2 @shadow-box-colour;
 }
 ul.nav.navbar-nav > li > ul > li {
-  text-shadow: none;
-  box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
+    text-shadow: none;
+    box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
 }
 div.navbar {
-  text-align: center;
+    text-align: center;
 
-  div.container-fluid {
-    margin-left: auto;
-    marigin-right: auto;
-  }
+    div.container-fluid {
+      margin-left: auto;
+      marigin-right: auto;
+    }
 }
 div#nav-container div.navbar.navbar-inverse div.container, #nav-container > div > div.container {
 //    padding-left: 0 !important;
@@ -263,29 +323,43 @@ div#nav-container div.navbar.navbar-inverse div.container, #nav-container > div 
 
 // Forms
 .form-horizontal {
-  margin-top: 5%;
+    margin-top: 5%;
 }
 
-div#social-splash {
-  margin-top:2%;
-  margin-bottom:2%;
+// Splash
+// Footer
+#footer-splash {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 5%;
 }
-div.navbar-collapse.collapse {
-//  float: left;
-//  white-space: nowrap;
+#social-splash {
+    position: relative;
+    &img {
+        display: inline;
+        height: auto;
+        width: auto\9; /* ie8 */
+        padding: 0;
+        margin: 0;
+    }
 }
+#copyright-splash {
+    color: @capital-white;
+    vertical-position: bottom;
+}
+
 .shadowed-elements {
   box-shadow: @shadow-box-h-distance @shadow-box-v-distance @shadow-box-blur-distance @shadow-box-spread-distance @shadow-box-colour;
 }
 
-
 // Styles transferred from splash.less
 #patients_referrers {
-  text-align: center;
-  margin: 0;
-  vertical-align: bottom;
-  white-space: nowrap;
-  position:relative;
+    text-align: center;
+    margin: 0;
+    vertical-align: bottom;
+    white-space: nowrap;
+    position:relative;
 }
 #right {
   position:absolute;
@@ -295,6 +369,7 @@ div.navbar-collapse.collapse {
 body {
   padding-top: 0;
   background-color: #222;
+  position: relative;
 }
 #patients_referrers img {
   height: auto;
@@ -313,25 +388,6 @@ a:hover {
   color: none;
   text-decoration: none;
 }
-#social-splash {
-  //    padding-top: 3%;
-  padding-left: 5%;
-}
-#social-splash img {
-  display: inline;
-  height: auto;
-  width: auto\9; /* ie8 */
-}
-#social-splash img {
-  padding: 0;
-  margin: 0;
-}
-#copyright-splash {
-  color: #ffffff;
-  margin-bottom: 5%;
-  font-size: 10px;
-  padding-right: 5%;
-}
 #referrer_button {
   margin: 4% 3% 6% 0;
 }
@@ -339,53 +395,53 @@ a:hover {
   margin: 4% 0 6% 3%;
 }
 #patient_button, #referrer_button {
-  display: inline;
+    display: inline;
 
-  // Small screens (@screen-xs)
-  @media (max-width: @screen-xs-max){
-    max-width:40%;
-  }
+    // Small screens (@screen-xs)
+    @media (max-width: @screen-xs-max){
+        max-width:40%;
+    }
 
-  // Screen tablet (@screen-sm)
-  @media(min-width: @screen-tablet){
-    max-width:30%;
-  }
+    // Screen tablet (@screen-sm)
+    @media(min-width: @screen-tablet){
+       max-width:30%;
+    }
 
-  // Screen desktop (@screen-md)
-  @media(min-width: @screen-desktop){
-    max-width:30%;
-  }
+    // Screen desktop (@screen-md)
+    @media(min-width: @screen-desktop){
+        max-width:30%;
+    }
 
-  // Screen large desktop (@screen-lg)
-  @media(min-width: @screen-lg-desktop){
-    max-width:30%;
-  }
+    // Screen large desktop (@screen-lg)
+    @media(min-width: @screen-lg-desktop){
+        max-width:30%;
+    }
 }
 .drop-shadow {
-  -moz-box-shadow:    3px 3px 5px 6px #222;
-  -webkit-box-shadow: 3px 3px 5px 6px #222;
-  box-shadow:         3px 3px 5px 6px #222;
+    -moz-box-shadow:    3px 3px 5px 6px #222;
+    -webkit-box-shadow: 3px 3px 5px 6px #222;
+    box-shadow:         3px 3px 5px 6px #222;
 }
 .background-color {
-  background: #222;
+    background: #222;
 }
 .vegas-loading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 /* Styles that used to be in mockup.css */
 
 #nav-container {
-  background: none;
-  background: url(/assets/images/background/background_1800_short.jpg) no-repeat;
-  background-position: center center;
-  min-height:10%;
-  padding-top: 4%;
-  padding-bottom: 1%;
-  position: relative;
+    background: none;
+    background: url(/assets/images/background/background_1800_short.jpg) no-repeat;
+    background-position: center center;
+    min-height:10%;
+    padding-top: 4%;
+    padding-bottom: 1%;
+    position: relative;
 }
 .fadeover, #social > a > img, #social-splash > a > img,  {
   /*display: inline;*/
@@ -429,10 +485,6 @@ a.navbar-brand img {
 #social img {
   padding: 0;
   margin: 0;
-}
-#copyright-splash {
-  margin-bottom: 5%;
-  font-size: 10px;
 }
 button.navbar-toggle.collapsed {
   z-index: 1000;

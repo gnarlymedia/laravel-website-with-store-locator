@@ -23,7 +23,7 @@
 
 @capital-light-blue: #008ABD;
 @capital-grey: #3C3D3F;
-@capital-white: #000000;
+@capital-white: #fff;
 
 @brand-primary: @capital-grey;
 @link-hover-color: @capital-light-blue;
@@ -51,8 +51,10 @@
 
 @splash-buttons-padding-top-xs-portrait: ceil(@splash-buttons-padding-top-base * 2);
 @splash-buttons-padding-top-xs-landscape: ceil(@splash-buttons-padding-top-base * 0.1);
-@splash-buttons-padding-top-sm: ceil(@splash-buttons-padding-top-base * 1.8);
-@splash-buttons-padding-top-md: ceil(@splash-buttons-padding-top-base * 1.5);
+@splash-buttons-padding-top-sm-portrait: ceil(@splash-buttons-padding-top-base * 1.8);
+@splash-buttons-padding-top-sm-landscape: ceil(@splash-buttons-padding-top-base * 1.8);
+@splash-buttons-padding-top-md-portrait: ceil(@splash-buttons-padding-top-base * 1);
+@splash-buttons-padding-top-md-landscape: ceil(@splash-buttons-padding-top-base * 0.5);
 @splash-buttons-padding-top-lg: ceil(@splash-buttons-padding-top-base * 1);
 
 @splash-buttons-padding-bottom-xs-portrait: ceil(@splash-buttons-padding-bottom-base * 3);
@@ -68,7 +70,8 @@
 @splash-divider-top-posn-xs-portrait: ceil(@splash-divider-top-posn-base * 1.17);
 @splash-divider-top-posn-xs-landscape: ceil(@splash-divider-top-posn-base * 0.6);
 @splash-divider-top-posn-sm: ceil(@splash-divider-top-posn-base * 1.16);
-@splash-divider-top-posn-md: ceil(@splash-divider-top-posn-base * 1.07);
+@splash-divider-top-posn-md-portrait: ceil(@splash-divider-top-posn-base * 1.07);
+@splash-divider-top-posn-md-landscape: ceil(@splash-divider-top-posn-base * 0.8);
 @splash-divider-top-posn-lg: ceil(@splash-divider-top-posn-base * 1);
 
 @splash-divider-bottom-posn-xs: ceil(@splash-divider-bottom-posn-base * 20);
@@ -85,6 +88,24 @@
 @splash-footer-margin-top-sm-landscape: ceil(@splash-footer-margin-top-base * 0.5);
 @splash-footer-margin-top-md: ceil(@splash-footer-margin-top-base * 0.5);
 @splash-footer-margin-top-lg: ceil(@splash-footer-margin-top-base * 0.5);
+
+// Copyright
+@splash-copyright-text-size-base: 12px;
+@splash-copyright-text-size-xs: ceil(@splash-copyright-text-size-base * 1);
+@splash-copyright-text-size-sm: ceil(@splash-copyright-text-size-base * 1);
+@splash-copyright-text-size-md: ceil(@splash-copyright-text-size-base * 1);
+@splash-copyright-text-size-lg: ceil(@splash-copyright-text-size-base * 1);
+
+@splash-copyright-margin-bottom-base: 2%;
+
+@splash-copyright-margin-bottom-xs-portrait: ceil(@splash-copyright-margin-bottom-base * 1);
+@splash-copyright-margin-bottom-xs-landscape: ceil(@splash-copyright-margin-bottom-base * 0.1);
+@splash-copyright-margin-bottom-sm-portrait: ceil(@splash-copyright-margin-bottom-base * 1);
+@splash-copyright-margin-bottom-sm-landscape: ceil(@splash-copyright-margin-bottom-base * 1);
+@splash-copyright-margin-bottom-md: ceil(@splash-copyright-margin-bottom-base * 1);
+@splash-copyright-margin-bottom-lg: ceil(@splash-copyright-margin-bottom-base * 0.2);
+
+
 
 
 // Sub pages
