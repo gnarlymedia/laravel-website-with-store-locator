@@ -20,6 +20,7 @@
 @font-size-larger: ceil((@font-size-base * 1.5)); // ~18px
 
 @navbar-inverse-bg: #008ABD;
+@nav-link-hover-bg: none;
 
 @capital-light-blue: #008ABD;
 @capital-grey: #3C3D3F;
@@ -29,7 +30,27 @@
 @link-hover-color: @capital-light-blue;
 //@link-hover-color: lighten(@link-color, 15%);
 
-// Splash
+
+// Splash page
+
+// Button and logo group
+@splash-buttons-padding-top-base: 23%;
+@splash-buttons-padding-bottom-base: 1%;
+
+@splash-buttons-padding-top-xs-portrait: ceil(@splash-buttons-padding-top-base * 2);
+@splash-buttons-padding-top-xs-landscape: ceil(@splash-buttons-padding-top-base * 0.1);
+@splash-buttons-padding-top-sm-portrait: ceil(@splash-buttons-padding-top-base * 1.8);
+@splash-buttons-padding-top-sm-landscape: ceil(@splash-buttons-padding-top-base * 1.8);
+@splash-buttons-padding-top-md-portrait: ceil(@splash-buttons-padding-top-base * 1);
+@splash-buttons-padding-top-md-landscape: ceil(@splash-buttons-padding-top-base * 0.7);
+@splash-buttons-padding-top-lg: ceil(@splash-buttons-padding-top-base * 1);
+
+@splash-buttons-padding-bottom-xs-portrait: ceil(@splash-buttons-padding-bottom-base * 3);
+@splash-buttons-padding-bottom-xs-landscape: ceil(@splash-buttons-padding-bottom-base * 0.01);
+@splash-buttons-padding-bottom-sm: ceil(@splash-buttons-padding-bottom-base * 2);
+@splash-buttons-padding-bottom-md: ceil(@splash-buttons-padding-bottom-base * 1.5);
+@splash-buttons-padding-bottom-lg: ceil(@splash-buttons-padding-bottom-base * 1);
+
 // Logo
 @splash-logo-size-base: 18%;
 @splash-logo-margin-bottom-base: 5%;
@@ -43,41 +64,7 @@
 @splash-logo-margin-bottom-xs: ceil(@splash-logo-margin-bottom-base * 1);
 @splash-logo-margin-bottom-sm: ceil(@splash-logo-margin-bottom-base * 1);
 @splash-logo-margin-bottom-md: ceil(@splash-logo-margin-bottom-base * 1);
-@splash-logo-margin-bottom-lg: ceil(@splash-logo-margin-bottom-base * 1);
-
-// Button and logo group
-@splash-buttons-padding-top-base: 23%;
-@splash-buttons-padding-bottom-base: 1%;
-
-@splash-buttons-padding-top-xs-portrait: ceil(@splash-buttons-padding-top-base * 2);
-@splash-buttons-padding-top-xs-landscape: ceil(@splash-buttons-padding-top-base * 0.1);
-@splash-buttons-padding-top-sm-portrait: ceil(@splash-buttons-padding-top-base * 1.8);
-@splash-buttons-padding-top-sm-landscape: ceil(@splash-buttons-padding-top-base * 1.8);
-@splash-buttons-padding-top-md-portrait: ceil(@splash-buttons-padding-top-base * 1);
-@splash-buttons-padding-top-md-landscape: ceil(@splash-buttons-padding-top-base * 0.7);
-@splash-buttons-padding-top-lg: ceil(@splash-buttons-padding-top-base * 1.3);
-
-@splash-buttons-padding-bottom-xs-portrait: ceil(@splash-buttons-padding-bottom-base * 3);
-@splash-buttons-padding-bottom-xs-landscape: ceil(@splash-buttons-padding-bottom-base * 0.01);
-@splash-buttons-padding-bottom-sm: ceil(@splash-buttons-padding-bottom-base * 2);
-@splash-buttons-padding-bottom-md: ceil(@splash-buttons-padding-bottom-base * 1.5);
-@splash-buttons-padding-bottom-lg: ceil(@splash-buttons-padding-bottom-base * 1);
-
-// Divider
-@splash-divider-top-posn-base: 61%;
-@splash-divider-bottom-posn-base: 0.1%;
-
-@splash-divider-top-posn-xs-portrait: ceil(@splash-divider-top-posn-base * 1.17);
-@splash-divider-top-posn-xs-landscape: ceil(@splash-divider-top-posn-base * 0.6);
-@splash-divider-top-posn-sm: ceil(@splash-divider-top-posn-base * 1.16);
-@splash-divider-top-posn-md-portrait: ceil(@splash-divider-top-posn-base * 1.07);
-@splash-divider-top-posn-md-landscape: ceil(@splash-divider-top-posn-base * 0.9);
-@splash-divider-top-posn-lg: ceil(@splash-divider-top-posn-base * 1.08);
-
-@splash-divider-bottom-posn-xs: ceil(@splash-divider-bottom-posn-base * 20);
-@splash-divider-bottom-posn-sm: ceil(@splash-divider-bottom-posn-base * 1);
-@splash-divider-bottom-posn-md: ceil(@splash-divider-bottom-posn-base * 1);
-@splash-divider-bottom-posn-lg: ceil(@splash-divider-bottom-posn-base * 1);
+@splash-logo-margin-bottom-lg: ceil(@splash-logo-margin-bottom-base * 0.5);
 
 // Footer
 @splash-footer-margin-top-base: 15%;
@@ -106,37 +93,36 @@
 @splash-copyright-margin-bottom-lg: ceil(@splash-copyright-margin-bottom-base * 0.2);
 
 
-
-
-// Sub pages
-// Navbar
+// Nav
 @navbar-inverse-link-color:  @capital-white;
 @navbar-padding-vertical: 10px;
 
 // Padding
+@navbar-ul-padding-ver-base: 4%;
+@navbar-ul-padding-ver-xs: ceil(@navbar-ul-padding-ver-base * 0.5);
+
 @navbar-li-padding-base: 3px;
+@navbar-li-padding-xs: ceil(@navbar-li-padding-base * 0.7);
+@navbar-li-padding-sm: ceil(@navbar-li-padding-base / 1.6);
+@navbar-li-padding-md: ceil(@navbar-li-padding-base * 0.6);
+@navbar-li-padding-lg: ceil(@navbar-li-padding-base / 1);
+
 @navbar-a-padding-hor-base: 22px;
+@navbar-a-padding-hor-xs: ceil(@navbar-a-padding-hor-base / 2);
+@navbar-a-padding-hor-sm: ceil(@navbar-a-padding-hor-base / 3.7);
+@navbar-a-padding-hor-md: ceil(@navbar-a-padding-hor-base * 0.7);
+@navbar-a-padding-hor-lg: ceil(@navbar-a-padding-hor-base / 1);
+
 @navbar-a-padding-ver-base: 11px;
+@navbar-a-padding-ver-xs: ceil(@navbar-a-padding-ver-base / 2);
+@navbar-a-padding-ver-sm: ceil(@navbar-a-padding-ver-base / 3.9);
+@navbar-a-padding-ver-md: ceil(@navbar-a-padding-ver-base * 0.7);
+@navbar-a-padding-ver-lg: ceil(@navbar-a-padding-ver-base / 1);
 
-@navbar-li-padding-factor-xs: ceil(@navbar-li-padding-base / 4);
-@navbar-li-padding-factor-sm: ceil(@navbar-li-padding-base / 1.6);
-@navbar-li-padding-factor-md: ceil(@navbar-li-padding-base / 1);
-@navbar-li-padding-factor-lg: ceil(@navbar-li-padding-base / 1);
-
-@navbar-a-padding-hor-factor-xs: ceil(@navbar-a-padding-hor-base / 3);
-@navbar-a-padding-hor-factor-sm: ceil(@navbar-a-padding-hor-base / 3.7);
-@navbar-a-padding-hor-factor-md: ceil(@navbar-a-padding-hor-base / 1.6);
-@navbar-a-padding-hor-factor-lg: ceil(@navbar-a-padding-hor-base / 1);
-
-@navbar-a-padding-ver-factor-xs: ceil(@navbar-a-padding-ver-base / 3);
-@navbar-a-padding-ver-factor-sm: ceil(@navbar-a-padding-ver-base / 3.9);
-@navbar-a-padding-ver-factor-md: ceil(@navbar-a-padding-ver-base / 1.5);
-@navbar-a-padding-ver-factor-lg: ceil(@navbar-a-padding-ver-base / 1);
-
-@navbar-font-size-factor-xs: ceil(@font-size-large / 4);
-@navbar-font-size-factor-sm: ceil(@font-size-large / 1.5);
-@navbar-font-size-factor-md: ceil(@font-size-large / 1.2);
-@navbar-font-size-factor-lg: ceil(@font-size-large / 1);
+@navbar-font-size-xs: ceil(@font-size-large * 1);
+@navbar-font-size-sm: ceil(@font-size-large / 1.5);
+@navbar-font-size-md: ceil(@font-size-large / 1.2);
+@navbar-font-size-lg: ceil(@font-size-large / 1);
 
 // Brand
 @navbar-brand-height-base: 36px;

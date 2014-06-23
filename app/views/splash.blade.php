@@ -32,9 +32,12 @@
 <body>
 <div id="patients_referrers" class="row">
     <img src="/assets/images/logo/capital_radiology.png" alt="capital_radiology" width="240" height="76" id="logo" class="img-responsive center-block"/>
-    <a href="/referrer-info"><img src="/assets/images/buttons/referrer_info_larger.png" alt="referrer_info" width="353" height="77" id="referrer_button" class="img-responsive fadeover" /></a>
-    <div id="right"></div>
-    <a href="/patient-info"><img src="/assets/images/buttons/patient_info_larger.png" alt="patient_info" width="353" height="77" id="patient_button" class="img-responsive fadeover"/></a>
+    <ul class="nav navbar-nav left">
+        <li class="fadeover shadowed"><a href="referrer-info">REFERRER INFORMATION</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+        <li class="fadeover shadowed"><a href="patient-info">PATIENT INFORMATION</a></li>
+    </ul>
 </div>
 
 <div id="footer-splash">
