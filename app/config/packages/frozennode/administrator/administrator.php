@@ -52,7 +52,8 @@ return array(
 	 *	)
 	 */
 	'menu' => array(
-        'posts'
+        'posts',
+        'links'
     ),
 
 	/**

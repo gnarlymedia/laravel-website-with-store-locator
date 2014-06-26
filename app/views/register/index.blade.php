@@ -5,7 +5,7 @@
 @stop
 
 @section('nav')
-    <li class="fadeover"><a href="patient-info">PATIENT INFORMATION</a></li>
+    <li class="fadeover"><a href="patient-info">INFO</a></li>
     <li class="fadeover"><a href="google-locations">LOCATIONS</a></li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle fadeover" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>

@@ -54,7 +54,7 @@
 	    </div>
       </div>
   	</div>
-    <div class="container">
+    <div class="container content-container">
 
 	    @yield('content', 'This content could not be found')
 

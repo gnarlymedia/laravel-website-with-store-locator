@@ -71,6 +71,11 @@ Route::get('patient-billing', function()
     return View::make('patient-billing');
 });
 
+Route::get('patient-links', function()
+{
+    return View::make('patient-links');
+});
+
 Route::get('patient-contact', function()
 {
     return View::make('patient-contact');

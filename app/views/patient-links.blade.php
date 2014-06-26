@@ -1,20 +1,12 @@
 @extends('layouts.sub')
 
-@section('title')
-	{{ Config::get('laravel-blog::meta.index_page.page_title') }}
-@endsection
-
-@section('meta_description')
-	{{ Config::get('laravel-blog::meta.index_page.meta_description') }}
-@endsection
-
-@section('meta_keywords')
-	{{ Config::get('laravel-blog::meta.index_page.meta_keywords') }}
-@endsection
+@section('head')
+	<title>Patients - Patient Information</title>
+@stop
 
 @section('nav')
-    <li class="fadeover"><a href="patient-info">INFO</a></li>
-    <li class="fadeover"><a href="google-locations">LOCATIONS</a></li>
+	<li class="fadeover"><a href="patient-info">INFO</a></li>
+	<li class="fadeover"><a href="google-locations">LOCATIONS</a></li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle fadeover" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -35,14 +27,25 @@
             <li><a href="opg">OPG</a></li>
         </ul>
     </li>
-    <li class="fadeover"><a href="patient-billing">BILLING</a></li>
-    <li><a href="#">BLOG</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div></li>
-    <li class="fadeover"><a href="patient-links">LINKS</a></li>
-    <li class="fadeover"><a href="patient-contact">CONTACT</a></li>
+	<li class="fadeover"><a href="patient-billing">BILLING</a></li>
+    <li class="fadeover"><a href="blog">BLOG</a></li>
+    <li class="fadeover"><a href="patient-links">LINKS</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div></li>
+	<li class="fadeover"><a href="patient-contact">CONTACT</a></li>
 @stop
 
 @section('content')
-	@include('laravel-blog::partials.list')
-	@include('laravel-blog::partials.archives')
-    <a class="btn btn-default admin-login-link" href="admin/posts">Blog admin login</a>
+    <div class="row">
+        <img src="/assets/images/istock/flower-sm.jpg" alt="flower" class="body-images-right img-responsive" >
+        <?php $links = Link::where(Link::STATUS, '=', Link::APPROVED)->paginate(5); ?>
+
+        <div class="container">
+            <?php foreach ($links as $link): ?>
+                    <h2><?php echo $link->title; ?></h2>
+                    <a href="<?php echo $link->url; ?>" target="_blank"><?php echo $link->content; ?></a>
+            <?php endforeach; ?>
+        </div>
+
+        <?php echo $links->links(); ?>
+    </div>
+    <a class="btn btn-default admin-login-link" href="admin/links">Link admin login</a>
 @stop

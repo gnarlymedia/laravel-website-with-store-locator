@@ -5,7 +5,7 @@
 @stop
 
 @section('nav')
-	<li class="fadeover"><a href="patient-info">PATIENT INFORMATION</a></li>
+	<li class="fadeover"><a href="patient-info">INFO</a></li>
 	<li class="fadeover"><a href="google-locations">LOCATIONS</a></li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle fadeover" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
@@ -30,6 +30,7 @@
 	<li><a href="#">BILLING</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31">
         </div></li>
     <li class="fadeover"><a href="blog">BLOG</a></li>
+    <li class="fadeover"><a href="patient-links">LINKS</a></li>
 	<li class="fadeover"><a href="patient-contact">CONTACT</a></li>
 @stop
 

@@ -310,7 +310,7 @@ ul.nav.navbar-nav li {
 ul.nav.navbar-nav li a {
     border: 1px solid @capital-white;
 }
-div.container, div.container-fluid {
+div.content-container, div.content-container {
     padding-top:8%;
 
     &h1 {
@@ -464,100 +464,105 @@ a:hover {
     position: relative;
 }
 .fadeover, #social > a > img, #social-splash > a > img,  {
-  /*display: inline;*/
-  opacity: 1;
-  transition: opacity .20s ease-in-out;
-  -moz-transition: opacity .20s ease-in-out;
-  -webkit-transition: opacity .20s ease-in-out;
+    /*display: inline;*/
+    opacity: 1;
+    transition: opacity .20s ease-in-out;
+    -moz-transition: opacity .20s ease-in-out;
+    -webkit-transition: opacity .20s ease-in-out;
 
-  &:hover {
-    opacity: 0.6;
-  }
+    &:hover {
+        opacity: 0.6;
+    }
 }
 .nav > li > a:hover, .nav > li > a:focus {
-  text-decoration: none;
-  background-color: inherit;
+    text-decoration: none;
+    background-color: inherit;
 }
 a.navbar-brand img {
-  max-width:100%;
-  width: auto;
+    max-width:100%;
+    width: auto;
 }
 .navbar-nav > li > a {
   /* 	line-height: 76px; */
 }
 .nav > li > a {
-  padding: 10px 5px;
+    padding: 10px 5px;
 }
 #pointer {
-  position:absolute;
-  left:50%;
-  margin-left: -15px;
+    position:absolute;
+    left:50%;
+    margin-left: -15px;
 }
 #social {
-  margin-top: 5%;
-  margin-bottom: 3%;
+    margin-top: 5%;
+    margin-bottom: 3%;
 }
 #social img {
-  display: inline;
-  height: auto;
-  width: auto\9; /* ie8 */
+    display: inline;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 #social img {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 button.navbar-toggle.collapsed {
-  z-index: 1000;
+    z-index: 1000;
 }
 .navbar-collapse.in, .navbar-collapse.collapsing {
-  overflow-y: inherit;
+    overflow-y: inherit;
 }
 div#nav-container > div.navbar.navbar-inverse {
-  background-color: inherit;
-  border: none;
+    background-color: inherit;
+    border: none;
 }
 .navbar-inverse .navbar-toggle {
-  background-color: darken(@capital-light-blue, 30%);
+    background-color: darken(@capital-light-blue, 30%);
 }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  border: none;
+    border: none;
 }
 .navbar-collapse.collapsing img {
   /* 	display: none; */
 }
-#blog-login-link {
-  float: right;
+.admin-login-link {
+    float: right;
+    margin-top: 2%;
 }
 .body-images-left {
-  float: left;
-  padding-right:3%;
+    float: left;
+    padding-right:3%;
+}
+.body-images-right {
+    float: right;
+    padding-left:3%;
 }
 .shadowed {
-  -webkit-filter: drop-shadow(8px 8px 7px #222);
-  filter: url(shadow.svg#drop-shadow);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-}
-.drop-shadow-xs {
-  -webkit-filter: drop-shadow(4px 4px 3px #222);
-  filter: url(shadow.svg#drop-shadow-xs);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-}
-div#patients_referrers img {
-  // Small screens (@screen-xs)
-  @media (max-width: @screen-desktop){
-    -webkit-filter: drop-shadow(4px 4px 3px #222);
-    filter: url(shadow.svg#drop-shadow-xs);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  }
-
-  // Screen desktop (@screen-md)
-  @media(min-width: @screen-desktop){
     -webkit-filter: drop-shadow(8px 8px 7px #222);
     filter: url(shadow.svg#drop-shadow);
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  }
+}
+.drop-shadow-xs {
+    -webkit-filter: drop-shadow(4px 4px 3px #222);
+    filter: url(shadow.svg#drop-shadow-xs);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+div#patients_referrers img {
+  // Small screens (@screen-xs)
+    @media (max-width: @screen-desktop){
+        -webkit-filter: drop-shadow(4px 4px 3px #222);
+        filter: url(shadow.svg#drop-shadow-xs);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    }
+
+    // Screen desktop (@screen-md)
+    @media(min-width: @screen-desktop){
+        -webkit-filter: drop-shadow(8px 8px 7px #222);
+        filter: url(shadow.svg#drop-shadow);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    }
 }
