@@ -47,5 +47,5 @@
 
         <?php echo $links->links(); ?>
     </div>
-    <a class="btn btn-default admin-login-link" href="admin/links">Link admin login</a>
+    <a class="btn btn-default admin-login-link" href="admin/links" target="_blank">Link admin login</a>
 @stop

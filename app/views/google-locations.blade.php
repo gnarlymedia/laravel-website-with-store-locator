@@ -47,7 +47,7 @@
             <h3>Locations</h3>
             <input type="text" id="addressInput" size="40" placeholder="Start typing your address or landmark" class="form-control" />
             <input class="btn btn-default" type="button" onclick="searchLocations()" value="Search this address"/>
-            <input class="btn btn-default" type="button" onclick="geolocate()" value="Find my current location again"/>
+            <input class="btn btn-default" type="button" onclick="geolocate()" value="Find my current location"/>
             <h4>Search distance</h4>
             <select id="radiusSelect" onchange="" class="form-control">
                 <option value="5">5km</option>
