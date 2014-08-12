@@ -97,7 +97,7 @@
             ],
             "authors": [
                 {
-                    "name": "Anahkiasen",
+                    "name": "Maxime Fabre",
                     "email": "ehtnam6@gmail.com"
                 }
             ],
@@ -463,7 +463,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -530,7 +530,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -606,7 +606,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -735,7 +735,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -789,7 +789,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1323,7 +1323,7 @@
             "authors": [
                 {
                     "name": "Anthony Ferrara",
-                    "email": "ircmaxell@php.net",
+                    "email": "ircmaxell@ircmaxell.com",
                     "homepage": "http://blog.ircmaxell.com"
                 }
             ],
@@ -1669,12 +1669,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/philipbrown/magniloquent.git",
-                "reference": "c2bf0a0faa1a3603d59e90d4d36506dc35422754"
+                "reference": "5900c271972b2886385b0d29eaacc2137a46659a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philipbrown/magniloquent/zipball/c2bf0a0faa1a3603d59e90d4d36506dc35422754",
-                "reference": "c2bf0a0faa1a3603d59e90d4d36506dc35422754",
+                "url": "https://api.github.com/repos/philipbrown/magniloquent/zipball/5900c271972b2886385b0d29eaacc2137a46659a",
+                "reference": "5900c271972b2886385b0d29eaacc2137a46659a",
                 "shasum": ""
             },
             "require": {
@@ -1703,7 +1703,7 @@
                     "name": "Alex Sears",
                     "email": "alexwsears@gmail.com",
                     "homepage": "http://alexsears.com",
-                    "role": "Creator/Developer"
+                    "role": "Developer"
                 }
             ],
             "description": "Self-validating models for Laravel 4's Eloquent",
@@ -1711,7 +1711,7 @@
                 "eloquent",
                 "laravel"
             ],
-            "time": "2014-06-27 20:23:39"
+            "time": "2014-08-11 20:02:41"
         },
         {
             "name": "mockery/mockery",
@@ -1719,12 +1719,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "eb1b9506b0f80a9d7d1b69841ff2ea53bb127297"
+                "reference": "217e04f061861c88ce56677225f8b0cf1eac9e79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/eb1b9506b0f80a9d7d1b69841ff2ea53bb127297",
-                "reference": "eb1b9506b0f80a9d7d1b69841ff2ea53bb127297",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/217e04f061861c88ce56677225f8b0cf1eac9e79",
+                "reference": "217e04f061861c88ce56677225f8b0cf1eac9e79",
                 "shasum": ""
             },
             "require": {
@@ -1777,7 +1777,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2014-08-08 12:49:13"
+            "time": "2014-08-11 12:38:44"
         },
         {
             "name": "monolog/monolog",
@@ -3576,7 +3576,7 @@
             ],
             "authors": [
                 {
-                    "name": "thujohn",
+                    "name": "Jonathan Thuau",
                     "email": "jonathan.thuau@gmail.com"
                 }
             ],
@@ -3593,7 +3593,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/JeffreyWay/Laravel-FormField.git",
+                "url": "git@github.com:JeffreyWay/Laravel-FormField.git",
                 "reference": "25d06676a75f05db7cc10399e72ce13c922047ae"
             },
             "dist": {
