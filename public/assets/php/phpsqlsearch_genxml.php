@@ -36,7 +36,7 @@ if (!$db_selected) {
 }
 
 // Search the rows in the markers table
-$query = sprintf("SELECT address, markers.name, phone, fax, openinghours, lat, lng, ( 6371 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance, modalities.name AS modality FROM markers JOIN marker_modality ON markers.id=marker_modality.marker_id JOIN modalities on marker_modality.modality_id=modalities.id HAVING distance < '%s' ORDER BY distance LIMIT 0 , 1000",
+$query = sprintf("SELECT address, markers.name, phone, fax, openinghours, lat, lng, ( 6371 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance, modalities.name AS modality FROM markers JOIN marker_modality ON markers.id=marker_modality.marker_id JOIN modalities on marker_modality.modality_id=modalities.id HAVING distance < '%s' ORDER BY distance, modality LIMIT 0 , 1000",
   mysql_real_escape_string($center_lat),
   mysql_real_escape_string($center_lng),
   mysql_real_escape_string($center_lat),
