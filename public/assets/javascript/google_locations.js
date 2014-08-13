@@ -225,6 +225,9 @@ function downloadComplete(data) {
     var nameOfDistance = "distance";
     var nameOfNum = "num";
     var nameOfAddress = "address";
+    var nameOfOpeningHours = "opening_hours";
+    var nameOfPhone = "phone";
+    var nameOfFax = "fax";
     var nameOfLatLng = "latlng";
 
     // Just allClinicAndModalities
@@ -242,7 +245,7 @@ function downloadComplete(data) {
     var markerNodes = xml.documentElement.getElementsByTagName("marker");
     var bounds = new google.maps.LatLngBounds();
 
-    function addClinicModalityToCurrentClinics(name, address, distance, latlng, modality) {
+    function addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, distance, latlng, modality) {
         if (allCurrentClinicNames.indexOf(name) == -1) {
             // New clinic
             allCurrentClinicNames.push(name);
@@ -253,6 +256,9 @@ function downloadComplete(data) {
             singleClinic[nameOfDistance] = distance;
             singleClinic[nameOfNum] = i;
             singleClinic[nameOfAddress] = address;
+            singleClinic[nameOfOpeningHours] = opening_hours;
+            singleClinic[nameOfPhone] = phone;
+            singleClinic[nameOfFax] = fax;
             singleClinic[nameOfLatLng] = latlng;
             singleClinic[nameOfModalitiesArray] = [modality];
 
@@ -274,23 +280,26 @@ function downloadComplete(data) {
     for (var i = 0; i < markerNodes.length; i++) {
         var name = markerNodes[i].getAttribute("name");
         var address = markerNodes[i].getAttribute("address");
+        var opening_hours = markerNodes[i].getAttribute("openinghours");
         var distance = parseFloat(markerNodes[i].getAttribute("distance"));
         var latlng = new google.maps.LatLng(
             parseFloat(markerNodes[i].getAttribute("lat")),
             parseFloat(markerNodes[i].getAttribute("lng"))
         );
         var modality = markerNodes[i].getAttribute("modality");
+        var phone = markerNodes[i].getAttribute("phone");
+        var fax = markerNodes[i].getAttribute("fax");
 
         // Check if we should examine this clinic
         if ((currentModality) && (currentModality != modalitySelectDefaultText)) {
             // A modality has been selected
             if (modality == currentModality) {
                 // This modality we've found is the current selected modality  - add to current clinics
-                addClinicModalityToCurrentClinics(name, address, distance, latlng, modality);
+                addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, distance, latlng, modality);
             }
         } else {
             // No modality set yet
-            addClinicModalityToCurrentClinics(name, address, distance, latlng, modality);
+            addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, distance, latlng, modality);
         }
     }
 
@@ -324,7 +333,7 @@ function downloadComplete(data) {
         for (var q = 0; q < clinicsForMarkers.length; q++) {
             thisLatlng = clinicsForMarkers[q][nameOfLatLng];
             markerModalities = makeMarkerModalitiesOutput(clinicsForMarkers[q][nameOfModalitiesArray]);
-            createMarker(thisLatlng, clinicsForMarkers[q][nameOfName], clinicsForMarkers[q][nameOfAddress], markerModalities);
+            createMarker(thisLatlng, clinicsForMarkers[q][nameOfName], clinicsForMarkers[q][nameOfAddress], clinicsForMarkers[q][nameOfOpeningHours], clinicsForMarkers[q][nameOfPhone], clinicsForMarkers[q][nameOfFax], markerModalities);
             bounds.extend(thisLatlng);
         }
     }
@@ -349,14 +358,39 @@ function downloadComplete(data) {
     }
 }
 
-function createMarker(latlng, name, address, modalities) {
-    var html = "<b>" + name + "</b> <br />" + address + "<br />Modalities: " + modalities;
+function createMarker(latlng, name, address, opening_hours, phone, fax, modalities) {
+    var html = "";
+
+    if (name) {
+        html += "<b>" + name + "</b><br />";
+    }
+
+    if (address) {
+        html += address + "<br />";
+    }
+
+    if (opening_hours) {
+        html += "Opening hours: " + opening_hours + "<br />";
+    }
+
+    if (phone) {
+        html += "Phone: " + phone + "<br />";
+    }
+
+    if (fax) {
+        html += "Fax: " + fax + "<br />";
+    }
+
+    if (modalities) {
+        html += "Modalities: " + modalities;
+    }
+
     var marker = new google.maps.Marker({
         map: map,
         position: latlng,
         icon: {
             url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
-        },
+        }
     });
 
     google.maps.event.addListener(marker, 'click', function() {
@@ -364,6 +398,13 @@ function createMarker(latlng, name, address, modalities) {
         infoWindow.open(map, marker);
     });
     markers.push(marker);
+
+    function testAttrAndAdd(attr) {
+        var output = null;
+        if (attr) {
+
+        }
+    }
 }
 
 function createOptionLocation(name, distance, num) {

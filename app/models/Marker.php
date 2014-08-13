@@ -15,6 +15,9 @@ class Marker extends Magniloquent {
 	protected $fillable = array(
 		'name',
 		'address',
+        'openinghours',
+        'phone',
+        'fax',
 		'lat',
 		'lng',
 		'services'

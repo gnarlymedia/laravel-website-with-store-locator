@@ -41,5 +41,17 @@ class ModalityTableSeeder extends Seeder {
 		$modality = Modality::create(array(
 			'name' => 'MRI'
 		));
+
+        $modality = Modality::create(array(
+            'name' => 'Low Dose CT'
+        ));
+
+        $modality = Modality::create(array(
+            'name' => 'CT Angiography'
+        ));
+
+        $modality = Modality::create(array(
+            'name' => 'Digital OPG'
+        ));
     }
 }

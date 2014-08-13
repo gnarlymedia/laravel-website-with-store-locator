@@ -36,7 +36,7 @@ if (!$db_selected) {
 }
 
 // Search the rows in the markers table
-$query = sprintf("SELECT address, markers.name, lat, lng, ( 6371 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance, modalities.name AS modality FROM markers JOIN marker_modality ON markers.id=marker_modality.marker_id JOIN modalities on marker_modality.modality_id=modalities.id HAVING distance < '%s' ORDER BY distance LIMIT 0 , 20",
+$query = sprintf("SELECT address, markers.name, phone, fax, openinghours, lat, lng, ( 6371 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance, modalities.name AS modality FROM markers JOIN marker_modality ON markers.id=marker_modality.marker_id JOIN modalities on marker_modality.modality_id=modalities.id HAVING distance < '%s' ORDER BY distance LIMIT 0 , 1000",
   mysql_real_escape_string($center_lat),
   mysql_real_escape_string($center_lng),
   mysql_real_escape_string($center_lat),
@@ -66,6 +66,9 @@ while ($row = @mysql_fetch_assoc($result)){
   $newnode = $parnode->appendChild($node);
   $newnode->setAttribute("name", $row['name']);
   $newnode->setAttribute("address", $row['address']);
+  $newnode->setAttribute("openinghours", $row['openinghours']);
+  $newnode->setAttribute("phone", $row['phone']);
+  $newnode->setAttribute("fax", $row['fax']);
   $newnode->setAttribute("lat", $row['lat']);
   $newnode->setAttribute("lng", $row['lng']);
   $newnode->setAttribute("distance", $row['distance']);
