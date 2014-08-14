@@ -245,7 +245,7 @@ function downloadComplete(data) {
     var markerNodes = xml.documentElement.getElementsByTagName("marker");
     var bounds = new google.maps.LatLngBounds();
 
-    function addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, distance, latlng, modality) {
+    function addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, distance, modality) {
         if (allCurrentClinicNames.indexOf(name) == -1) {
             // New clinic
             allCurrentClinicNames.push(name);
@@ -260,6 +260,7 @@ function downloadComplete(data) {
             singleClinic[nameOfPhone] = phone;
             singleClinic[nameOfFax] = fax;
             singleClinic[nameOfLatLng] = latlng;
+            singleClinic[nameOfDistance] = distance;
             singleClinic[nameOfModalitiesArray] = [modality];
 
             currentClinics.push(singleClinic);
@@ -295,11 +296,11 @@ function downloadComplete(data) {
             // A modality has been selected
             if (modality == currentModality) {
                 // This modality we've found is the current selected modality  - add to current clinics
-                addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, distance, latlng, modality);
+                addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, distance, modality);
             }
         } else {
             // No modality set yet
-            addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, distance, latlng, modality);
+            addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, distance, modality);
         }
     }
 
@@ -333,7 +334,7 @@ function downloadComplete(data) {
         for (var q = 0; q < clinicsForMarkers.length; q++) {
             thisLatlng = clinicsForMarkers[q][nameOfLatLng];
             markerModalities = makeMarkerModalitiesOutput(clinicsForMarkers[q][nameOfModalitiesArray]);
-            createMarker(thisLatlng, clinicsForMarkers[q][nameOfName], clinicsForMarkers[q][nameOfAddress], clinicsForMarkers[q][nameOfOpeningHours], clinicsForMarkers[q][nameOfPhone], clinicsForMarkers[q][nameOfFax], markerModalities);
+            createMarker(thisLatlng, clinicsForMarkers[q][nameOfName], clinicsForMarkers[q][nameOfAddress], clinicsForMarkers[q][nameOfOpeningHours], clinicsForMarkers[q][nameOfPhone], clinicsForMarkers[q][nameOfFax], clinicsForMarkers[q][nameOfDistance], markerModalities);
             bounds.extend(thisLatlng);
         }
     }
@@ -358,31 +359,37 @@ function downloadComplete(data) {
     }
 }
 
-function createMarker(latlng, name, address, opening_hours, phone, fax, modalities) {
+function createMarker(latlng, name, address, opening_hours, phone, fax, distance, modalities) {
     var html = "";
 
     if (name) {
-        html += "<b>" + name + "</b><br />";
+        html += "<b>" + name + "</b>";
     }
 
     if (address) {
-        html += address + "<br />";
+        html += "<br />" + address;
     }
 
     if (opening_hours) {
-        html += "Opening hours: " + opening_hours + "<br />";
+        html += "<br />Opening hours: " + opening_hours;
     }
 
     if (phone) {
-        html += "Phone: " + phone + "<br />";
+        html += "<br />Phone: " + phone;
     }
 
     if (fax) {
-        html += "Fax: " + fax + "<br />";
+        html += "<br />Fax: " + fax;
     }
 
     if (modalities) {
-        html += "Modalities: " + modalities;
+        html += "<br />Modalities: " + modalities;
+    }
+
+    if (distance) {
+        var numberDistance = Number(distance);
+        var roundedDistance  = Math.round(numberDistance * Math.pow(10,0))/Math.pow(10,0);
+        html += "<br /><b>Distance: " + roundedDistance + "km</b>";
     }
 
     var marker = new google.maps.Marker({

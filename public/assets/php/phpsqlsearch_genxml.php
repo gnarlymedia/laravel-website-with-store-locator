@@ -44,7 +44,7 @@ $query = sprintf("SELECT address, markers.name, phone, fax, openinghours, lat, l
 $result = mysql_query($query);
 
 
-// Search the rows in the markers table
+// (before using inner join) Search the rows in the markers table
 /*
 $query = sprintf("SELECT address, name, lat, lng, ( 6371 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance FROM markers HAVING distance < '%s' ORDER BY distance LIMIT 0 , 20",
   mysql_real_escape_string($center_lat),
