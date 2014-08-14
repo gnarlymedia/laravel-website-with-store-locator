@@ -29,7 +29,7 @@ class MarkersTableSeeder extends Seeder {
         $marker = Marker::create(array(
             'name' => 'Broadford',
             'address' => '81 High Street Broadford VIC 3658',
-            'openinghours' => 'Tues – Thurs 8:30-1',
+            'openinghours' => 'Tues - Thurs 8:30-1',
             'phone' => '03 5783 8388 (All appointments through Wallan)',
             'fax' => '03 5783 1898',
             'lat' => '-37.204205',
@@ -131,7 +131,7 @@ class MarkersTableSeeder extends Seeder {
         $marker = Marker::create(array(
             'name' => 'Kilmore Imaging',
             'address' => 'Rutledge Street Kilmore VIC 3764',
-            'openinghours' => 'Mon - Fri 9 - 5',
+            'openinghours' => 'Mon to Fri 9 to 5',
             'phone' => '03 5734 2118',
             'fax' => '03 5781 1475',
             'lat' => '-37.301622',
