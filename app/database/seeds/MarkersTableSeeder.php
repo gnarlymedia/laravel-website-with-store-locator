@@ -137,6 +137,27 @@ class MarkersTableSeeder extends Seeder {
         );
         add_modalities($marker, $modalities_short_codes);
 
+        // Footscray Central
+        $marker = Marker::create(array(
+            'name' => 'Footscray Central',
+            'address' => '81 Paisley Street Footscray VIC 3011',
+            'openinghours' => 'Mon-Fri 8.30 - 5',
+            'phone' => '03 9688 2888',
+            'fax' => '03 9687 9485',
+            'lat' => '-37.800451',
+            'lng' => '144.895524'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'ct',
+            'ct_angiography',
+            'echocardiography'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
         // Greenvale
         $marker = Marker::create(array(
             'name' => 'Greenvale',
