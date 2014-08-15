@@ -20,7 +20,7 @@ class Marker extends Magniloquent {
         'fax',
 		'lat',
 		'lng',
-		'services'
+        'email'
 	);
 
 	// Prevents the listed columns from mass assignment

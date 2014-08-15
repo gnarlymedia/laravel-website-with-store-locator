@@ -53,5 +53,13 @@ class ModalityTableSeeder extends Seeder {
         $modality = Modality::create(array(
             'name' => 'Digital OPG'
         ));
+
+        $modality = Modality::create(array(
+            'name' => 'Fluoroscopy'
+        ));
+
+        $modality = Modality::create(array(
+            'name' => 'Nuclear Medicine'
+        ));
     }
 }

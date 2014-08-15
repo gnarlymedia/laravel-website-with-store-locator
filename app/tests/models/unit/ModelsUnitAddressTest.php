@@ -70,10 +70,10 @@ class ModelsUnitAddressTest extends TestCase {
 		
 		// The error should be set
 		$this->assertEquals($errors, array(
-			"The addressLine1 field is required.",
-			"The addressSuburb field is required.",
-			"The addressState field is required.",
-			"The addressPostcode field is required.",
+			"The address line1 field is required.",
+			"The address suburb field is required.",
+			"The address state field is required.",
+			"The address postcode field is required.",
 		));
 	}
 	

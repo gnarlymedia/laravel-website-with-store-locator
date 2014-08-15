@@ -18,4 +18,6 @@ return array(
     'low_dose_ct' => 'Low Dose CT',
     'ct_angiography' => 'CT Angiography',
     'digital_opg' => 'Digital OPG',
+    'fluoroscopy' => 'Fluoroscopy',
+    'nuclear_medicine' => 'Nuclear Medicine'
 );

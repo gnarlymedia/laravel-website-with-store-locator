@@ -229,9 +229,7 @@ function downloadComplete(data) {
     var nameOfPhone = "phone";
     var nameOfFax = "fax";
     var nameOfLatLng = "latlng";
-
-    // Just allClinicAndModalities
-    var nameOfModality = "modality";
+    var nameOfEmail = "email";
 
     // Just currentClinics
     var nameOfModalitiesArray = "modalities";
@@ -245,7 +243,7 @@ function downloadComplete(data) {
     var markerNodes = xml.documentElement.getElementsByTagName("marker");
     var bounds = new google.maps.LatLngBounds();
 
-    function addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, distance, modality) {
+    function addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, email, distance, modality) {
         if (allCurrentClinicNames.indexOf(name) == -1) {
             // New clinic
             allCurrentClinicNames.push(name);
@@ -261,6 +259,7 @@ function downloadComplete(data) {
             singleClinic[nameOfFax] = fax;
             singleClinic[nameOfLatLng] = latlng;
             singleClinic[nameOfDistance] = distance;
+            singleClinic[nameOfEmail] = email;
             singleClinic[nameOfModalitiesArray] = [modality];
 
             currentClinics.push(singleClinic);
@@ -290,17 +289,18 @@ function downloadComplete(data) {
         var modality = markerNodes[i].getAttribute("modality");
         var phone = markerNodes[i].getAttribute("phone");
         var fax = markerNodes[i].getAttribute("fax");
+        var email = markerNodes[i].getAttribute("email");
 
         // Check if we should examine this clinic
         if ((currentModality) && (currentModality != modalitySelectDefaultText)) {
             // A modality has been selected
             if (modality == currentModality) {
                 // This modality we've found is the current selected modality  - add to current clinics
-                addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, distance, modality);
+                addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, email, distance, modality);
             }
         } else {
             // No modality set yet
-            addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, distance, modality);
+            addClinicModalityToCurrentClinics(name, address, opening_hours, phone, fax, latlng, email, distance, modality);
         }
     }
 
@@ -334,7 +334,7 @@ function downloadComplete(data) {
         for (var q = 0; q < clinicsForMarkers.length; q++) {
             thisLatlng = clinicsForMarkers[q][nameOfLatLng];
             markerModalities = makeMarkerModalitiesOutput(clinicsForMarkers[q][nameOfModalitiesArray]);
-            createMarker(thisLatlng, clinicsForMarkers[q][nameOfName], clinicsForMarkers[q][nameOfAddress], clinicsForMarkers[q][nameOfOpeningHours], clinicsForMarkers[q][nameOfPhone], clinicsForMarkers[q][nameOfFax], clinicsForMarkers[q][nameOfDistance], markerModalities);
+            createMarker(thisLatlng, clinicsForMarkers[q][nameOfName], clinicsForMarkers[q][nameOfAddress], clinicsForMarkers[q][nameOfOpeningHours], clinicsForMarkers[q][nameOfPhone], clinicsForMarkers[q][nameOfFax], clinicsForMarkers[q][nameOfEmail], clinicsForMarkers[q][nameOfDistance], markerModalities);
             bounds.extend(thisLatlng);
         }
     }
@@ -359,7 +359,7 @@ function downloadComplete(data) {
     }
 }
 
-function createMarker(latlng, name, address, opening_hours, phone, fax, distance, modalities) {
+function createMarker(latlng, name, address, opening_hours, phone, fax, email, distance, modalities) {
     var html = "";
 
     if (name) {
@@ -371,19 +371,23 @@ function createMarker(latlng, name, address, opening_hours, phone, fax, distance
     }
 
     if (opening_hours) {
-        html += "<br />Opening hours: " + opening_hours;
+        html += "<br /><em>Opening hours: </em>" + opening_hours;
     }
 
     if (phone) {
-        html += "<br />Phone: " + phone;
+        html += "<br /><em>Phone: </em>" + phone;
     }
 
     if (fax) {
-        html += "<br />Fax: " + fax;
+        html += "<br /><em>Fax: </em>" + fax;
+    }
+
+    if (email) {
+        html += "<br /><em>Email: </em>" + "<a href='mailto:" + email + "'>" + email + "</a>";
     }
 
     if (modalities) {
-        html += "<br />Modalities: " + modalities;
+        html += "<br /><em>Modalities: </em>" + modalities;
     }
 
     if (distance) {

@@ -25,6 +25,22 @@ class MarkersTableSeeder extends Seeder {
 			}
 		}
 
+        // Altona North
+        $marker = Marker::create(array(
+            'name' => 'Altona North',
+            'address' => '156-158 Millers Road Altona North VIC 3025',
+            'openinghours' => 'Mon-Fri 9 - 5',
+            'phone' => '03 8378 4988',
+            'fax' => '03 9314 1623',
+            'lat' => '-37.830772',
+            'lng' => '144.848011'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'bone_densitometry'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
         // Broadford
         $marker = Marker::create(array(
             'name' => 'Broadford',
@@ -95,11 +111,37 @@ class MarkersTableSeeder extends Seeder {
 		);
 		add_modalities($marker, $modalities_short_codes);
 
+        // Footscray
+        $marker = Marker::create(array(
+            'name' => 'Footscray',
+            'address' => 'Western Private Hospital, Cnr Eleanor and Marion Streets Footscray VIC 3011',
+            'openinghours' => 'Mon-Fri 8.30 - 5.30 & Sat 9 - 1. MRI opening hours: Mon-Fri 7.00am - 7.00pm & Sat 9.00am - 1.00pm',
+            'phone' => '03 9236 4088',
+            'fax' => '03 9317 0899',
+            'email' => 'wph@capitalradiology.com.au',
+            'lat' => '-37.792983',
+            'lng' => '144.886078'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'fluoroscopy',
+            'ultrasound',
+            'doppler',
+            'mammography',
+            'opg',
+            'low_dose_ct',
+            'ct_angiography',
+            'bone_densitometry',
+            'mri',
+            'nuclear_medicine'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
         // Greenvale
         $marker = Marker::create(array(
             'name' => 'Greenvale',
             'address' => '1 Greenvale Drive Greenvale VIC 3059',
-            'openinghours' => 'Mon-Fri 9 - 5 & Sat 9 - 1',
+            'openinghours' => 'Mon-Fri 9 - 5 (X-Ray only), Sat 9 - 1 (Ultrasound only)',
             'phone' => '03 8401 8471',
             'fax' => '03 9401 3979',
             'lat' => '-37.639999',
@@ -131,7 +173,7 @@ class MarkersTableSeeder extends Seeder {
         $marker = Marker::create(array(
             'name' => 'Kilmore Imaging',
             'address' => 'Rutledge Street Kilmore VIC 3764',
-            'openinghours' => 'Mon to Fri 9 to 5',
+            'openinghours' => 'Mon - Fri 9 - 5',
             'phone' => '03 5734 2118',
             'fax' => '03 5781 1475',
             'lat' => '-37.301622',
