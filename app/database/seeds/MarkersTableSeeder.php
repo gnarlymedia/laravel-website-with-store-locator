@@ -41,6 +41,27 @@ class MarkersTableSeeder extends Seeder {
         );
         add_modalities($marker, $modalities_short_codes);
 
+        // Balaclava
+        $marker = Marker::create(array(
+            'name' => 'Balaclava',
+            'address' => 'Suite 5, 285 Carlisle Street Balaclava VIC 3183',
+            'openinghours' => 'Mon-Fri 8.30 - 6.00 & Sat 9 - 1',
+            'phone' => '03 8552 9552',
+            'fax' => '03 9527 3788',
+            'lat' => '-37.869563',
+            'lng' => '144.996040'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'low_dose_ct',
+            'ct_angiography',
+            'echocardiography'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
         // Broadford
         $marker = Marker::create(array(
             'name' => 'Broadford',
@@ -231,6 +252,28 @@ class MarkersTableSeeder extends Seeder {
         );
         add_modalities($marker, $modalities_short_codes);
 
+        // St Albans
+        $marker = Marker::create(array(
+            'name' => 'St Albans',
+            'address' => '151-153 Furlong Road St Albans VIC 3021',
+            'openinghours' => 'Mon-Fri 8.30 - 5 & Sat 9 - 1',
+            'phone' => '03 8312 7888',
+            'fax' => '03 9356 0158',
+            'lat' => '-37.761020',
+            'lng' => '144.815516'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'mammography',
+            'ct',
+            'ct_angiography',
+            'nuclear_medicine',
+            'opg'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
         // Sunbury
         $marker = Marker::create(array(
             'name' => 'Sunbury',
@@ -265,6 +308,45 @@ class MarkersTableSeeder extends Seeder {
             'doppler',
             'digital_opg',
             'low_dose_ct'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Werribee
+        $marker = Marker::create(array(
+            'name' => 'Werribee',
+            'address' => '27 Princes Highway Werribee VIC 3030',
+            'openinghours' => 'Mon-Fri 9 - 5',
+            'phone' => '03 8734 3222',
+            'fax' => '03 9741 1585',
+            'lat' => '-37.898663',
+            'lng' => '144.668821'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'ct'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Williamstown
+        $marker = Marker::create(array(
+            'name' => 'Williamstown',
+            'address' => '89 Ferguson Street Williamstown VIC 3016',
+            'openinghours' => 'Mon-Fri 8.30 - 5.30 & Sat 9 - 1',
+            'phone' => '03 9399 6000',
+            'fax' => '03 9397 4811',
+            'lat' => '-37.859131',
+            'lng' => '144.897057'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'ct',
+            'ct_angiography'
         );
         add_modalities($marker, $modalities_short_codes);
 
