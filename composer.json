@@ -20,12 +20,18 @@
 		"anahkiasen/former": "3.4.3",
         "league/oauth1-client": "~1.0",
         "thujohn/rss": "dev-master",
-        "fbf/laravel-blog": "dev-master",
+        "fbf/laravel-blog": "0.7.0",
         "frozennode/administrator": "dev-master",
         "fbf/laravel-comments": "dev-master",
         "fbf/laravel-contact-form": "dev-master",
         "guzzlehttp/guzzle": "~4.0"
 	},
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packages.cartalyst.com"
+        }
+    ],
 	"autoload": {
 		"classmap": [
 			"app/commands",

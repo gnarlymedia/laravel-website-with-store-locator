@@ -49,12 +49,12 @@ class Patient extends Eloquent {
 	);
 	
 	protected $niceNames = array(
-    	'email'     => 'Email address',
-    	'DOB'     => 'Date of birth',
+    	'email'         => 'Email address',
+    	'DOB'           => 'Date of birth',
     	'firstName'     => 'First name',
-    	'surname'     => 'Surname',
+    	'surname'       => 'Surname',
     	'homePhone'     => 'Phone number',
-    	'medicareNumber' => 'Medicare number'
+    	'medicareNumber'=> 'Medicare number'
 	);
 	
 	/**

@@ -49,7 +49,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8552 9552',
             'fax' => '03 9527 3788',
             'lat' => '-37.869563',
-            'lng' => '144.996040'
+            'lng' => '144.996040',
+            'location_region' => 'south-east'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -87,7 +88,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 9387 9900',
             'fax' => '03 9387 9911',
 			'lat' => '-37.765394',
-			'lng' => '144.963656'
+			'lng' => '144.963656',
+            'location_region' => 'north'
 		));
 		$modalities_short_codes = array(
 			'general_xray',
@@ -97,7 +99,32 @@ class MarkersTableSeeder extends Seeder {
 			'opg'
 		);
 		add_modalities($marker, $modalities_short_codes);
-		
+
+        // Cheltenham
+        $marker = Marker::create(array(
+            'name' => 'Cheltenham Jamieson Street',
+            'address' => 'Suite 4, 10 Jamieson Street Cheltenham VIC 3192',
+            'openinghours' => 'Mon-Fri 8.30 - 5.30 & Sat 9 - noon',
+            'phone' => '03 9583 2203',
+            'fax' => '03 9583 6359',
+            'lat' => '-37.960304',
+            'lng' => '145.055373',
+            'location_region' => 'south-east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'fluoroscopy',
+            'ultrasound',
+            'doppler',
+            'mammography',
+            'opg',
+            'low_dose_ct',
+            'bone_densitometry',
+            'echocardiography',
+            'nuclear_medicine'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
 		// Craigieburn
 		$marker = Marker::create(array(
 			'name' => 'Craigieburn',

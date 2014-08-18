@@ -28,6 +28,11 @@ Route::get('google-locations', array('as' => 'locations', function()
 	return View::make('google-locations');
 }));
 
+Route::get('locations-list', function()
+{
+    return View::make('locations-list');
+});
+
 // Theme
 Route::get('theme', function()
 {

@@ -20,7 +20,9 @@ class Marker extends Magniloquent {
         'fax',
 		'lat',
 		'lng',
-        'email'
+        'email',
+        'info',
+        'location_region'
 	);
 
 	// Prevents the listed columns from mass assignment
@@ -40,5 +42,23 @@ class Marker extends Magniloquent {
 	public function modalities()
     {
         return $this->belongsToMany('Modality');
+    }
+
+    public static $displayNames = array(
+        'name'			=> 'Name',
+        'address'		=> 'Address',
+        'phone'	        => 'Phone',
+        'fax'		    => 'Fax',
+        'openinghours'	=> 'Opening hours',
+        'email'			=> 'Email',
+        'info'			=> 'Info'
+    );
+
+    public static $elementsToBold = array(
+        'name'
+    );
+
+    public function isInRegion($region) {
+        return ($region == $this->location_region);
     }
 }

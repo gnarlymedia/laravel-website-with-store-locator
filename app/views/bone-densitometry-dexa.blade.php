@@ -6,7 +6,13 @@
 
 @section('nav')
 	<li class="fadeover"><a href="patient-info">INFO</a></li>
-	<li class="fadeover"><a href="google-locations">LOCATIONS</a></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle fadeover" data-toggle="dropdown">LOCATIONS <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="locations-list">LOCATIONS LIST</a></li>
+            <li><a href="google-locations">LOCATIONS NEAR ME</a></li>
+        </ul>
+    </li>
     <li class="dropdown"><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">

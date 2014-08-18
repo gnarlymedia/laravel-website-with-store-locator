@@ -19,5 +19,8 @@ return array(
     'ct_angiography' => 'CT Angiography',
     'digital_opg' => 'Digital OPG',
     'fluoroscopy' => 'Fluoroscopy',
-    'nuclear_medicine' => 'Nuclear Medicine'
+    'nuclear_medicine' => 'Nuclear Medicine',
+
+    // Location region names
+    'south-east' => 'South East',
 );
