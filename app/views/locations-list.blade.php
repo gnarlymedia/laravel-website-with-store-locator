@@ -66,7 +66,7 @@
         else
             $markers = Marker::paginate($numberOfResults);
 
-        Marker::createMarkerList($markers);
+        echo Marker::createMarkerList($markers);
         echo $markers->links();
     ?></p>
 @stop
