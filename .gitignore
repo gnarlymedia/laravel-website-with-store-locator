@@ -17,3 +17,4 @@ error_log
 php.ini
 public/assets/php/error_log
 public/error_log
+composer
