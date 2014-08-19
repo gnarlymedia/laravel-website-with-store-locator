@@ -18,18 +18,17 @@
         <ul class="dropdown-menu">
             <li><a href="#">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
             <li><a href="ct">CT</a></li>
-            <li><a href="ct-angiography">CT ANGIOGRAPHY</a></li>
+            <li><a href="ct_angiography">CT ANGIOGRAPHY</a></li>
             <li><a href="doppler">DOPPLER ULTRASOUND</a></li>
             <li><a href="echocardiography">ECHOCARDIOGRAPHY</a></li>
-            <li><a href="general-x-ray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
+            <li><a href="general_xray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
             <li><a href="mammography">MAMMOGRAPHY</a></li>
             <li><a href="mri">MRI</a></li>
-            <li><a href="nuclear-medicine">NUCLEAR MEDICINE</a></li>
+            <li><a href="nuclear_medicine">NUCLEAR MEDICINE</a></li>
             <li><a href="ultrasound">ULTRASOUND</a></li>
-            <li><a href="platelet-rich-plasma">PLATELET RICH PLASMA</a></li>
-            <li><a href="dental-x-ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
-            <li><a href="dexa">BONE MINERAL DENSITOMETRY</a></li>
-            <li><a href="cardiac-imaging">CARDIAC IMAGING</a></li>
+            <li><a href="platelet_rich_plasma">PLATELET RICH PLASMA</a></li>
+            <li><a href="dental_x_ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
+            <li><a href="cardiac_imaging">CARDIAC IMAGING</a></li>
             <li><a href="opg">OPG</a></li>
         </ul>
     </li>
@@ -70,5 +69,5 @@
     <p>Bone mineral densitometry is a scan which uses low energy x-rays to measure the density of your bone. It is used to diagnose osteoporosis and assess your fracture risk. It is also used to monitor your bone density especially if you are on treatment for osteoporosis.</p>
 
     <p>Routine evaluations every two years may be needed to see a significant change in bone mineral density, decrease or increase. Few patients, such as patients on high dose steroid medication, may need follow-up at six months.</p>
-    <h2>Bone Densitometry (DEXA) clinics</h2>
+    <?php echo Marker::createClinicList(Request::path());?>
 @stop

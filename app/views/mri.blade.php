@@ -16,20 +16,19 @@
     <li class="dropdown"><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li class="fadeover"><a href="bone-densitometry-dexa">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
+            <li class="fadeover"><a href="bone_densitometry">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
             <li><a href="ct">CT</a></li>
-            <li><a href="ct-angiography">CT ANGIOGRAPHY</a></li>
+            <li><a href="ct_angiography">CT ANGIOGRAPHY</a></li>
             <li><a href="doppler">DOPPLER ULTRASOUND</a></li>
             <li><a href="echocardiography">ECHOCARDIOGRAPHY</a></li>
-            <li><a href="general-x-ray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
+            <li><a href="general_xray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
             <li><a href="mammography">MAMMOGRAPHY</a></li>
             <li><a href="#">MRI</a></li>
-            <li><a href="nuclear-medicine">NUCLEAR MEDICINE</a></li>
+            <li><a href="nuclear_medicine">NUCLEAR MEDICINE</a></li>
             <li><a href="ultrasound">ULTRASOUND</a></li>
-            <li><a href="platelet-rich-plasma">PLATELET RICH PLASMA</a></li>
-            <li><a href="dental-x-ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
-            <li><a href="dexa">BONE MINERAL DENSITOMETRY</a></li>
-            <li><a href="cardiac-imaging">CARDIAC IMAGING</a></li>
+            <li><a href="platelet_rich_plasma">PLATELET RICH PLASMA</a></li>
+            <li><a href="dental_x_ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
+            <li><a href="cardiac_imaging">CARDIAC IMAGING</a></li>
             <li><a href="opg">OPG</a></li>
         </ul>
     </li>
@@ -48,7 +47,7 @@
 
     <p></p>Also, it is very important that you advise our staff when booking an appointment if you are unable to lay still&#47;flat.</p>
 
-    <p>Our scanners are perfect for patients who might be overweight or slightly claustobphobic. The extra large opening means is perfect for patients of all sizes and the short gantry of 120cm means that for studies where the head is not the area under investigation the patients head can be outside the magnet.</p>
+    <p>Our scanners are perfect for patients who might be overweight or slightly claustrophobic. The extra large opening is perfect for patients of all sizes and the short gantry of 120cm means that for studies where the head is not the area under investigation the patients head can be outside the magnet.</p>
 
     <p>The MRI (Magnetic Resonance Imaging), machine uses a very strong magnetic field and radio waves to examine a specific area of your body. This technique does not use x-rays and is considered safe and painless.</p>
 
@@ -58,4 +57,5 @@
 
     <h2>FAQ’s</h2>
     <p>You will hear a variety of loud noises during the procedure we will provide you with either earphones or earplugs. The MRI technologist will be in constant communication with you during the procedure using a two-way microphone system. For your comfort, blankets and/or pillows will be provided upon request. The MRI exam room is typically cool in order to ensure that the computer system operates properly.</p>
+<?php echo Marker::createClinicList(Request::path());?>
 @stop

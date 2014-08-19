@@ -16,20 +16,19 @@
     <li class="dropdown"><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li class="fadeover"><a href="bone-densitometry-dexa">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
+            <li class="fadeover"><a href="bone_densitometry">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
             <li><a href="ct">CT</a></li>
-            <li><a href="ct-angiography">CT ANGIOGRAPHY</a></li>
+            <li><a href="ct_angiography">CT ANGIOGRAPHY</a></li>
             <li><a href="doppler">DOPPLER ULTRASOUND</a></li>
             <li><a href="echocardiography">ECHOCARDIOGRAPHY</a></li>
-            <li><a href="general-x-ray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
+            <li><a href="general_xray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
             <li><a href="mammography">MAMMOGRAPHY</a></li>
             <li><a href="mri">MRI</a></li>
             <li><a href="#">NUCLEAR MEDICINE</a></li>
             <li><a href="ultrasound">ULTRASOUND</a></li>
-            <li><a href="platelet-rich-plasma">PLATELET RICH PLASMA</a></li>
-            <li><a href="dental-x-ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
-            <li><a href="dexa">BONE MINERAL DENSITOMETRY</a></li>
-            <li><a href="cardiac-imaging">CARDIAC IMAGING</a></li>
+            <li><a href="platelet_rich_plasma">PLATELET RICH PLASMA</a></li>
+            <li><a href="dental_x_ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
+            <li><a href="cardiac_imaging">CARDIAC IMAGING</a></li>
             <li><a href="opg">OPG</a></li>
         </ul>
     </li>
@@ -63,4 +62,5 @@
     <p>Normally there is a delay between the injection and the scan that can range from several minutes to several hours. For example, the thyroid gland is scanned almost immediately after administration of the substance, whereas for a bone scan you will be asked to return approximately 3 hours after injection during which time the radiopharmaceutical will have been taken up by the bones.</p>
 
     <p>On completion of the test the specialist nuclear medicine physician will then examine the films and send a report to your doctor.</p>
+<?php echo Marker::createClinicList(Request::path());?>
 @stop

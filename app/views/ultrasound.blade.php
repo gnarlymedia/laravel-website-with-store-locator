@@ -16,20 +16,19 @@
     <li class="dropdown"><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li><a href="bone-densitometry-dexa">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
+            <li><a href="bone_densitometry">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
             <li><a href="ct">CT</a></li>
-            <li><a href="ct-angiography">CT ANGIOGRAPHY</a></li>
+            <li><a href="ct_angiography">CT ANGIOGRAPHY</a></li>
             <li><a href="doppler">DOPPLER ULTRASOUND</a></li>
             <li><a href="echocardiography">ECHOCARDIOGRAPHY</a></li>
-            <li><a href="general-x-ray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
+            <li><a href="general_xray">GENERAL X<span class="font-normal">-</span>RAY</a></li>
             <li><a href="mammography">MAMMOGRAPHY</a></li>
             <li><a href="mri">MRI</a></li>
-            <li><a href="nuclear-medicine">NUCLEAR MEDICINE</a></li>
+            <li><a href="nuclear_medicine">NUCLEAR MEDICINE</a></li>
             <li><a href="#">ULTRASOUND</a></li>
-            <li><a href="platelet-rich-plasma">PLATELET RICH PLASMA</a></li>
-            <li><a href="dental-x-ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
-            <li><a href="dexa">BONE MINERAL DENSITOMETRY</a></li>
-            <li><a href="cardiac-imaging">CARDIAC IMAGING</a></li>
+            <li><a href="platelet_rich_plasma">PLATELET RICH PLASMA</a></li>
+            <li><a href="dental_x_ray">DENTAL X<span class="font-normal">-</span>RAY</a></li>
+            <li><a href="cardiac_imaging">CARDIAC IMAGING</a></li>
             <li><a href="opg">OPG</a></li>
         </ul>
     </li>
@@ -69,4 +68,5 @@
     <p>Ultrasound is particularly useful in pregnancy as there are no known harmful effects from its diagnostic use. Modern ultrasound equipment shows detail in “real-time”, not as still images. This enables a moving image to be seen on the screen.</p>
 
     <p>Your doctor will explain why an ultrasound examination is necessary and the best choice of imaging for you. Your doctor may feel it is necessary for you to have an x-ray or other procedure, as well as an ultrasound.</p>
+<?php echo Marker::createClinicList(Request::path());?>
 @stop

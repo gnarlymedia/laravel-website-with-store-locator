@@ -104,9 +104,9 @@ Route::get('referrer-billing', function()
 
 
 // Procedures
-Route::get('bone-densitometry-dexa', function()
+Route::get('bone_densitometry', function()
 {
-    return View::make('bone-densitometry-dexa');
+    return View::make('bone_densitometry');
 });
 
 Route::get('ct', function()
@@ -114,9 +114,9 @@ Route::get('ct', function()
     return View::make('ct');
 });
 
-Route::get('ct-angiography', function()
+Route::get('ct_angiography', function()
 {
-    return View::make('ct-angiography');
+    return View::make('ct_angiography');
 });
 
 Route::get('doppler', function()
@@ -129,9 +129,9 @@ Route::get('echocardiography', function()
     return View::make('echocardiography');
 });
 
-Route::get('general-x-ray', function()
+Route::get('general_xray', function()
 {
-    return View::make('general-x-ray');
+    return View::make('general_xray');
 });
 
 Route::get('mammography', function()
@@ -144,9 +144,9 @@ Route::get('mri', function()
     return View::make('mri');
 });
 
-Route::get('nuclear-medicine', function()
+Route::get('nuclear_medicine', function()
 {
-    return View::make('nuclear-medicine');
+    return View::make('nuclear_medicine');
 });
 
 Route::get('ultrasound', function()
@@ -154,14 +154,14 @@ Route::get('ultrasound', function()
     return View::make('ultrasound');
 });
 
-Route::get('platelet-rich-plasma', function()
+Route::get('platelet_rich_plasma', function()
 {
-    return View::make('platelet-rich-plasma');
+    return View::make('platelet_rich_plasma');
 });
 
-Route::get('dental-x-ray', function()
+Route::get('dental_x_ray', function()
 {
-    return View::make('dental-x-ray');
+    return View::make('dental_x_ray');
 });
 
 Route::get('dexa', function()
@@ -169,9 +169,9 @@ Route::get('dexa', function()
     return View::make('dexa');
 });
 
-Route::get('cardiac-imaging', function()
+Route::get('cardiac_imaging', function()
 {
-    return View::make('cardiac-imaging');
+    return View::make('cardiac_imaging');
 });
 
 
