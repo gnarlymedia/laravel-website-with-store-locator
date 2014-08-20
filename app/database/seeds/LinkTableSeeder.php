@@ -17,7 +17,8 @@ class LinkTableSeeder extends Seeder {
         $link = Link::create(array(
             'title' => 'Capitol Health',
             'content' => 'Capitol Health website',
-            'url' => 'http://capitolhealth.com.au/'
+            'url' => 'http://capitolhealth.com.au/',
+            'status' => 'APPROVED'
         ));
 
 		$faker = Faker\Factory::create();
@@ -28,7 +29,13 @@ class LinkTableSeeder extends Seeder {
 				array(
                     'title' => $faker->sentence($nbWords = 2),
                     'content' => $faker->sentence($nbWords = 4),
-                    'url' => $faker->url
+                    'url' => $faker->url,
+                    'status' => $faker->randomElement(
+                        $array = array (
+                            'DRAFT',
+                            'APPROVED'
+                        )
+                    )
 				)
 			);
 		}

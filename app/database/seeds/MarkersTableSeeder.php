@@ -41,6 +41,22 @@ class MarkersTableSeeder extends Seeder {
         );
         add_modalities($marker, $modalities_short_codes);
 
+        // Ashburton
+        $marker = Marker::create(array(
+            'name' => 'Ashburton',
+            'address' => '448 Warrigal Road Ashburton VIC 3147',
+            'openinghours' => 'Mon - Fri 9-5',
+            'phone' => '03 9886 9090',
+            'fax' => '03 9886 9958',
+            'lat' => '-37.868242',
+            'lng' => '145.091948',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+        );
+        add_modalities($marker, $modalities_short_codes);
+
         // Balaclava
         $marker = Marker::create(array(
             'name' => 'Balaclava',
@@ -60,6 +76,46 @@ class MarkersTableSeeder extends Seeder {
             'low_dose_ct',
             'ct_angiography',
             'echocardiography'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Boronia
+        $marker = Marker::create(array(
+            'name' => 'Boronia',
+            'address' => '41 Boronia Road Boronia VIC 3155',
+            'openinghours' => 'Mon - Fri 9-5',
+            'phone' => '03 9754 9488',
+            'fax' => '03 9762 0199',
+            'lat' => '-37.862425',
+            'lng' => '145.292278',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Box Hill
+        $marker = Marker::create(array(
+            'name' => 'Box Hill',
+            'address' => 'Suite 2, 28-32 Arnold Street Box Hill VIC 3128',
+            'openinghours' => 'Mon - Fri 8.30-5.30 & Sat 9-noon',
+            'phone' => '03 8843 6888',
+            'fax' => '03 9898 0186',
+            'lat' => '-37.813768',
+            'lng' => '145.116520',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'cone_beam_ct',
+            'ct'
         );
         add_modalities($marker, $modalities_short_codes);
 
@@ -100,7 +156,27 @@ class MarkersTableSeeder extends Seeder {
 		);
 		add_modalities($marker, $modalities_short_codes);
 
-        // Cheltenham
+        // Camberwell
+        $marker = Marker::create(array(
+            'name' => 'Camberwell',
+            'address' => 'Unit 2 55 – 59 Avenue Rd Camberwell VIC 3124',
+            'openinghours' => 'Mon - Fri 9-5 & Sat 9-noon',
+            'phone' => '03 8808 7688',
+            'fax' => '03 9813 4455',
+            'lat' => '-37.834662',
+            'lng' => '145.061335',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'ct'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Cheltenham Jamieson Street
         $marker = Marker::create(array(
             'name' => 'Cheltenham Jamieson Street',
             'address' => 'Suite 4, 10 Jamieson Street Cheltenham VIC 3192',
@@ -125,6 +201,41 @@ class MarkersTableSeeder extends Seeder {
         );
         add_modalities($marker, $modalities_short_codes);
 
+        // Cheltenham Nepean Highway
+        $marker = Marker::create(array(
+            'name' => 'Cheltenham Nepean Highway',
+            'address' => '1160 Nepean Highway Cheltenham VIC 3192',
+            'openinghours' => 'By appointment',
+            'lat' => '-37.959755',
+            'lng' => '145.052989',
+            'location_region' => 'south-east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Clayton
+        $marker = Marker::create(array(
+            'name' => 'Clayton',
+            'address' => '1383 Centre Road Clayton VIC 3168',
+            'openinghours' => 'Mon-Fri 8.30 - 5.00 & Sat 9 - noon',
+            'phone' => '03 9543 1688',
+            'fax' => '03 9543 1919',
+            'lat' => '-37.928020',
+            'lng' => '145.117197',
+            'location_region' => 'south-east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'ct',
+            'echocardiography'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
 		// Craigieburn
 		$marker = Marker::create(array(
 			'name' => 'Craigieburn',
@@ -139,7 +250,60 @@ class MarkersTableSeeder extends Seeder {
 			'general_xray'
 		);
 		add_modalities($marker, $modalities_short_codes);
-		
+
+        // Dandenong
+        $marker = Marker::create(array(
+            'name' => 'Dandenong',
+            'address' => '54-56 Princes Highway Dandenong VIC 3175',
+            'openinghours' => 'Mon-Fri 9 - 5 & Sat 9 - noon',
+            'phone' => '03 8788 9888',
+            'fax' => '03 9792 2253',
+            'lat' => '-37.981591',
+            'lng' => '145.211455',
+            'location_region' => 'south-east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'ct_angiography',
+            'mri',
+            'bone_densitometry'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Dandenong City
+        $marker = Marker::create(array(
+            'name' => 'Dandenong City',
+            'address' => '9 Pultney Street Dandenong VIC 3175',
+            'openinghours' => 'Mon-Fri 9 - 5',
+            'phone' => '03 8788 9888',
+            'fax' => '03 9794 9927',
+            'lat' => '-37.988891',
+            'lng' => '145.215264',
+            'location_region' => 'south-east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Dingley
+        $marker = Marker::create(array(
+            'name' => 'Dingley',
+            'address' => '110 Centre Dandenong Road Dingley VIC 3172',
+            'openinghours' => 'Mon-Fri 9 - noon',
+            'phone' => '03 9558 2155',
+            'lat' => '-37.984644',
+            'lng' => '145.134048',
+            'location_region' => 'south-east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
 		// Epping
 		$marker = Marker::create(array(
 			'name' => 'Epping',
@@ -256,6 +420,25 @@ class MarkersTableSeeder extends Seeder {
         );
         add_modalities($marker, $modalities_short_codes);
 
+        // Moorabbin
+        $marker = Marker::create(array(
+            'name' => 'Moorabbin',
+            'address' => 'Suite 2, 999 Nepean Highway Moorabbin VIC 3189',
+            'openinghours' => 'Mon-Fri 9 - 5',
+            'phone' => '03 8552 8888',
+            'fax' => '03 9553 1191',
+            'lat' => '-37.934227',
+            'lng' => '145.036238'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'ct'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
         // Niddrie
         $marker = Marker::create(array(
             'name' => 'Niddrie',
@@ -276,6 +459,76 @@ class MarkersTableSeeder extends Seeder {
             'echocardiography',
             'ct_angiography',
             'mri'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Rowville Health
+        $marker = Marker::create(array(
+            'name' => 'Rowville Health',
+            'address' => 'Suite 1, 150 Kellets Road Rowville VIC 3178',
+            'openinghours' => 'Mon - Fri 9-5',
+            'phone' => '03 9763 9503',
+            'fax' => '03 9763 5946',
+            'lat' => '-37.913777',
+            'lng' => '145.257259',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Rowville Wellness
+        $marker = Marker::create(array(
+            'name' => 'Rowville Wellness',
+            'address' => 'Suite 1/1101 Wellington Road Rowville VIC 3178',
+            'openinghours' => 'Mon - Fri 9-5',
+            'phone' => '03 9724 7300',
+            'fax' => '03 9755 5143',
+            'lat' => '-37.926662',
+            'lng' => '145.250554',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Sandringham
+        $marker = Marker::create(array(
+            'name' => 'Sandringham',
+            'address' => '324 Bluff Road Sandringham VIC 3191',
+            'openinghours' => 'Mon-Fri 1:30 - 5',
+            'phone' => '03 9598 8040',
+            'fax' => '03 9597 0871',
+            'lat' => '-37.952568',
+            'lng' => '145.020961'
+        ));
+        $modalities_short_codes = array(
+            'general_xray'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Springvale
+        $marker = Marker::create(array(
+            'name' => 'Springvale',
+            'address' => '12-14 Windsor Avenue Springvale VIC 3171',
+            'openinghours' => 'Mon-Fri 9 - 5 & Sat 9 - 1',
+            'phone' => '03 8558 5888',
+            'fax' => '03 9574 0244',
+            'lat' => '-37.951959',
+            'lng' => '145.149999'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'mammography',
+            'opg',
+            'ct',
+            'ct_angiography',
+            'bone_densitometry',
+            'echocardiography'
         );
         add_modalities($marker, $modalities_short_codes);
 

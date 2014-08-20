@@ -21,6 +21,7 @@ return array(
     'fluoroscopy'           => 'Fluoroscopy',
     'nuclear_medicine'      => 'Nuclear Medicine',
     'platelet_rich_plasma'  => 'Platelet Rich Plasma',
+    'cone_beam_ct'          => 'Cone Beam CT',
 
     // Extra
     'dental_x_ray'          => 'OPG',

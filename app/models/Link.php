@@ -24,7 +24,8 @@ class Link extends Eloquent {
 	protected $fillable = array(
 		'title',
 		'content',
-        'url'
+        'url',
+        'status',
 	);
 
 	// Prevents the listed columns from mass assignment

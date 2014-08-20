@@ -82,7 +82,9 @@ class Marker extends Magniloquent {
                         $result .= '<b>';
                     }
                     if (!$isElementToBold) {
+                        $result .= '<em>';
                         $result .= Marker::$displayNames[$displayNameKey] . ': ';
+                        $result .= '</em>';
                     }
                     $result .= $marker->$column_name;
                     if ($isElementToBold)
@@ -101,7 +103,7 @@ class Marker extends Magniloquent {
     /**
      * @return mixed
      */
-    public static function getCinicsWithModality($modality)
+    public static function getClinicsWithModality($modality)
     {
         return DB::table('markers')
             ->where('modalities.name', '=', (Config::get('constants.' . $modality)))
@@ -113,7 +115,7 @@ class Marker extends Magniloquent {
 
     public static function createClinicList($path)
     {
-        $markers = Marker::getCinicsWithModality($path);
+        $markers = Marker::getClinicsWithModality($path);
         if (count($markers) > 0) {
             $result = '<h2>' . Config::get('constants.' . $path) . ' clinics</h2>';
             $result .= '<p>';
