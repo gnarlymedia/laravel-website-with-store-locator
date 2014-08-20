@@ -28,10 +28,15 @@ Route::get('google-locations', array('as' => 'locations', function()
 	return View::make('google-locations');
 }));
 
-Route::get('locations-list', function()
+Route::get('locations-list',  function()
 {
     return View::make('locations-list');
 });
+
+//Route::get('locations-list', array('as' => 'locations-list', function()
+//{
+//    return View::make('locations-list');
+//}));
 
 // Theme
 Route::get('theme', function()
@@ -272,6 +277,8 @@ Route::group(array('before' => 'auth'), function()
 
 /* 	Route::get('/patient-details-test', 'PatientControllerExtTest@showTest'); */
 });
+
+Route::post('locations-list', 'MarkerFilterController@filter');
 
 Route::get('cover', function()
 {

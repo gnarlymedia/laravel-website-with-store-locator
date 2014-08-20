@@ -56,13 +56,30 @@
     <a class="btn btn-default" href="locations-list?location=south-east">South-East</a>
     <a class="btn btn-default" href="locations-list?location=east">East</a>
     <a class="btn btn-default" href="locations-list?location=regional">Regional</a>
-    <p><?php
-        $numberOfResults = 5;
 
-        if (isset($_GET["location"])) {
-            $value = htmlspecialchars($_GET["location"]);
-            if ($value != 'all')
-                $markers = Marker::where('location_region', '=', $value)->paginate($numberOfResults);
+    {{ Form::open(array('action' => array('MarkerFilterController@filter'))) }}
+
+    {{ Form::select('location', array(
+        'all' => 'All',
+        'north' => 'North',
+        'west' => 'West',
+        'south-east' => 'South-East',
+        'east' => 'East',
+        'regional' => 'Regional'
+    ), 'all') }}
+
+    {{ Form::submit('Click Me!') }}
+
+    {{ Form::close() }}
+
+    <p>
+        <?php $numberOfResults = 5;
+        if (isset($location)) {
+//        var_dump($location);
+
+            if ($location != 'all')
+                $markers = Marker::where('location_region', '=', $location)
+                    ->paginate($numberOfResults);
             else
                 $markers = Marker::paginate($numberOfResults);
         }
@@ -70,9 +87,6 @@
             $markers = Marker::paginate($numberOfResults);
 
         echo Marker::createMarkerList($markers);
-        if (isset($value))
-            echo $markers->appends(array('location' => $value))->links();
-        else
-            echo $markers->links();
-    ?></p>
+        echo $markers->links(); ?>
+    </p>
 @stop
