@@ -159,7 +159,7 @@ class MarkersTableSeeder extends Seeder {
         // Camberwell
         $marker = Marker::create(array(
             'name' => 'Camberwell',
-            'address' => 'Unit 2 55 – 59 Avenue Rd Camberwell VIC 3124',
+            'address' => 'Unit 2 55 - 59 Avenue Rd Camberwell VIC 3124',
             'openinghours' => 'Mon - Fri 9-5 & Sat 9-noon',
             'phone' => '03 8808 7688',
             'fax' => '03 9813 4455',
@@ -481,7 +481,7 @@ class MarkersTableSeeder extends Seeder {
         // Rowville Wellness
         $marker = Marker::create(array(
             'name' => 'Rowville Wellness',
-            'address' => 'Suite 1/1101 Wellington Road Rowville VIC 3178',
+            'address' => 'Suite 1, 1101 Wellington Road Rowville VIC 3178',
             'openinghours' => 'Mon - Fri 9-5',
             'phone' => '03 9724 7300',
             'fax' => '03 9755 5143',
