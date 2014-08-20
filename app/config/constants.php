@@ -9,6 +9,7 @@ return array(
 	'general_xray'          => 'General X-Ray',
 	'ultrasound'            => 'Ultrasound',
 	'doppler'               => 'Doppler',
+    'doppler-ultrasound'    => 'Doppler-Ultrasound',
 	'ct'                    => 'CT',
 	'opg'                   => 'OPG',
 	'bone_densitometry'     => 'Bone Densitometry',

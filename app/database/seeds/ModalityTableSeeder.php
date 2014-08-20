@@ -65,5 +65,9 @@ class ModalityTableSeeder extends Seeder {
         $modality = Modality::create(array(
             'name' => 'Cone Beam CT'
         ));
+
+        $modality = Modality::create(array(
+            'name' => 'Doppler-Ultrasound'
+        ));
     }
 }

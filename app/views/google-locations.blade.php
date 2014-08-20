@@ -63,7 +63,7 @@
                 <option value="50">50km</option>
                 <option value="100">100km</option>
                 <option value="200" selected>200km</option>
-                <option value="20000">20000km</option>
+                <option value="500">500km</option>
             </select>
         </div>
         <h4 id="filterResults">Filter results</h4>

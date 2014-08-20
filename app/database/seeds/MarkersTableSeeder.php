@@ -28,12 +28,13 @@ class MarkersTableSeeder extends Seeder {
         // Altona North
         $marker = Marker::create(array(
             'name' => 'Altona North',
-            'address' => '156-158 Millers Road Altona North VIC 3025',
-            'openinghours' => 'Mon-Fri 9 - 5',
+            'address' => htmlspecialchars('156-158 Millers Road Altona North VIC 3025'),
+            'openinghours' => htmlspecialchars('Mon-Fri 9 - 5'),
             'phone' => '03 8378 4988',
             'fax' => '03 9314 1623',
             'lat' => '-37.830772',
-            'lng' => '144.848011'
+            'lng' => '144.848011',
+            'location_region' => 'west'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -127,7 +128,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 5783 8388 (All appointments through Wallan)',
             'fax' => '03 5783 1898',
             'lat' => '-37.204205',
-            'lng' => '145.046741'
+            'lng' => '145.046741',
+            'location_region' => 'regional'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -244,7 +246,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '0384018431',
             'fax' => '0394013979',
 			'lat' => '-37.599297',
-			'lng' => '144.940844'
+			'lng' => '144.940844',
+            'location_region' => 'north'
 		));
 		$modalities_short_codes = array(
 			'general_xray'
@@ -312,7 +315,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8401 8401',
             'fax' => '03 9401 3979',
 			'lat' => '-37.659017',
-			'lng' => '145.019493'
+			'lng' => '145.019493',
+            'location_region' => 'north'
 		));
 		$modalities_short_codes = array(
 			'general_xray',
@@ -332,7 +336,8 @@ class MarkersTableSeeder extends Seeder {
             'fax' => '03 9317 0899',
             'email' => 'wph@capitalradiology.com.au',
             'lat' => '-37.792983',
-            'lng' => '144.886078'
+            'lng' => '144.886078',
+            'location_region' => 'west'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -357,7 +362,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 9688 2888',
             'fax' => '03 9687 9485',
             'lat' => '-37.800451',
-            'lng' => '144.895524'
+            'lng' => '144.895524',
+            'location_region' => 'west'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -378,7 +384,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8401 8471',
             'fax' => '03 9401 3979',
             'lat' => '-37.639999',
-            'lng' => '144.881419'
+            'lng' => '144.881419',
+            'location_region' => 'north'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -394,7 +401,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8312 7088',
             'fax' => '03 9364 0570',
             'lat' => '-37.723914',
-            'lng' => '144.806603'
+            'lng' => '144.806603',
+            'location_region' => 'north'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -405,18 +413,76 @@ class MarkersTableSeeder extends Seeder {
         // Kilmore Imaging
         $marker = Marker::create(array(
             'name' => 'Kilmore Imaging',
-            'address' => 'Rutledge Street Kilmore VIC 3764',
+            'address' => 'Kilmore Hospital, Rutledge Street Kilmore VIC 3764',
             'openinghours' => 'Mon - Fri 9 - 5',
             'phone' => '03 5734 2118',
             'fax' => '03 5781 1475',
-            'lat' => '-37.301622',
-            'lng' => '144.958031'
+            'lat' => '-37.301638',
+            'lng' => '144.958018',
+            'location_region' => 'regional'
         ));
         $modalities_short_codes = array(
             'general_xray',
             'ultrasound',
             'doppler',
             'ct'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Kyneton
+        $marker = Marker::create(array(
+            'name' => 'Kyneton',
+            'address' => '11 Jennings Street Kyneton VIC 3444',
+            'openinghours' => 'By appointment',
+            'phone' => '03 5422 2722',
+            'fax' => '03 5422 3176',
+            'lat' => '-37.247654',
+            'lng' => '144.450319',
+            'location_region' => 'regional'
+        ));
+        $modalities_short_codes = array(
+            'ultrasound',
+            'doppler-ultrasound'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Mildura Lime Avenue
+        $marker = Marker::create(array(
+            'name' => 'Mildura Lime Avenue',
+            'address' => '93-95 Lime Avenue Mildura VIC 3500',
+            'openinghours' => 'Mon - Fri 8.30-5, Sat 9-12',
+            'phone' => '03 5051 7777',
+            'fax' => '03 5021 5297',
+            'lat' => '-34.184985',
+            'lng' => '142.157929',
+            'location_region' => 'regional'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'ct',
+            'echocardiography',
+            'mammography',
+            'mri',
+            'bone_densitometry'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Mildura Ontario Medical Centre
+        $marker = Marker::create(array(
+            'name' => 'Mildura Ontario Medical Centre',
+            'address' => 'Ontario Medical Centre, 239-241 Thirteenth Street Mildura VIC 3500',
+            'openinghours' => 'Mon - Fri 9-1',
+            'phone' => '03 5051 7444',
+            'fax' => '03 5021 9673',
+            'lat' => '-34.184382',
+            'lng' => '142.144058',
+            'location_region' => 'regional'
+        ));
+        $modalities_short_codes = array(
+            'general_xray'
         );
         add_modalities($marker, $modalities_short_codes);
 
@@ -428,7 +494,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8552 8888',
             'fax' => '03 9553 1191',
             'lat' => '-37.934227',
-            'lng' => '145.036238'
+            'lng' => '145.036238',
+            'location_region' => 'south-east'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -447,7 +514,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 9334 3434',
             'fax' => '03 9379 0011',
             'lat' => '-37.736513',
-            'lng' => '144.892275'
+            'lng' => '144.892275',
+            'location_region' => 'north'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -502,7 +570,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 9598 8040',
             'fax' => '03 9597 0871',
             'lat' => '-37.952568',
-            'lng' => '145.020961'
+            'lng' => '145.020961',
+            'location_region' => 'south-east'
         ));
         $modalities_short_codes = array(
             'general_xray'
@@ -517,7 +586,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8558 5888',
             'fax' => '03 9574 0244',
             'lat' => '-37.951959',
-            'lng' => '145.149999'
+            'lng' => '145.149999',
+            'location_region' => 'south-east'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -540,7 +610,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8312 7888',
             'fax' => '03 9356 0158',
             'lat' => '-37.761020',
-            'lng' => '144.815516'
+            'lng' => '144.815516',
+            'location_region' => 'west'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -562,7 +633,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 9218 7288',
             'fax' => '03 9740 2600',
             'lat' => '-37.579388',
-            'lng' => '144.723070'
+            'lng' => '144.723070',
+            'location_region' => 'north'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -580,7 +652,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8361 4488',
             'fax' => '03 9449 3066',
             'lat' => '-37.693894',
-            'lng' => '144.764350'
+            'lng' => '144.764350',
+            'location_region' => 'north'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -588,6 +661,80 @@ class MarkersTableSeeder extends Seeder {
             'doppler',
             'digital_opg',
             'low_dose_ct'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Vermont
+        $marker = Marker::create(array(
+            'name' => 'Vermont',
+            'address' => '399-401 Burwood Highway Vermont VIC 3133',
+            'openinghours' => 'Mon - Fri 8.30-5.30 & Sat 9-12',
+            'phone' => '03 9814 6666',
+            'fax' => '03 9886 1955',
+            'lat' => '-37.854694',
+            'lng' => '145.171817',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'opg',
+            'low_dose_ct',
+            'ct_angiography',
+            'echocardiography'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Vermont – MRI & Nuclear Medicine
+        $marker = Marker::create(array(
+            'name' => 'Vermont - MRI & Nuclear Medicine',
+            'address' => '411 Burwood Highway Vermont VIC 3133',
+            'openinghours' => 'Nuc Med Mon, Wed & Fri 8.30-5.30 & MRI Mon-Thur 7.00am - 9.00pm & Fri 7.00am - 6.00pm',
+            'phone' => '03 9814 6633',
+            'fax' => '03 9802 9641',
+            'lat' => '-37.854856',
+            'lng' => '145.173226',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'nuclear_medicine',
+            'mri'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Wallan
+        $marker = Marker::create(array(
+            'name' => 'Wallan',
+            'address' => '65 Wellington Street Wallan VIC 3756',
+            'openinghours' => 'Mon - Fri 9-5',
+            'phone' => '03 5783 8388',
+            'fax' => '03 5783 1898',
+            'lat' => '-37.413840',
+            'lng' => '144.977332',
+            'location_region' => 'regional'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler',
+            'echocardiography'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Wantrina
+        $marker = Marker::create(array(
+            'name' => 'Wantrina',
+            'address' => '103 Harold Street Wantrina VIC 3152',
+            'openinghours' => 'Mon - Fri 9-5',
+            'phone' => '03 9801 6697',
+            'fax' => '03 9800 0013',
+            'lat' => '-37.856940',
+            'lng' => '145.228159',
+            'location_region' => 'east'
+        ));
+        $modalities_short_codes = array(
+            'general_xray'
         );
         add_modalities($marker, $modalities_short_codes);
 
@@ -599,7 +746,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 8734 3222',
             'fax' => '03 9741 1585',
             'lat' => '-37.898663',
-            'lng' => '144.668821'
+            'lng' => '144.668821',
+            'location_region' => 'west'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -618,7 +766,8 @@ class MarkersTableSeeder extends Seeder {
             'phone' => '03 9399 6000',
             'fax' => '03 9397 4811',
             'lat' => '-37.859131',
-            'lng' => '144.897057'
+            'lng' => '144.897057',
+            'location_region' => 'west'
         ));
         $modalities_short_codes = array(
             'general_xray',
@@ -627,6 +776,25 @@ class MarkersTableSeeder extends Seeder {
             'opg',
             'ct',
             'ct_angiography'
+        );
+        add_modalities($marker, $modalities_short_codes);
+
+        // Woodend
+        $marker = Marker::create(array(
+            'name' => 'Woodend',
+            'address' => 'Cnr Brooke and Templeton Streets Woodend VIC 3442',
+            'openinghours' => 'Mon - Fri 9-5',
+            'phone' => '03 5427 1002',
+            'fax' => '03 5427 2623',
+            'lat' => '-37.359526',
+            'lng' => '144.529800',
+            'location_region' => 'regional'
+        ));
+        $modalities_short_codes = array(
+            'general_xray',
+            'ultrasound',
+            'doppler-ultrasound',
+            'opg'
         );
         add_modalities($marker, $modalities_short_codes);
 
