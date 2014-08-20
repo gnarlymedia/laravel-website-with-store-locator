@@ -50,9 +50,12 @@
 
 @section('content')
     <h1>Locations List</h1>
-    <a class="btn btn-default" href="locations-list?location=all"">All</a>
-    <a class="btn btn-default" href="locations-list?location=north"">North</a>
+    <a class="btn btn-default" href="locations-list?location=all">All</a>
+    <a class="btn btn-default" href="locations-list?location=north">North</a>
+    <a class="btn btn-default" href="locations-list?location=west">West</a>
     <a class="btn btn-default" href="locations-list?location=south-east">South-East</a>
+    <a class="btn btn-default" href="locations-list?location=east">East</a>
+    <a class="btn btn-default" href="locations-list?location=regional">Regional</a>
     <p><?php
         $numberOfResults = 5;
 
