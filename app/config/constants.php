@@ -28,5 +28,10 @@ return array(
     'dental_x_ray'          => 'OPG',
 
     // Location region names
+    'all'                   => 'All',
+    'north'                 => 'North',
+    'west'                  => 'West',
     'south-east'            => 'South East',
+    'east'                  => 'East',
+    'regional'              => 'Regional',
 );

@@ -61,14 +61,20 @@
 
         if (isset($_GET["location"])) {
             $value = htmlspecialchars($_GET["location"]);
+            $filter = $value;
             if ($value != 'all')
                 $markers = Marker::where('location_region', '=', $value)->paginate($numberOfResults);
             else
                 $markers = Marker::paginate($numberOfResults);
         }
-        else
+        else {
             $markers = Marker::paginate($numberOfResults);
+            $filter = 'all';
+        }
 
+        if ($filter) {
+            ?><h3><?php echo Config::get('constants.' . $filter) ?></h3><?php
+        }
         echo Marker::createMarkerList($markers);
         if (isset($value))
             echo $markers->appends(array('location' => $value))->links();
