@@ -387,7 +387,7 @@ function createMarker(latlng, name, address, opening_hours, phone, fax, email, d
     }
 
     if (modalities) {
-        html += "<br /><em>Modalities: </em>" + modalities;
+        html += "<br /><em>Services: </em>" + modalities;
     }
 
     if (distance) {

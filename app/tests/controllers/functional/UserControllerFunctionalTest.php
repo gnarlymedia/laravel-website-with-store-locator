@@ -74,11 +74,12 @@ class UserControllerFunctionalTest extends TestCase {
 	
 	public function testEdit()
 	{
-		$this->mock->shouldReceive('find')
+		$this->mock
+            ->shouldReceive('find')
 			->once()
-			->with(1);
+			->with(547);
 	
-		$this->call('GET', 'user/1/edit');
+		$this->call('GET', 'user/547/edit');
 		
 		$this->assertResponseOk();
 	}

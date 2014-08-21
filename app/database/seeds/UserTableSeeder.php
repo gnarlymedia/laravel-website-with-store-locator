@@ -21,7 +21,7 @@ class UserTableSeeder extends Seeder {
 					'dob' => $faker->date($format = 'd/m/Y', $max = 'now'),
 					'first_name' => $faker->firstName,
 					'surname' => $faker->lastName,
-					'phone_number' => $faker->randomNumber($nbDigits = 10)
+					'phone_number' => $faker->randomNumber($nbDigits = 8)
 				)
 			);
 /* 	        $this->command->info('var_dump($user): ' + var_dump($user)); */

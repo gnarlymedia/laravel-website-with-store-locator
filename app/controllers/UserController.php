@@ -78,7 +78,8 @@ class UserController extends BaseController {
 	{
 		$user = $this->user->find($id);
 		
-		return View::make('user.edit')->with('user', $user);
+		return View::make('user.edit')
+            ->with('user', $user);
 	}
 
 	/**

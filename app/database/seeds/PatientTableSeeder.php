@@ -25,15 +25,15 @@ class PatientTableSeeder extends Seeder {
 			'gender' => $faker->text($maxNbChars = 6),
 			'DOB' => $faker->dateTimeThisCentury->format('d-m-Y'),
 			'ethnicity' => $faker->optional()->text($maxNbChars = 20),
-			'homePhone' => $faker->optional()->randomNumber($nbDigits = 10),
-			'mobilePhone' => $faker->optional()->randomNumber($nbDigits = 10),
-			'workPhone' => $faker->optional()->randomNumber($nbDigits = 10),
-			'faxNumber' => $faker->optional()->randomNumber($nbDigits = 10),
+			'homePhone' => $faker->optional()->randomNumber($nbDigits = 8),
+			'mobilePhone' => $faker->optional()->randomNumber($nbDigits = 8),
+			'workPhone' => $faker->optional()->randomNumber($nbDigits = 8),
+			'faxNumber' => $faker->optional()->randomNumber($nbDigits = 8),
 			'email' => $faker->optional()->safeEmail,
 			'dateDeceased' => $faker->optional()->date($format = 'd-m-Y', $max = 'now'),
 			'address' => $faker->address,
 			'condition' => $faker->optional()->text($maxNbChars = 30),
-			'user_id' => $faker->randomNumber(1, 5)
+			'user_id' => $faker->numberBetween(1, 5)
 		  ));
 		}        
     }

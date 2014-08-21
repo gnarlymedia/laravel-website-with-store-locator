@@ -17,7 +17,7 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROCEDURES <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li><a href="#">BONE DENSITOMETRY <span class="font-normal">(</span>DEXA<span class="font-normal">)</span></a></li>
-            <li><a href="ct">CT</a></li>
+            <li><a href="/ct">CT</a></li>
             <li><a href="ct_angiography">CT ANGIOGRAPHY</a></li>
             <li><a href="doppler">DOPPLER ULTRASOUND</a></li>
             <li><a href="echocardiography">ECHOCARDIOGRAPHY</a></li>
@@ -34,6 +34,7 @@
     </li>
 	<li class="fadeover"><a href="patient-billing">BILLING</a></li>
     <li class="fadeover"><a href="/blog">Blog</a></li>
+    <li class="fadeover"><a href="patient-links">LINKS</a></li>
 	<li class="fadeover"><a href="patient-contact">CONTACT</a></li>
 @stop
 
