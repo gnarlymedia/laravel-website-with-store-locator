@@ -15,7 +15,12 @@
 @section('nav')
     <?php
     if (isset($_GET["type"])) {
-        if (htmlspecialchars($_GET["type"] == 'patient')) { ?>
+        $value = htmlspecialchars($_GET["type"]);
+    } else {
+        $value = 'patient';
+    }
+    if (isset($value)) {
+        if ($value == 'patient') { ?>
             <!-- Patient nav -->
             <li class="fadeover"><a href="patient-info">INFO</a></li>
             <li class="dropdown">
@@ -48,14 +53,14 @@
             <li><a href="#">BLOG</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div></li>
             <li class="fadeover"><a href="patient-links">LINKS</a></li>
             <li class="fadeover"><a href="patient-contact">CONTACT</a></li>
+        <?php } else { ?>
+            <!-- Referrer nav -->
+            <li><a href="referrer-info">REFERRER INFORMATION</a></li>
+            <li class="fadeover"><a href="referrer-results">RESULTS</a></li>
+            <li class="fadeover"><a href="referrer-billing">BILLING</a></li>
+            <li><a href="#">BLOG</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div></li>
         <?php }
-    } else { ?>
-        <!-- Referrer nav -->
-        <li><a href="referrer-info">REFERRER INFORMATION</a></li>
-        <li class="fadeover"><a href="referrer-results">RESULTS</a></li>
-        <li class="fadeover"><a href="referrer-billing">BILLING</a></li>
-        <li><a href="#">BLOG</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div></li>
-    <?php } ?>
+    }?>
 @stop
 
 @section('content')
