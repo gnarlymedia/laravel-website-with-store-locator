@@ -34,4 +34,8 @@ return array(
     'south-east'            => 'South East',
     'east'                  => 'East',
     'regional'              => 'Regional',
+
+    // Blog types
+    'patient'               => 'Patient',
+    'referrer'              => 'Referrer',
 );

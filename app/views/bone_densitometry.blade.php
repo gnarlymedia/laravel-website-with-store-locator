@@ -33,7 +33,7 @@
         </ul>
     </li>
 	<li class="fadeover"><a href="patient-billing">BILLING</a></li>
-    <li class="fadeover"><a href="/blog">Blog</a></li>
+    <li class="fadeover"><a href="blog?type=patient">Blog</a></li>
     <li class="fadeover"><a href="patient-links">LINKS</a></li>
 	<li class="fadeover"><a href="patient-contact">CONTACT</a></li>
 @stop

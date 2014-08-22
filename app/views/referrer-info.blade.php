@@ -8,6 +8,7 @@
     <li><a href="#">REFERRER INFORMATION</a><div id="pointer" class="hidden-xs"><img src="/assets/images/elements/glyphicon.png" alt="glyphicon" width="31" height="31"></div></li>
     <li class="fadeover"><a href="referrer-results">RESULTS</a></li>
     <li class="fadeover"><a href="referrer-billing">BILLING</a></li>
+    <li class="fadeover"><a href="blog?type=referrer">BLOG</a></li>
 @stop
 
 @section('content')
