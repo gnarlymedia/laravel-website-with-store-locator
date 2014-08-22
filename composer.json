@@ -6,7 +6,7 @@
 	"require": {
 		"laravel/framework": "4.2.8",
 		"phpunit/phpunit": "3.7.*",
-		"doctrine/dbal": "2.3.4",
+        "doctrine/dbal": "2.4.2",
 		"laravelbook/ardent": "dev-master",
 		"way/generators": "dev-master",
 		"zizaco/factory-muff": "1.6.4",
@@ -14,7 +14,6 @@
 		"fzaninotto/faker": "1.4.*",
 		"magniloquent/magniloquent": "dev-master",
 		"itsgoingd/clockwork": "1.*",
-		"ccampbell/chromephp": "dev-master",
 		"way/form": "dev-master",
 		"patricktalmadge/bootstrapper": "dev-develop",
         "anahkiasen/former": "3.5.0",

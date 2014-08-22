@@ -6,26 +6,26 @@ class UserTableSeeder extends Seeder {
     {
         DB::table('users')->delete();
 		
-		$faker = Faker\Factory::create();
-		
-		for ($i = 0; $i < 20; $i++)
-		{
-		
-			$password = $faker->word;
-		
-			$user = User::create(
-				array(
-				    'email' => $faker->email,
-				    'password' => $password,
-					'password_confirmation' => $password,
-					'dob' => $faker->date($format = 'd/m/Y', $max = 'now'),
-					'first_name' => $faker->firstName,
-					'surname' => $faker->lastName,
-					'phone_number' => $faker->randomNumber($nbDigits = 8)
-				)
-			);
-/* 	        $this->command->info('var_dump($user): ' + var_dump($user)); */
-		}
+//		$faker = Faker\Factory::create();
+//
+//		for ($i = 0; $i < 20; $i++)
+//		{
+//
+//			$password = $faker->word;
+//
+//			$user = User::create(
+//				array(
+//				    'email' => $faker->email,
+//				    'password' => $password,
+//					'password_confirmation' => $password,
+//					'dob' => $faker->date($format = 'd/m/Y', $max = 'now'),
+//					'first_name' => $faker->firstName,
+//					'surname' => $faker->lastName,
+//					'phone_number' => $faker->randomNumber($nbDigits = 8)
+//				)
+//			);
+///* 	        $this->command->info('var_dump($user): ' + var_dump($user)); */
+//		}
 		
 		// Our test user
 		$user = User::create(array(

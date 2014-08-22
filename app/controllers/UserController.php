@@ -90,7 +90,7 @@ class UserController extends BaseController {
 	 */
 	public function update($id)
 	{
-		{{ ChromePhp::log('update function'); }}
+//		{{ ChromePhp::log('update function'); }}
 		$s = $this->user->update($id);
 		
 		if ($s->isSaved()) {
