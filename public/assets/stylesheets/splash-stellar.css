@@ -1,0 +1,134 @@
+html {
+	height:100%;
+	width:100%;
+}
+body {
+	width:100%;
+}
+#centering_container {
+	max-width:2000px;
+	margin:0 auto;
+}
+.pos-relative {
+	position:relative;
+}
+.pos-fixed {
+	position: fixed;
+}
+#stellar-jumbotron {
+	position: fixed;	
+}
+.stellar {
+	position: fixed;	
+}
+.jumbotron {
+	margin-top: 20px; 
+}
+#background-image {
+	z-index: -1000;
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#logo {
+	margin: 0 auto 20px auto;
+}
+#portal_buttons {
+	display:block;
+	margin: 0 auto;
+}
+#patients_referrers {
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -245px;
+  width: 490px;
+  text-align: center;
+  display: inline;
+  white-space: nowrap;
+}
+#vertical_line {
+	margin:0 30px;
+}
+#our-story-panel {
+	position: absolute;
+	margin: -20px 0 0 0;
+	background-color: white;
+	height:410px;
+	z-index:-500;
+	width:100%;
+	padding:0 80px;
+}
+#our-story-container {
+	position:relative;
+	top: 1060px;
+	width: 100%;
+}
+#our-story-container h1 {
+	margin: 60px 0 20px 0;
+}
+#glyphicon {
+	display:block;
+	margin: 0 auto;
+	z-index: 1001;
+}
+.sidebar-right {
+	float:right;
+}
+.sub-image {
+	margin: 0 10px 0 20px;
+}
+.clear {
+	clear:both;
+}
+a {
+	color: none;
+	text-decoration: none;
+}
+a:hover {
+	color: none;
+	text-decoration: none;
+}
+#footer {
+	position: fixed;
+   	padding: 30px 60px 45px 120px;
+	width: 100%;
+	background-color: white;
+	bottom:0;
+	left:0;
+}
+#social {
+	float:left;
+}
+#footer img, #footer a {
+	padding: 0;
+	margin: 0;
+}
+#copyright {
+	float: right;
+	font-size: 10px;
+	bottom: 70px;
+	right: 50px;
+}
+
+// iscroll styles
+.mobile body {
+  overflow: hidden;
+}
+
+.mobile #wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mobile #scroller {
+  height: 3000px;
+}
+
+
+
+
+
